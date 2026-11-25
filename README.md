@@ -32,3 +32,11 @@ Shared validation, mandatory declared comparison feature timestamps, conservativ
 
 ### v0.9 local evidence integrity
 `evidence.audit` checks SHA-256 against supplied bytes and exact byte-span citations, validates declared dates and license eligibility, groups exact mirrors and declared common origins, and reports declared opposing stances. It is a standalone prototype, not a trusted ingestion service. It never authorizes publication. No source authenticity or historical availability is proven by a self-supplied digest or timestamp. See QA.md for blockers.
+
+## Database migration history
+
+The files in `supabase/migrations/` are the four migrations recovered from the
+live StratIQ project `aobhcuvawfmxnbkyftyl`. They are authoritative for that
+project. The root `schema.sql` is retained as the v0.9 fresh-install draft for
+historical reference and its original static tests. Use the migration history
+to reconstruct an isolated database. See [v0.10 QA](qa/V0.10.md).

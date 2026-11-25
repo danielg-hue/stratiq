@@ -1,0 +1,11 @@
+create role stratiq_assessor nologin noinherit nobypassrls; create role stratiq_evaluator nologin noinherit nobypassrls; create role stratiq_outcome_ingest nologin noinherit nobypassrls;
+grant usage on schema stratiq_private to stratiq_assessor,stratiq_evaluator,stratiq_outcome_ingest;
+grant select on stratiq_private.element_registry,stratiq_private.methodology to stratiq_assessor;
+create policy assessor_read on stratiq_private.element_registry for select to stratiq_assessor using(true);
+create policy assessor_read on stratiq_private.methodology for select to stratiq_assessor using(true);
+grant select on stratiq_private.company,stratiq_private.snapshot,stratiq_private.snapshot_seal,stratiq_private.assessment,stratiq_private.outcome to stratiq_evaluator;
+do $$ declare t text; begin foreach t in array array['company','snapshot_seal','outcome'] loop execute format('create policy evaluator_read on stratiq_private.%I for select to stratiq_evaluator using(true)',t); end loop; end $$;
+create policy evaluator_read on stratiq_private.snapshot for select to stratiq_evaluator using(exists(select 1 from stratiq_private.snapshot_seal s where s.snapshot_id=id));
+create policy evaluator_read on stratiq_private.assessment for select to stratiq_evaluator using(exists(select 1 from stratiq_private.snapshot_seal s where s.snapshot_id=assessment.snapshot_id));
+grant insert on stratiq_private.outcome to stratiq_outcome_ingest;
+create policy ingest_outcome on stratiq_private.outcome for insert to stratiq_outcome_ingest with check(true);
