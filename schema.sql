@@ -1,0 +1,57 @@
+-- v0.8 fresh-install PostgreSQL schema; not deployed or runtime verified.
+begin;
+create schema stratiq_private;
+revoke all on schema stratiq_private from public, anon, authenticated;
+set local search_path = stratiq_private, pg_catalog;
+create table company (id uuid primary key default gen_random_uuid(), legal_name text not null);
+create table identifier (company_id uuid references company not null, scheme text not null, value text not null, valid_from timestamptz not null, valid_to timestamptz, known_at timestamptz not null, primary key(company_id,scheme,value,valid_from,known_at), check(valid_to is null or valid_to>valid_from));
+create table methodology (version text primary key, specification jsonb not null, frozen_at timestamptz not null);
+create table source (id uuid primary key default gen_random_uuid(), url text not null, content_sha256 text not null check(content_sha256 ~ '^[a-f0-9]{64}$'), available_at timestamptz not null, retrieved_at timestamptz not null, license_status text not null check(license_status in ('unknown','restricted','research_only','commercial_allowed')),  supersedes uuid references source, check(retrieved_at>=available_at));
+create table snapshot (id uuid primary key default gen_random_uuid(), company_id uuid references company not null, version text references methodology not null, as_of timestamptz not null, created_at timestamptz not null default now(), model_version text not null, input_manifest jsonb not null, unique(id,as_of));
+create table element_registry (element text primary key, framework text not null);
+insert into element_registry values ('rivalry','porter'),('entrants','porter'),('substitutes','porter'),('buyer_power','porter'),('supplier_power','porter'),('social','steeple'),('technology','steeple'),('economic','steeple'),('environment','steeple'),('political','steeple'),('legal','steeple'),('ethical','steeple'),('value','vrio'),('rarity','vrio'),('imitability','vrio'),('organization','vrio'),('liquidity','financial'),('solvency','financial'),('profitability','financial'),('cash_conversion','financial'),('revenue_stability','financial'),('margin_stability','financial'),('capital_efficiency','financial'),('debt_service','financial'),('working_capital','financial'),('funding_access','financial'),('execution','governance'),('capital_allocation','governance'),('board_independence','governance'),('incentives','governance'),('disclosure','governance'),('succession','governance'),('internal_controls','governance'),('shareholder_rights','governance'),('innovation_pipeline','growth'),('research_productivity','growth'),('addressable_market','growth'),('organic_growth','growth'),('commercialization','growth'),('adaptability','growth'),('customer_retention','market'),('market_share','market'),('brand','market'),('distribution','market'),('demand_visibility','market'),('supply_chain','operations'),('concentration','operations'),('cyber_resilience','operations'),('workforce','operations'),('continuity','operations');
+create table assessment (snapshot_id uuid references snapshot not null, element text references element_registry not null, status text not null check(status in ('assessed','unknown')), score numeric, rationale text not null check(status<>'assessed' or length(trim(rationale))>0), primary key(snapshot_id,element), check((status='assessed' and score is not null and score between -2 and 2 and score*4=trunc(score*4)) or (status<>'assessed' and score is null)));
+create table evidence (snapshot_id uuid not null, element text not null, source_id uuid references source not null, locator text not null check(length(trim(locator))>0), primary key(snapshot_id,element,source_id,locator), foreign key(snapshot_id,element) references assessment);
+create function enforce_cutoff() returns trigger language plpgsql set search_path=stratiq_private,pg_catalog as $$ begin if (select available_at from source where id=new.source_id) > (select as_of from snapshot where id=new.snapshot_id) then raise exception 'future evidence'; end if; if (select license_status from source where id=new.source_id) not in ('research_only','commercial_allowed') then raise exception 'source license not cleared'; end if; return new; end $$;
+create trigger evidence_cutoff before insert or update on evidence for each row execute function enforce_cutoff();
+create table outcome (company_id uuid references company not null, as_of timestamptz not null, outcome_end timestamptz not null, available_at timestamptz not null, metric text not null, value numeric not null check(value::text not in ('NaN','Infinity','-Infinity')), primary key(company_id,as_of,outcome_end,metric,available_at), check(as_of<outcome_end and outcome_end<=available_at));
+create table experiment (id uuid primary key default gen_random_uuid(), protocol jsonb not null, frozen_at timestamptz not null, version text references methodology not null);
+create table experiment_result (experiment_id uuid references experiment not null, recorded_at timestamptz not null default now(), result jsonb not null, primary key(experiment_id,recorded_at));
+do $$ declare t text; begin foreach t in array array['element_registry','company','identifier','methodology','source','snapshot','assessment','evidence','outcome','experiment','experiment_result'] loop execute format('alter table stratiq_private.%I enable row level security',t); execute format('revoke all on stratiq_private.%I from public, anon, authenticated',t); end loop; end $$;
+revoke all on function enforce_cutoff() from public, anon, authenticated;
+-- Append-only records: owners/superusers remain trusted administrators.
+create function reject_mutation() returns trigger language plpgsql set search_path=pg_catalog as $$ begin raise exception 'append-only record'; end $$;
+do $$ declare t text; begin foreach t in array array['element_registry','company','identifier','methodology','source','snapshot','assessment','evidence','outcome','experiment','experiment_result'] loop
+ execute format('create trigger immutable_rows before update or delete on stratiq_private.%I for each row execute function stratiq_private.reject_mutation()',t);
+ execute format('create trigger immutable_truncate before truncate on stratiq_private.%I for each statement execute function stratiq_private.reject_mutation()',t);
+ execute format('revoke all on stratiq_private.%I from service_role',t);
+end loop; end $$;
+create function require_evidence() returns trigger language plpgsql set search_path=stratiq_private,pg_catalog as $$ begin
+ if new.status='assessed' and not exists(select 1 from evidence where snapshot_id=new.snapshot_id and element=new.element) then raise exception 'scored element requires evidence'; end if; return null;
+end $$;
+create constraint trigger assessment_evidence_required after insert on assessment deferrable initially deferred for each row execute function require_evidence();
+revoke all on schema stratiq_private from service_role;
+revoke all on function reject_mutation(), require_evidence(), enforce_cutoff() from public, anon, authenticated, service_role;
+-- Serialize child inserts and sealing on the parent row.
+create table snapshot_seal (snapshot_id uuid primary key references snapshot, sealed_at timestamptz not null default clock_timestamp());
+alter table snapshot_seal enable row level security;
+revoke all on snapshot_seal from public, anon, authenticated, service_role;
+create trigger immutable_rows before update or delete on snapshot_seal for each row execute function reject_mutation();
+create trigger immutable_truncate before truncate on snapshot_seal for each statement execute function reject_mutation();
+create function guard_snapshot() returns trigger language plpgsql set search_path=stratiq_private,pg_catalog as $$ begin
+ if current_setting('transaction_isolation') <> 'read committed' then raise exception 'read committed required'; end if;
+ perform 1 from snapshot where id=new.snapshot_id for update;
+ if exists(select 1 from snapshot_seal where snapshot_id=new.snapshot_id) then raise exception 'snapshot sealed'; end if;
+ if tg_table_name='snapshot_seal' then
+  if (select count(*) from assessment where snapshot_id=new.snapshot_id) <> 50 then raise exception 'incomplete snapshot'; end if;
+  if (select count(*) from assessment where snapshot_id=new.snapshot_id and status='assessed') < 40 then raise exception 'insufficient coverage'; end if;
+  if exists(select 1 from element_registry r left join assessment a on a.element=r.element and a.snapshot_id=new.snapshot_id group by r.framework having count(*) filter (where a.status='assessed')*2<count(*)) then raise exception 'insufficient framework coverage'; end if;
+  if exists(select 1 from assessment a where a.snapshot_id=new.snapshot_id and a.status='assessed' and not exists(select 1 from evidence e where e.snapshot_id=a.snapshot_id and e.element=a.element)) then raise exception 'missing evidence'; end if;
+ end if;
+ return new;
+end $$;
+create trigger guard_assessment before insert on assessment for each row execute function guard_snapshot();
+create trigger guard_evidence before insert on evidence for each row execute function guard_snapshot();
+create trigger guard_seal before insert on snapshot_seal for each row execute function guard_snapshot();
+revoke all on function guard_snapshot() from public, anon, authenticated, service_role;
+commit;
