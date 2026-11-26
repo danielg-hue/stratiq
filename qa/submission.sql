@@ -15,6 +15,8 @@ declare
     scores jsonb;
     citations jsonb;
     variant jsonb;
+    manifest jsonb;
+    bad_manifest jsonb;
     expected text;
 begin
     begin
@@ -30,6 +32,7 @@ begin
     select jsonb_agg(jsonb_build_object('element',element,'score',1,'status','assessed','rationale','test') order by element),
         jsonb_agg(jsonb_build_object('element',element,'source_id',company_id,'locator','test') order by element)
     into scores,citations from stratiq_private.element_registry;
+    manifest := jsonb_build_object('sources', jsonb_build_array(jsonb_build_object('source_id', company_id, 'sha256', repeat('a',64))));
     for variant, expected in
         select * from (values
             ('[]'::jsonb, 'missing evidence'),
@@ -38,14 +41,29 @@ begin
         ) as cases(variant, expected)
     loop
         begin
-            perform stratiq_private.submit_assessment(request_id,company_id,'qa-1','2020-02-01','qa','{}',scores,variant);
+            perform stratiq_private.submit_assessment(request_id,company_id,'qa-1','2020-02-01','qa',case when variant = '[]'::jsonb then '{"sources":[]}'::jsonb else manifest end,scores,variant);
             raise exception 'incorrectly accepted invalid submission';
         exception when raise_exception then
             if sqlerrm <> expected then raise; end if;
         end;
     end loop;
-    perform stratiq_private.submit_assessment(request_id,company_id,'qa-1','2020-02-01','qa','{}',scores,citations);
-    perform stratiq_private.submit_assessment(request_id,company_id,'qa-1','2020-02-01','qa','{}',scores,citations);
+    for bad_manifest in
+        select value from jsonb_array_elements(jsonb_build_array(
+            '{}'::jsonb, '{"sources":[]}'::jsonb,
+            jsonb_set(manifest, '{sources,0,sha256}', to_jsonb(repeat('f',64))),
+            jsonb_set(manifest, '{sources}', (manifest->'sources') || (manifest->'sources')),
+            jsonb_set(manifest, '{sources}', (manifest->'sources') || jsonb_build_array(
+                jsonb_build_object('source_id','00000000-0000-0000-0000-000000000002','sha256',repeat('b',64))))
+        ))
+    loop
+        begin
+            perform stratiq_private.submit_assessment(request_id,company_id,'qa-1','2020-02-01','qa',bad_manifest,scores,citations);
+            raise exception 'invalid source manifest accepted';
+        exception when invalid_parameter_value then null;
+        end;
+    end loop;
+    perform stratiq_private.submit_assessment(request_id,company_id,'qa-1','2020-02-01','qa',manifest,scores,citations);
+    perform stratiq_private.submit_assessment(request_id,company_id,'qa-1','2020-02-01','qa',manifest,scores,citations);
     begin
         perform stratiq_private.submit_assessment(request_id,company_id,'qa-1','2020-02-01','qa','{"changed":true}',scores,citations);
         raise exception 'changed request accepted';

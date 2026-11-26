@@ -35,7 +35,7 @@ Shared validation, mandatory declared comparison feature timestamps, conservativ
 
 ## Database migration history
 
-The files in `supabase/migrations/` are the six migrations recovered from the
+The files in `supabase/migrations/` are the seven migrations recovered from the
 live StratIQ project `aobhcuvawfmxnbkyftyl`. They are authoritative for that
 project. The root `schema.sql` is retained as the v0.9 fresh-install draft for
 historical reference and its original static tests. Use the migration history

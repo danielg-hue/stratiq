@@ -14,7 +14,8 @@ cat > "$scratch/submit.sql" <<'SQL'
 set local role stratiq_assessor;
 select stratiq_private.submit_assessment(
     '00000000-0000-0000-0000-000000000020', '00000000-0000-0000-0000-000000000001',
-    'qa-1', '2020-02-01', 'qa', '{}',
+    'qa-1', '2020-02-01', 'qa', jsonb_build_object('sources', jsonb_build_array(
+        jsonb_build_object('source_id','00000000-0000-0000-0000-000000000001','sha256',repeat('a',64)))),
     jsonb_agg(jsonb_build_object('element',element,'score',1,'status','assessed','rationale','test') order by element),
     jsonb_agg(jsonb_build_object('element',element,'source_id','00000000-0000-0000-0000-000000000001','locator','test') order by element)
 ) from stratiq_private.element_registry;
