@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="description" content="Explore StratIQ's SEC filing-based company research pilot.">
+<title>StratIQ | SEC Research</title>
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./main.mjs"></script>
+</head>
+<body>
+<header class="masthead"><span class="wordmark">Strat<span>IQ</span></span><nav aria-label="Sections"><a href="#benchmarks">Benchmarks</a><a href="#issuers">Issuers</a><a href="#methodology">Methodology</a></nav></header>
+<main>
+<section class="intro" aria-labelledby="title">
+  <p class="eyebrow">STRATIQ RESEARCH</p>
+  <h1 id="title">SEC filing benchmarks</h1>
+  <p>Compare accounting signals against subsequent reported revenue growth. Explore which issuers qualified in each fiscal cohort.</p>
+</section>
+<section class="panel" id="benchmarks" aria-labelledby="benchmark-title">
+  <div class="section-head"><div><p class="eyebrow">COHORT COMPARISON</p><h2 id="benchmark-title">Rank correlation</h2></div><label>Fiscal cohort<select id="year"></select></label></div>
+  <p id="cohort-summary" role="status">Loading cohort results…</p>
+  <div id="correlations" class="metrics"></div>
+</section>
+<section class="panel" id="issuers" aria-labelledby="issuer-title">
+  <div class="section-head"><div><p class="eyebrow">COVERAGE</p><h2 id="issuer-title">Issuer directory</h2></div><button id="export" type="button" disabled>Download cohort JSON</button></div>
+  <div class="filters"><label>Search issuers<input id="search" type="search" placeholder="Ticker, company name, or CIK"></label><label>Coverage<select id="coverage"><option value="all">All issuers</option><option value="included">Matched</option><option value="excluded">Excluded</option></select></label></div>
+  <p id="issuer-count" role="status"></p>
+  <div class="table-wrap"><table><thead><tr><th scope="col">Issuer</th><th scope="col">Status</th><th scope="col">Filing evidence</th></tr></thead><tbody id="issuer-rows"></tbody></table></div>
+</section>
+<section id="methodology" class="method" aria-labelledby="method-title">
+  <h2 id="method-title">Methodology and limitations</h2>
+  <p>The pilot uses point-in-time SEC Company Facts and a convenience sample of listed companies with eligible December fiscal periods. The results are descriptive. The cohorts share issuers and omit delisted companies.</p>
+  <a href="https://github.com/danielg-hue/stratiq/tree/stratiq-v0.10/research">Methods and published data</a>
+</section>
+<noscript><p>Enable JavaScript to browse the issuer directory and compare cohorts.</p></noscript>
+</main>
+</body>
+</html>
