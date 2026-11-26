@@ -25,3 +25,26 @@ by the SHA-256 values in `model.json`.
 QA covered forecast generation without outcome records, cutoff rejection
 of a late FY2025 revision, and identical predictions after adding future
 data. The Python suite passed all 86 tests.
+
+## Custodian outcome collection
+
+After the cutoff, archive the relevant SEC Company Facts responses in
+custodian-controlled storage as `TICKER.json` files. From the repository
+root run the collector with the digest from the independent custody record.
+
+```sh
+python sec_holdout_outcomes.py research/fy2026-holdout REGISTERED_SHA256 PRIVATE_ARCHIVES NEW_PRIVATE_DIRECTORY
+```
+
+It verifies the frozen bundle, publisher CIK, adjacent fiscal periods,
+revenue tag, cutoff and denominator. A missing or conflicting outcome blocks
+the entire output. A successful run creates a private directory containing
+`outcomes.json` for the evaluator and `provenance.json` for the custodian.
+The latter records both accessions, both revenue values, archive digests
+and the outcome file digest. Keep both files and the original SEC archives
+outside the public repository. Share only the approved aggregate result.
+
+The full synthetic round trip confirmed that the evaluator accepts the
+generated labels and that a post-cutoff revision cannot affect them. Tests
+also verified that altered registrations or premature collection never read
+outcome archives. The live frozen bundle remains locked until the cutoff.
