@@ -55,3 +55,18 @@ class RollingTest(TestCase):
             records[0]["val"] = value
             with self.assertRaisesRegex(ValueError, "JSON number"):
                 rolling_revenue(archive(records), timestamp("2026-08-05T00:00:00Z"))
+
+
+    def test_36_week_third_quarter_pairs_with_same_filing_comparative(self):
+        facts = [
+            filing("2025-12-27", "2026-02-03", 93925, "2024-12-29"),
+            dict(filing("2026-09-05", "2026-10-08", 68898, "2025-12-28"), form="10-Q", accn="q3"),
+            dict(filing("2025-09-06", "2026-10-08", 64582, "2024-12-29"), form="10-Q", accn="q3"),
+        ]
+        cutoff = timestamp("2026-11-26T00:00:00Z")
+        result = rolling_revenue(archive(facts), cutoff)
+        self.assertEqual(result["trailing_four_quarter_revenue_usd"], "98241")
+        self.assertEqual(result["interim_quarters"], 3)
+        facts[-1]["end"] = "2025-09-20"
+        with self.assertRaisesRegex(ValueError, "differ by more than one week"):
+            rolling_revenue(archive(facts), cutoff)

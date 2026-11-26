@@ -33,3 +33,9 @@ The follow-up audit added fail-closed checks for nonnumeric JSON fact values
 and annual baselines revised after their interim comparison. A later annual
 revision requires a compatible interim comparison before the model can
 combine the values. The three checked-in examples reproduced exactly.
+
+A follow-up corrected the 36-week third-quarter window used by PepsiCo.
+The current and prior cumulative periods must now differ by at most one
+week, in addition to the existing same-filing requirement. The corrected
+November 26 snapshot reconciled all 40 archived issuers. PepsiCo was the
+only changed row and returned USD 98.241 billion through September 5, 2026.

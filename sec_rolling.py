@@ -11,7 +11,7 @@ from sec_facts import fetch_company_facts, select_as_of, vintages
 
 ANNUAL = ("10-K", "10-K/A")
 INTERIM = ("10-Q", "10-Q/A")
-QUARTERS = ((75, 105), (165, 200), (255, 295))
+QUARTERS = ((75, 105), (165, 200), (250, 295))
 
 
 def quarter_count(start, end):
@@ -52,6 +52,8 @@ def trailing_revenue(facts, cutoff):
     if len(prior_ends) != 1:
         raise ValueError("missing or ambiguous prior-year YTD revenue in the same filing")
     prior = select_as_of(comparative, cutoff, start=start, end=prior_ends.pop(), forms=INTERIM)
+    if abs((current.end - current.start).days - (prior.end - prior.start).days) > 7:
+        raise ValueError("interim comparison periods differ by more than one week")
     return last, annual.value + current.value - prior.value, count, (annual, current, prior)
 
 
