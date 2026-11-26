@@ -6,6 +6,10 @@ const summary = document.querySelector('#cohort-summary');
 const count = document.querySelector('#issuer-count');
 const correlations = document.querySelector('#correlations');
 const download = document.querySelector('#export');
+const savedOnly = document.querySelector('#saved-only');
+const savedCount = document.querySelector('#saved-count');
+const watchlistStatus = document.querySelector('#watchlist-status');
+const watchlistKey = 'stratiq.watchlist.v1';
 const names = {
   return_on_assets: 'Return on assets',
   negative_sloan_accruals: 'Negative Sloan accruals',
@@ -23,7 +27,7 @@ function element(tag, value) {
   return item;
 }
 
-function rowFor(issuer) {
+function rowFor(issuer, saved, toggle) {
   const row = element('tr');
   const company = element('td');
   company.append(element('strong', issuer.ticker), element('small', issuer.name || `CIK ${issuer.cik}`));
@@ -33,7 +37,16 @@ function rowFor(issuer) {
   const link = element('a', 'SEC filings');
   link.href = `https://www.sec.gov/edgar/browse/?CIK=${issuer.cik}`;
   source.append(link);
-  row.append(company, status, source);
+  const actions = element('td');
+  const button = element('button', saved ? 'Saved' : 'Save');
+  button.type = 'button';
+  button.className = 'save';
+  button.dataset.cik = issuer.cik;
+  button.setAttribute('aria-pressed', String(saved));
+  button.setAttribute('aria-label', `Watchlist: ${issuer.ticker}`);
+  button.addEventListener('click', toggle);
+  actions.append(button);
+  row.append(company, status, source, actions);
   return row;
 }
 
@@ -47,22 +60,53 @@ async function initialize() {
     year.append(option);
   }
 
+  const known = new Set(reports.flatMap((report) => report.coverage.map((issuer) => String(issuer.cik))));
+  function readWatchlist() {
+    try {
+      const stored = JSON.parse(localStorage.getItem(watchlistKey) ?? '[]');
+      return new Set(Array.isArray(stored) ? stored.filter((cik) => known.has(cik)) : []);
+    } catch {
+      return new Set();
+    }
+  }
+
+  let watchlist = readWatchlist();
   const active = () => reports.find((report) => String(report.feature_year) === year.value);
   function renderIssuers() {
     const query = search.value.trim().toLowerCase();
     const issuers = active().coverage.filter((issuer) =>
+      (!savedOnly.checked || watchlist.has(String(issuer.cik))) &&
       (coverage.value === 'all' || issuer.included === (coverage.value === 'included')) &&
       [issuer.ticker, issuer.name || '', String(issuer.cik), String(issuer.cik).padStart(10, '0')]
         .some((value) => value.toLowerCase().includes(query)));
     count.textContent = `${issuers.length} issuer${issuers.length === 1 ? '' : 's'} shown`;
-    table.replaceChildren(...issuers.map(rowFor));
+    savedCount.textContent = `${watchlist.size} saved`;
+    table.replaceChildren(...issuers.map((issuer) => {
+      const cik = String(issuer.cik);
+      return rowFor(issuer, watchlist.has(cik), () => toggleIssuer(issuer));
+    }));
     if (!issuers.length) {
       const empty = element('td', 'No issuers match these filters.');
-      empty.colSpan = 3;
+      empty.colSpan = 4;
       const row = element('tr');
       row.append(empty);
       table.append(row);
     }
+  }
+
+  function toggleIssuer(issuer) {
+    const cik = String(issuer.cik);
+    const removing = watchlist.delete(cik);
+    if (!removing) watchlist.add(cik);
+    const action = removing ? 'Removed' : 'Saved';
+    try {
+      localStorage.setItem(watchlistKey, JSON.stringify([...watchlist]));
+      watchlistStatus.textContent = `${action} ${issuer.ticker}.`;
+    } catch {
+      watchlistStatus.textContent = `${action} ${issuer.ticker} for this session. Browser storage is unavailable.`;
+    }
+    renderIssuers();
+    (table.querySelector(`button[data-cik="${cik}"]`) ?? savedOnly).focus();
   }
 
   function renderCohort() {
@@ -83,6 +127,13 @@ async function initialize() {
   year.addEventListener('change', renderCohort);
   search.addEventListener('input', renderIssuers);
   coverage.addEventListener('change', renderIssuers);
+  savedOnly.addEventListener('change', renderIssuers);
+  window.addEventListener('storage', (event) => {
+    if (event.key === watchlistKey || event.key === null) {
+      watchlist = readWatchlist();
+      renderIssuers();
+    }
+  });
   download.addEventListener('click', () => {
     const report = active();
     const uri = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'}));

@@ -9,7 +9,8 @@ links to issuer filings on EDGAR. No credentials or database access are needed.
 The explorer provides a fiscal cohort switch, rank correlations, issuer
 lookup by company name, ticker or CIK, coverage filters, filing links and a
 JSON export of the active cohort. The published data covers an exploratory
-accounting pilot. Customer accounts, watchlists, alerts and strategic
+accounting pilot. The watchlist is stored in the current browser and follows issuers across
+cohorts by CIK. Customer accounts, cross-device sync, alerts and strategic
 assessments are outside this release.
 
 QA passed for the default cohort, switching fiscal years, company-name search,
@@ -23,3 +24,14 @@ https://stratiq-sec-research.tangycharm15.chatgpt.site. The deployed source
 archive was generated from application commit `4816702`. The connected Vercel
 team belongs to Hospice Tools. The GitHub Pages artifact is staged on
 `gh-pages`, and the GitHub integration lacks permission to enable Pages.
+
+
+## Watchlist release QA
+
+Use Node 20+ and install `jsdom@26.1.0` in a separate QA directory.
+Run `node app/check.mjs /path/to/dist /path/to/qa-directory` after building.
+The suite verified persistence on reopen, cross-tab refresh, removal while
+filtered, focus restoration, malformed and stale stored data, and session-only
+operation when storage is blocked. These are DOM tests. Visual browser QA
+remains outstanding. The watchlist build was deployed on the same private Site
+from hosting source commit `eca1d6d`.

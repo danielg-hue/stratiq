@@ -34,3 +34,10 @@ th{font-size:.875rem;color:var(--muted)}
 small{display:block;color:var(--muted)}
 .method{padding:1.2rem 0}
 @media(max-width:32rem){.masthead{align-items:flex-start;flex-direction:column}.filters label,.section-head label{width:100%}}
+.watchlist-controls{display:flex;align-items:center;gap:1rem;margin-bottom:.75rem}
+.checkbox{display:flex;align-items:center;gap:.45rem}
+.checkbox input{accent-color:var(--accent);min-height:auto;width:1rem;height:1rem}
+#saved-count,#watchlist-status{color:var(--muted);font-size:.875rem}
+#watchlist-status:empty{display:none}
+.save{background:#fff;color:var(--accent);min-width:4.5rem}
+.save[aria-pressed="true"]{background:#e1f4e9;border-color:#4f8c73}
