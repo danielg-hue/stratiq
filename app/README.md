@@ -110,3 +110,12 @@ Honeywell's card now labels the continuing-operations basis and links
 the recast inputs directly to the SEC exhibit. All 40 issuers in the
 November 26 snapshot now have both trailing revenue and comparable growth.
 The Python, PostgreSQL and Explorer interaction suites passed.
+
+## Issuer screener
+
+The screener ranks the rolling snapshot by revenue, growth, or ticker.
+The minimum growth filter applies to the unrounded percentage.
+Each row displays the issuer's own reporting period. The issuer link
+opens the detailed calculation and filing inputs in the rolling panel.
+The DOM tests cover numeric ordering, filtering, empty results, and
+keyboard focus transfer on opening a row. Hosting source: `7a44ae3`.

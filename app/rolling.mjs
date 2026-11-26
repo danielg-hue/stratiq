@@ -59,6 +59,61 @@ function issuerCard(row) {
   return card;
 }
 
+function initializeScreener(snapshot, openIssuer) {
+  const minimum = document.querySelector('#screen-minimum');
+  const sort = document.querySelector('#screen-sort');
+  const summary = document.querySelector('#screen-summary');
+  const rows = document.querySelector('#screen-rows');
+  const score = {
+    growth: (row) => row.year_over_year?.percent ?? -Infinity,
+    revenue: (row) => row.unavailable ? -Infinity : Number(row.trailing_four_quarter_revenue_usd),
+  };
+
+  function renderScreen() {
+    if (minimum.validity.badInput) {
+      summary.textContent = 'Enter a valid percentage to filter the table.';
+      rows.replaceChildren();
+      return;
+    }
+    const lowerBound = minimum.value === '' ? -Infinity : minimum.valueAsNumber;
+    const ordered = snapshot.issuers.filter((row) => score.growth(row) >= lowerBound);
+    ordered.sort((left, right) => {
+      const getValue = score[sort.value];
+      if (getValue && getValue(left) !== getValue(right)) {
+        return getValue(left) > getValue(right) ? -1 : 1;
+      }
+      return left.ticker.localeCompare(right.ticker);
+    });
+    summary.textContent = `${ordered.length} of ${snapshot.issuers.length} issuers · Filing cutoff ${snapshot.cutoff.slice(0, 10)} UTC`;
+    rows.replaceChildren(...ordered.map((issuer) => {
+      const row = node('tr', '');
+      const company = node('th', '');
+      company.scope = 'row';
+      const link = node('a', issuer.ticker);
+      link.href = '#rolling';
+      link.addEventListener('click', () => openIssuer(issuer.ticker));
+      company.append(link);
+      if (issuer.company) company.append(node('small', issuer.company));
+      row.append(company, node('td', issuer.period_end ?? 'Unavailable'),
+        node('td', issuer.unavailable ? 'Unavailable' : usd.format(score.revenue(issuer))),
+        node('td', issuer.year_over_year ? `${percentage.format(score.growth(issuer))}%` : 'Unavailable'));
+      return row;
+    }));
+    if (!ordered.length) {
+      const row = node('tr', '');
+      const cell = node('td', 'No issuers meet this growth threshold.');
+      cell.colSpan = 4;
+      row.append(cell);
+      rows.append(row);
+    }
+  }
+  minimum.disabled = false;
+  sort.disabled = false;
+  minimum.addEventListener('input', renderScreen);
+  sort.addEventListener('change', renderScreen);
+  renderScreen();
+}
+
 async function initialize() {
   const response = await fetch(new URL('./rolling.json', import.meta.url));
   if (!response.ok) throw new Error('Rolling data unavailable');
@@ -88,8 +143,14 @@ async function initialize() {
   issuerSelect.addEventListener('change', render);
   peerSelect.addEventListener('change', render);
   render();
+  initializeScreener(snapshot, (ticker) => {
+    issuerSelect.value = ticker;
+    render();
+    issuerSelect.focus({preventScroll: true});
+  });
 }
 
 initialize().catch(() => {
   cutoff.textContent = 'Rolling revenue data could not load. Reload the page to retry.';
+  document.querySelector('#screen-summary').textContent = 'Screener data could not load.';
 });
