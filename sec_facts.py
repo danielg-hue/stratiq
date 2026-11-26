@@ -48,6 +48,8 @@ def vintages(raw, taxonomy, concept, unit):
             raise ValueError("invalid SEC filing chronology")
         # Company Facts supplies filing dates. Wait until that Eastern date has elapsed.
         available = datetime.combine(filed + timedelta(days=1), time(), ZoneInfo("America/New_York"))
+        if type(entry["val"]) not in (int, Decimal):
+            raise ValueError("SEC fact value must be a JSON number")
         value = Decimal(entry["val"])
         if not value.is_finite():
             raise ValueError("nonfinite SEC fact")

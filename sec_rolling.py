@@ -44,6 +44,8 @@ def trailing_revenue(facts, cutoff):
     current = select_as_of(eligible, cutoff, start=next_start, end=last, forms=INTERIM)
     if current is None:
         raise ValueError("latest interim filing is missing cumulative revenue")
+    if annual.available_at > current.available_at:
+        raise ValueError("annual baseline was revised after the latest interim comparison")
     comparative = [fact for fact in eligible if fact.accession == current.accession and fact.start == start
                    and fact.form in INTERIM and fact.end < end and quarter_count(start, fact.end) == count]
     prior_ends = {fact.end for fact in comparative}

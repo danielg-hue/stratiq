@@ -28,3 +28,8 @@ All 89 Python tests and the PostgreSQL regression suite passed. Tests included
 the exact filing-availability boundary and mismatched interim comparatives.
 The rolling check is a revenue monitor. The frozen FY2026 holdout is
 evaluated separately against its preregistered full-year outcome.
+
+The follow-up audit added fail-closed checks for nonnumeric JSON fact values
+and annual baselines revised after their interim comparison. A later annual
+revision requires a compatible interim comparison before the model can
+combine the values. The three checked-in examples reproduced exactly.

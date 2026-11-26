@@ -41,3 +41,17 @@ class RollingTest(TestCase):
         records[2]["accn"] = "other"
         with self.assertRaisesRegex(ValueError, "prior-year YTD"):
             rolling_revenue(archive(records), timestamp("2026-08-05T00:00:00Z"))
+
+
+    def test_late_annual_revision_does_not_mix_with_older_interim_comparatives(self):
+        records = data()[:3]
+        records.append(dict(records[0], filed="2026-09-01", form="10-K/A", accn="amended", val=110))
+        with self.assertRaisesRegex(ValueError, "annual baseline was revised"):
+            rolling_revenue(archive(records), timestamp("2026-09-05T00:00:00Z"))
+
+    def test_nonnumeric_json_fact_is_rejected(self):
+        for value in (True, "100"):
+            records = data()[:1]
+            records[0]["val"] = value
+            with self.assertRaisesRegex(ValueError, "JSON number"):
+                rolling_revenue(archive(records), timestamp("2026-08-05T00:00:00Z"))
