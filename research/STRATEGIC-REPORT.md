@@ -56,3 +56,34 @@ snapshot was sealed. Adapter tests also checked metadata mismatches,
 insufficient coverage, deterministic input order and parameter binding.
 The Python suite passed 79 tests. Hosted worker credentials and live
 integration remain outstanding.
+
+## SEC primary filing intake
+
+Download and preserve the issuer's SEC Submissions JSON and the original
+primary HTML filing. Record the retrieval time. Use the exact archive
+filename listed by the SEC. For each citation, prepare a JSON object with
+`element`, `excerpt`, and `stance`. Include enough literal text for the
+UTF-8 byte sequence to occur exactly once in the original HTML.
+
+```sh
+python sec_filing.py submissions.json ACCESSION primary.htm RETRIEVED_AT selections.json
+```
+
+The result supplies one `document` and a list of `citations` for the report
+bundle. It derives the canonical SEC URL from issuer and accession metadata,
+hashes the raw filing, and resolves byte offsets against the original file.
+It supports primary 10-K and 10-Q HTML documents and amendments listed in the
+recent submissions arrays. The SEC acceptance timestamp is the availability
+proxy. Keep the retrieval and custody record separately. A matching filename
+does not independently prove archival provenance, and acceptance time is
+not independent evidence of the precise dissemination time. Packaged
+documents are marked research-only.
+
+A real run downloaded the SEC Submissions record and Apple FY2024 Form
+10-K, accession `0000320193-24-000123`. It resolved a context citation at
+bytes `167093:167138` and passed the strategic report's integrity audit. No
+strategic score was assigned. The raw archive SHA-256 was
+`a3c4b13b313581642abbdee26e27141fb0fcca2ef915f069a3a3e32a68d8f671`.
+Tests covered UTF-8 offsets, invalid accession and file identity, unsafe
+filenames, ambiguous excerpts and retrieval chronology. All 82 Python
+tests passed.
