@@ -1,3 +1,4 @@
+import './scoring.mjs';
 import './rolling.mjs';
 import {downloadFile} from './download.mjs';
 

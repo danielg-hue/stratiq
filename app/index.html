@@ -10,7 +10,7 @@
 <script type="module" src="./main.mjs"></script>
 </head>
 <body>
-<header class="masthead"><span class="wordmark">Strat<span>IQ</span></span><nav aria-label="Sections"><a href="#benchmarks">Benchmarks</a><a href="#issuers">Issuers</a><a href="#rolling">Rolling revenue</a><a href="#screener">Screener</a><a href="#methodology">Methodology</a></nav></header>
+<header class="masthead"><span class="wordmark">Strat<span>IQ</span></span><nav aria-label="Sections"><a href="#benchmarks">Benchmarks</a><a href="#issuers">Issuers</a><a href="#rolling">Rolling revenue</a><a href="#screener">Screener</a><a href="#scoring">Scoring</a><a href="#methodology">Methodology</a></nav></header>
 <main>
 <section class="intro" aria-labelledby="title">
   <p class="eyebrow">STRATIQ RESEARCH</p>
@@ -48,6 +48,15 @@
   <p id="watchlist-status" role="status"></p>
   <p id="issuer-count" role="status"></p>
   <div class="table-wrap"><table><thead><tr><th scope="col">Issuer</th><th scope="col">Status</th><th scope="col">Filing evidence</th><th scope="col">Watchlist</th></tr></thead><tbody id="issuer-rows"></tbody></table></div>
+</section>
+<section class="panel" id="scoring" aria-labelledby="scoring-title">
+  <div class="section-head"><div><p class="eyebrow">INTERNAL RESEARCH</p><h2 id="scoring-title">Strategic scorecard</h2></div></div>
+  <div class="filters">
+    <label>Open a StratIQ draft<input id="score-file" type="file" accept=".json,application/json" disabled></label>
+    <label>Show elements<select id="score-filter" disabled><option value="all">All elements</option><option value="assessed">Scored</option><option value="unknown">Unknown</option></select></label>
+  </div>
+  <p id="score-status" role="status">Loading scoring workspace…</p>
+  <div id="score-result"></div>
 </section>
 <section id="methodology" class="method" aria-labelledby="method-title">
   <h2 id="method-title">Methodology and limitations</h2>

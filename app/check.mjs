@@ -14,7 +14,17 @@ globalThis.window = window;
 globalThis.localStorage = window.localStorage;
 const rolling = JSON.parse(await readFile(root + '/rolling.json', 'utf8'));
 rolling.issuers.push({ticker: 'UNAVAILABLE', company: '=1+1', cik: 0, unavailable: true});
-globalThis.fetch = async (url) => ({ok: true, json: async () => url.pathname.endsWith('/rolling.json') ? rolling : data});
+const registry = JSON.parse(await readFile(root + '/scoring-registry.json', 'utf8'));
+const draftFile = process.argv[4];
+const draft = draftFile ? JSON.parse(await readFile(draftFile, 'utf8')) : null;
+const assets = new Map([
+  ['cohorts.json', data], ['rolling.json', rolling], ['scoring-registry.json', registry],
+  ['internal-scoring-draft.json', draft],
+]);
+globalThis.fetch = async (url) => {
+  const asset = assets.get(url.pathname.split('/').at(-1));
+  return {ok: asset != null, json: async () => asset};
+};
 let downloaded;
 let filename;
 globalThis.URL.createObjectURL = (blob) => { downloaded = blob; return 'blob:test'; };
@@ -25,6 +35,31 @@ window.HTMLAnchorElement.prototype.click = function () {
 await import(pathToFileURL(root + '/main.mjs'));
 await new Promise(setImmediate);
 const query = (selector) => document.querySelector(selector);
+assert.equal(query('#score-file').disabled, false);
+if (draft) {
+  assert.match(query('#score-result').textContent, /5 of 50 elements scored/);
+  assert.match(query('#score-result').textContent, /Apple Inc/);
+  assert.equal(document.querySelectorAll('#score-result a').length, 17);
+  query('#score-filter').value = 'assessed';
+  query('#score-filter').dispatchEvent(new window.Event('change'));
+  assert.equal(document.querySelectorAll('#score-result .score-element').length, 5);
+  const changed = structuredClone(draft);
+  changed.sources[0].origin = 'javascript:1';
+  changed.company = '<script>Example</script>';
+  const upload = (value) => {
+    Object.defineProperty(query('#score-file'), 'files', {configurable: true,
+      value: [{size: 1000, text: async () => JSON.stringify(value)}]});
+    query('#score-file').dispatchEvent(new window.Event('change'));
+  };
+  upload(changed);
+  await new Promise(setImmediate);
+  assert.match(query('#score-result h3').textContent, /<script>/);
+  assert.equal(document.querySelectorAll('#score-result a, #score-result script').length, 0);
+  changed.frameworks.financial.elements[0].element = 'unknown_element';
+  upload(changed);
+  await new Promise(setImmediate);
+  assert.match(query('#score-status').textContent, /invalid score or citation/);
+}
 assert.match(query('#cohort-summary').textContent, /29 of 40/);
 assert.match(query('#correlations').textContent, /\+0\.203/);
 assert.equal(document.querySelectorAll('#issuer-rows tr').length, 40);

@@ -52,3 +52,8 @@ small{display:block;color:var(--muted)}
 .rolling-card h3{font-size:1rem;margin:.1rem 0;color:var(--muted)}
 #rolling-comparison:empty{display:none}
 .rolling-growth{color:var(--muted);font-size:.9rem}
+.score-framework{border-top:1px solid var(--line);padding:.65rem 0}
+.score-framework summary{cursor:pointer;font-weight:650;color:var(--accent)}
+.score-element{padding:.6rem 0 .45rem 1rem}
+.score-element p{margin:.25rem 0;color:var(--muted)}
+.score-element ul{margin:.25rem 0}

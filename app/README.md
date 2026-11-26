@@ -127,3 +127,22 @@ accessions. Missing values remain blank. Formula-like text from source
 fields is exported as literal text. DOM tests verified order, filtering,
 empty-result behavior, and formula escaping. All 103 Python tests passed.
 Hosting source: `62c21f2`.
+
+## Internal scoring workspace
+
+The Scoring panel opens reports produced by `strategic_report.py`. It
+shows coverage against the 50 registered elements, rationale, source
+links, and exact citation byte ranges. Files chosen through the panel
+are read locally without upload. The browser validates report structure
+and recomputes coverage and the draft index. This is an internal viewer.
+Generating or sealing a report remains a backend or CLI operation.
+
+The standard build excludes all draft data. For verified owner-only
+deployments, an optional `--internal-draft PATH` packages one report.
+The private build includes the Apple FY2024 pilot draft. No Apple draft
+data is tracked in the public source repository.
+
+DOM tests verified both build flavors, coverage filtering, citation links,
+rejection of invalid registry entries, inert rendering of HTML-like input
+and removal of non-HTTPS source links. All 106 Python tests passed.
+Hosting source: `6920c7e`.
