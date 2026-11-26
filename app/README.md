@@ -87,3 +87,15 @@ without a peer ranking or a normalized growth comparison.
 DOM regression tests covered selection, matched and mismatched period dates,
 and duplicate selection. All 98 Python tests passed. Authenticated visual
 browser QA remains open. Hosting source commit: `6449dff`.
+
+## Rolling year-over-year revenue growth
+
+The rolling cards include year-over-year growth when the comparable prior
+trailing window can be reconstructed from its original SEC filing vintage.
+The prior period and its filing inputs appear alongside the current inputs.
+The November 26 snapshot supports growth for 38 of 40 issuers. Alphabet
+and Honeywell still show their trailing revenue, with growth unavailable
+under the matching rules. Existing trailing revenue values did not change.
+
+The database and Explorer regression suites passed alongside all 99 Python
+tests. The private build was packaged from hosting source commit `d9e2632`.

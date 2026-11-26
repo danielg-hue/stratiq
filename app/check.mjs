@@ -34,11 +34,14 @@ const fire = (node, event, value) => {
 assert.match(query('#rolling-cutoff').textContent, /2026-11-26/);
 fire(query('#rolling-issuer'), 'change', 'AMZN');
 assert.match(query('#rolling-result').textContent, /797.46B/);
+assert.match(query('#rolling-result').textContent, /[+]15.4% year over year/);
+assert.match(query('#rolling-result').textContent, /Prior period ended 2025-09-30/);
 assert.match(query('#rolling-result').textContent, /2026-09-30/);
 assert.match(query('#rolling-result a').href, /^https:\/\/www\.sec\.gov\/Archives\//);
 fire(query('#rolling-peer'), 'change', 'GOOGL');
 assert.equal(document.querySelectorAll('.rolling-card').length, 2);
 assert.match(query('#rolling-result').textContent, /471.1B/);
+assert.match(query('#rolling-result').textContent, /Year-over-year growth unavailable/);
 assert.equal(query('#rolling-comparison').textContent, '');
 fire(query('#rolling-peer'), 'change', 'PEP');
 assert.match(query('#rolling-comparison').textContent, /different dates/);

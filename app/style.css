@@ -51,3 +51,4 @@ small{display:block;color:var(--muted)}
 .rolling-card{padding:1rem;border:1px solid var(--line);border-radius:.65rem;min-width:0}
 .rolling-card h3{font-size:1rem;margin:.1rem 0;color:var(--muted)}
 #rolling-comparison:empty{display:none}
+.rolling-growth{color:var(--muted);font-size:.9rem}

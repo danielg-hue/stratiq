@@ -8,6 +8,7 @@ from pathlib import Path
 from holdout_run import timestamp
 from sec_cohort import REVENUE_TAGS
 from sec_facts import fetch_company_facts, select_as_of, vintages
+from validation import number
 
 ANNUAL = ("10-K", "10-K/A")
 INTERIM = ("10-Q", "10-Q/A")
@@ -57,6 +58,52 @@ def trailing_revenue(facts, cutoff):
     return last, annual.value + current.value - prior.value, count, (annual, current, prior)
 
 
+def filing_inputs(sources):
+    return [
+        {"role": role, "accession": fact.accession, "start": fact.start.isoformat(),
+         "end": fact.end.isoformat(), "available_at": fact.available_at.isoformat(), "revenue_usd": str(fact.value)}
+        for role, fact in zip(("annual", "current_ytd", "prior_ytd"), sources)
+    ]
+
+
+def prior_growth(facts, cutoff, revenue, interim_quarters, sources):
+    annual = sources[0]
+    interim = interim_quarters > 0
+    target = sources[2].end if interim else annual.start - timedelta(days=1)
+    filings = [
+        fact for fact in facts
+        if fact.end == target and fact.available_at <= cutoff
+        and (fact.start == annual.start and fact.form in INTERIM if interim
+             else fact.start is not None and fact.form in ANNUAL
+             and 350 <= (fact.end - fact.start).days <= 380)
+    ]
+    if not filings:
+        return None
+    original_cutoff = min(fact.available_at for fact in filings)
+    try:
+        prior = trailing_revenue(facts, original_cutoff)
+    except ValueError:
+        return None
+    if prior is None:
+        return None
+    period_end, value, quarters, inputs = prior
+    if period_end != target or quarters != interim_quarters or value <= 0:
+        return None
+    if interim and inputs[1].value != sources[2].value:
+        # Mixing an originally published base with a restated comparison distorts growth.
+        return None
+    if not interim and abs((annual.end - annual.start).days - (inputs[0].end - inputs[0].start).days) > 7:
+        return None
+    growth = float((revenue - value) * 100 / value)
+    if not number(growth):
+        return None
+    return {
+        "prior_period_end": period_end.isoformat(), "prior_cutoff": original_cutoff.isoformat(),
+        "prior_revenue_usd": str(value), "percent": growth,
+        "inputs": filing_inputs(inputs),
+    }
+
+
 def rolling_revenue(raw, cutoff):
     """Resolve the latest complete annual/YTD combination across known revenue tags."""
     if cutoff.utcoffset() is None:
@@ -73,12 +120,12 @@ def rolling_revenue(raw, cutoff):
             problems.append((max(f.end for f in facts if f.available_at <= cutoff), error))
             continue
         if result is not None:
-            candidates.append((tag, result))
+            candidates.append((tag, result, facts))
     if not candidates:
         if problems:
             raise max(problems, key=lambda item: item[0])[1]
         raise ValueError("no eligible annual revenue baseline")
-    tag, (end, revenue, interim_quarters, sources) = max(candidates, key=lambda item: item[1][0])
+    tag, (end, revenue, interim_quarters, sources), facts = max(candidates, key=lambda item: item[1][0])
     if any(period > end for period, _ in problems):
         raise ValueError("a newer reported period could not be reconciled")
     if revenue < 0:
@@ -89,11 +136,8 @@ def rolling_revenue(raw, cutoff):
         "as_of": cutoff.isoformat(), "period_end": end.isoformat(), "revenue_tag": tag,
         "trailing_four_quarter_revenue_usd": str(revenue), "interim_quarters": interim_quarters,
         "source_sha256": sources[0].source_sha256,
-        "inputs": [
-            {"role": role, "accession": fact.accession, "start": fact.start.isoformat(),
-             "end": fact.end.isoformat(), "available_at": fact.available_at.isoformat(), "revenue_usd": str(fact.value)}
-            for role, fact in zip(("annual", "current_ytd", "prior_ytd"), sources)
-        ],
+        "inputs": filing_inputs(sources),
+        "year_over_year": prior_growth(facts, cutoff, revenue, interim_quarters, sources),
     }
 
 

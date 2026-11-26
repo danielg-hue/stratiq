@@ -36,7 +36,8 @@
           "available_at": "2026-10-30T04:00:00+00:00",
           "revenue_usd": "289007000000"
         }
-      ]
+      ],
+      "year_over_year": null
     },
     {
       "ticker": "AMZN",
@@ -73,7 +74,39 @@
           "available_at": "2026-10-31T04:00:00+00:00",
           "revenue_usd": "503538000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-01T04:00:00+00:00",
+        "prior_revenue_usd": "691330000000",
+        "percent": 15.350845471771802,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001018724-25-000004",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-08T05:00:00+00:00",
+            "revenue_usd": "637959000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001018724-25-000123",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-01T04:00:00+00:00",
+            "revenue_usd": "503538000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001018724-25-000123",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-01T04:00:00+00:00",
+            "revenue_usd": "450167000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "META",
@@ -110,7 +143,39 @@
           "available_at": "2026-10-23T04:00:00+00:00",
           "revenue_usd": "141073000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-31T04:00:00+00:00",
+        "prior_revenue_usd": "189458000000",
+        "percent": 27.524306178678124,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001326801-25-000017",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-01-31T05:00:00+00:00",
+            "revenue_usd": "164501000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001628280-25-047240",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-31T04:00:00+00:00",
+            "revenue_usd": "141073000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001628280-25-047240",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-31T04:00:00+00:00",
+            "revenue_usd": "116116000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "TSLA",
@@ -147,7 +212,39 @@
           "available_at": "2026-10-23T04:00:00+00:00",
           "revenue_usd": "69926000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-24T04:00:00+00:00",
+        "prior_revenue_usd": "95633000000",
+        "percent": 8.299436387021217,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001628280-25-003063",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-01-31T05:00:00+00:00",
+            "revenue_usd": "97690000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001628280-25-045968",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-24T04:00:00+00:00",
+            "revenue_usd": "69926000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001628280-25-045968",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-24T04:00:00+00:00",
+            "revenue_usd": "71983000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "NFLX",
@@ -184,7 +281,39 @@
           "available_at": "2026-10-22T04:00:00+00:00",
           "revenue_usd": "33132274000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-23T04:00:00+00:00",
+        "prior_revenue_usd": "43378787000",
+        "percent": 14.651968022987825,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001065280-25-000044",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-01-28T05:00:00+00:00",
+            "revenue_usd": "39000966000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001065280-25-000406",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-23T04:00:00+00:00",
+            "revenue_usd": "33132274000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001065280-25-000406",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-23T04:00:00+00:00",
+            "revenue_usd": "28754453000"
+          }
+        ]
+      }
     },
     {
       "ticker": "IBM",
@@ -221,7 +350,39 @@
           "available_at": "2026-10-23T04:00:00+00:00",
           "revenue_usd": "47849000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-24T04:00:00+00:00",
+        "prior_revenue_usd": "65403000000",
+        "percent": 6.826903964649939,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000051143-25-000015",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-26T05:00:00+00:00",
+            "revenue_usd": "62753000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000051143-25-000064",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-24T04:00:00+00:00",
+            "revenue_usd": "47849000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000051143-25-000064",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-24T04:00:00+00:00",
+            "revenue_usd": "45199000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "ORCL",
@@ -258,7 +419,39 @@
           "available_at": "2026-09-12T04:00:00+00:00",
           "revenue_usd": "14926000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-08-31",
+        "prior_cutoff": "2025-09-11T04:00:00+00:00",
+        "prior_revenue_usd": "59018000000",
+        "percent": 21.617133755803316,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000950170-25-087926",
+            "start": "2024-06-01",
+            "end": "2025-05-31",
+            "available_at": "2025-06-19T04:00:00+00:00",
+            "revenue_usd": "57399000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001193125-25-200095",
+            "start": "2025-06-01",
+            "end": "2025-08-31",
+            "available_at": "2025-09-11T04:00:00+00:00",
+            "revenue_usd": "14926000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001193125-25-200095",
+            "start": "2024-06-01",
+            "end": "2024-08-31",
+            "available_at": "2025-09-11T04:00:00+00:00",
+            "revenue_usd": "13307000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "INTC",
@@ -295,7 +488,39 @@
           "available_at": "2026-10-31T04:00:00+00:00",
           "revenue_usd": "39179000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-27",
+        "prior_cutoff": "2025-11-07T05:00:00+00:00",
+        "prior_revenue_usd": "53439000000",
+        "percent": 12.075450513669791,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000050863-25-000009",
+            "start": "2023-12-31",
+            "end": "2024-12-28",
+            "available_at": "2025-02-01T05:00:00+00:00",
+            "revenue_usd": "53101000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000050863-25-000179",
+            "start": "2024-12-29",
+            "end": "2025-09-27",
+            "available_at": "2025-11-07T05:00:00+00:00",
+            "revenue_usd": "39179000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000050863-25-000179",
+            "start": "2023-12-31",
+            "end": "2024-09-28",
+            "available_at": "2025-11-07T05:00:00+00:00",
+            "revenue_usd": "38841000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "AMD",
@@ -332,7 +557,39 @@
           "available_at": "2026-11-05T05:00:00+00:00",
           "revenue_usd": "24369000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-27",
+        "prior_cutoff": "2025-11-06T05:00:00+00:00",
+        "prior_revenue_usd": "32027000000",
+        "percent": 41.86779904455616,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000002488-25-000012",
+            "start": "2023-12-31",
+            "end": "2024-12-28",
+            "available_at": "2025-02-06T05:00:00+00:00",
+            "revenue_usd": "25785000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000002488-25-000166",
+            "start": "2024-12-29",
+            "end": "2025-09-27",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "24369000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000002488-25-000166",
+            "start": "2023-12-31",
+            "end": "2024-09-28",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "18127000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "KO",
@@ -369,7 +626,39 @@
           "available_at": "2026-10-29T04:00:00+00:00",
           "revenue_usd": "36119000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-26",
+        "prior_cutoff": "2025-10-24T04:00:00+00:00",
+        "prior_revenue_usd": "47663000000",
+        "percent": 7.114533285777227,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000021344-25-000011",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-21T05:00:00+00:00",
+            "revenue_usd": "47061000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001628280-25-046054",
+            "start": "2025-01-01",
+            "end": "2025-09-26",
+            "available_at": "2025-10-24T04:00:00+00:00",
+            "revenue_usd": "36119000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001628280-25-046054",
+            "start": "2024-01-01",
+            "end": "2024-09-27",
+            "available_at": "2025-10-24T04:00:00+00:00",
+            "revenue_usd": "35517000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "PEP",
@@ -406,7 +695,39 @@
           "available_at": "2026-10-09T04:00:00+00:00",
           "revenue_usd": "64582000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-06",
+        "prior_cutoff": "2025-10-10T04:00:00+00:00",
+        "prior_revenue_usd": "92366000000",
+        "percent": 6.360565576077778,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000077476-25-000007",
+            "start": "2023-12-31",
+            "end": "2024-12-28",
+            "available_at": "2025-02-05T05:00:00+00:00",
+            "revenue_usd": "91854000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000077476-25-000053",
+            "start": "2024-12-29",
+            "end": "2025-09-06",
+            "available_at": "2025-10-10T04:00:00+00:00",
+            "revenue_usd": "64582000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000077476-25-000053",
+            "start": "2023-12-31",
+            "end": "2024-09-07",
+            "available_at": "2025-10-10T04:00:00+00:00",
+            "revenue_usd": "64070000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "MCD",
@@ -443,7 +764,39 @@
           "available_at": "2026-11-07T05:00:00+00:00",
           "revenue_usd": "19876000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-06T05:00:00+00:00",
+        "prior_revenue_usd": "26264000000",
+        "percent": 5.779774596405726,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000063908-25-000012",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-26T05:00:00+00:00",
+            "revenue_usd": "25920000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000063908-25-000059",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "19876000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000063908-25-000059",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "19532000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "SBUX",
@@ -464,7 +817,23 @@
           "available_at": "2026-11-13T05:00:00+00:00",
           "revenue_usd": "37910600000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-28",
+        "prior_cutoff": "2025-11-15T05:00:00+00:00",
+        "prior_revenue_usd": "37184400000",
+        "percent": 1.952969524854509,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000829224-25-000114",
+            "start": "2024-09-30",
+            "end": "2025-09-28",
+            "available_at": "2025-11-15T05:00:00+00:00",
+            "revenue_usd": "37184400000"
+          }
+        ]
+      }
     },
     {
       "ticker": "COST",
@@ -485,7 +854,23 @@
           "available_at": "2026-10-08T04:00:00+00:00",
           "revenue_usd": "303154000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-08-31",
+        "prior_cutoff": "2025-10-09T04:00:00+00:00",
+        "prior_revenue_usd": "275235000000",
+        "percent": 10.143695387577887,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000909832-25-000101",
+            "start": "2024-09-02",
+            "end": "2025-08-31",
+            "available_at": "2025-10-09T04:00:00+00:00",
+            "revenue_usd": "275235000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "HD",
@@ -522,7 +907,39 @@
           "available_at": "2026-11-21T05:00:00+00:00",
           "revenue_usd": "126485000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-11-02",
+        "prior_cutoff": "2025-11-26T05:00:00+00:00",
+        "prior_revenue_usd": "166189000000",
+        "percent": 3.028479622598367,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000354950-25-000085",
+            "start": "2024-01-29",
+            "end": "2025-02-02",
+            "available_at": "2025-03-22T04:00:00+00:00",
+            "revenue_usd": "159514000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001628280-25-053868",
+            "start": "2025-02-03",
+            "end": "2025-11-02",
+            "available_at": "2025-11-26T05:00:00+00:00",
+            "revenue_usd": "126485000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001628280-25-053868",
+            "start": "2024-01-29",
+            "end": "2024-10-27",
+            "available_at": "2025-11-26T05:00:00+00:00",
+            "revenue_usd": "119810000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "LOW",
@@ -559,7 +976,39 @@
           "available_at": "2026-08-28T04:00:00+00:00",
           "revenue_usd": "44888000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-08-01",
+        "prior_cutoff": "2025-08-29T04:00:00+00:00",
+        "prior_revenue_usd": "83612000000",
+        "percent": 8.156723915227479,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000060667-25-000049",
+            "start": "2024-02-03",
+            "end": "2025-01-31",
+            "available_at": "2025-03-25T04:00:00+00:00",
+            "revenue_usd": "83674000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000060667-25-000174",
+            "start": "2025-02-01",
+            "end": "2025-08-01",
+            "available_at": "2025-08-29T04:00:00+00:00",
+            "revenue_usd": "44888000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000060667-25-000174",
+            "start": "2024-02-03",
+            "end": "2024-08-02",
+            "available_at": "2025-08-29T04:00:00+00:00",
+            "revenue_usd": "44950000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "TGT",
@@ -596,7 +1045,39 @@
           "available_at": "2026-08-29T04:00:00+00:00",
           "revenue_usd": "49057000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-08-02",
+        "prior_cutoff": "2025-08-30T04:00:00+00:00",
+        "prior_revenue_usd": "105640000000",
+        "percent": 1.9547519878833775,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000027419-25-000018",
+            "start": "2024-02-04",
+            "end": "2025-02-01",
+            "available_at": "2025-03-13T04:00:00+00:00",
+            "revenue_usd": "106566000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000027419-25-000118",
+            "start": "2025-02-02",
+            "end": "2025-08-02",
+            "available_at": "2025-08-30T04:00:00+00:00",
+            "revenue_usd": "49057000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000027419-25-000118",
+            "start": "2024-02-04",
+            "end": "2024-08-03",
+            "available_at": "2025-08-30T04:00:00+00:00",
+            "revenue_usd": "49983000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "WMT",
@@ -633,7 +1114,39 @@
           "available_at": "2026-08-29T04:00:00+00:00",
           "revenue_usd": "343011000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-07-31",
+        "prior_cutoff": "2025-08-30T04:00:00+00:00",
+        "prior_revenue_usd": "693153000000",
+        "percent": 6.158380617266318,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000104169-25-000021",
+            "start": "2024-02-01",
+            "end": "2025-01-31",
+            "available_at": "2025-03-15T04:00:00+00:00",
+            "revenue_usd": "680985000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000104169-25-000137",
+            "start": "2025-02-01",
+            "end": "2025-07-31",
+            "available_at": "2025-08-30T04:00:00+00:00",
+            "revenue_usd": "343011000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000104169-25-000137",
+            "start": "2024-02-01",
+            "end": "2024-07-31",
+            "available_at": "2025-08-30T04:00:00+00:00",
+            "revenue_usd": "330843000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "JNJ",
@@ -670,7 +1183,39 @@
           "available_at": "2026-10-22T04:00:00+00:00",
           "revenue_usd": "69629000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-28",
+        "prior_cutoff": "2025-10-23T04:00:00+00:00",
+        "prior_revenue_usd": "92149000000",
+        "percent": 7.798239807268662,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000200406-25-000038",
+            "start": "2024-01-01",
+            "end": "2024-12-29",
+            "available_at": "2025-02-14T05:00:00+00:00",
+            "revenue_usd": "88821000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000200406-25-000209",
+            "start": "2024-12-30",
+            "end": "2025-09-28",
+            "available_at": "2025-10-23T04:00:00+00:00",
+            "revenue_usd": "69629000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000200406-25-000209",
+            "start": "2024-01-01",
+            "end": "2024-09-29",
+            "available_at": "2025-10-23T04:00:00+00:00",
+            "revenue_usd": "66301000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "PFE",
@@ -707,7 +1252,39 @@
           "available_at": "2026-11-04T05:00:00+00:00",
           "revenue_usd": "45022000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-28",
+        "prior_cutoff": "2025-11-05T05:00:00+00:00",
+        "prior_revenue_usd": "62785000000",
+        "percent": 1.3363064426216453,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000078003-25-000054",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-28T05:00:00+00:00",
+            "revenue_usd": "63627000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000078003-25-000150",
+            "start": "2025-01-01",
+            "end": "2025-09-28",
+            "available_at": "2025-11-05T05:00:00+00:00",
+            "revenue_usd": "45022000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000078003-25-000150",
+            "start": "2024-01-01",
+            "end": "2024-09-29",
+            "available_at": "2025-11-05T05:00:00+00:00",
+            "revenue_usd": "45864000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "MRK",
@@ -744,7 +1321,39 @@
           "available_at": "2026-11-05T05:00:00+00:00",
           "revenue_usd": "48611000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-06T05:00:00+00:00",
+        "prior_revenue_usd": "64235000000",
+        "percent": 4.892971121662645,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001628280-25-007732",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-26T05:00:00+00:00",
+            "revenue_usd": "64168000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000310158-25-000059",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "48611000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000310158-25-000059",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "48544000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "ABBV",
@@ -781,7 +1390,39 @@
           "available_at": "2026-11-04T05:00:00+00:00",
           "revenue_usd": "44542000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-05T05:00:00+00:00",
+        "prior_revenue_usd": "59644000000",
+        "percent": 10.68003487358326,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001551152-25-000020",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-15T05:00:00+00:00",
+            "revenue_usd": "56334000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001551152-25-000049",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-05T05:00:00+00:00",
+            "revenue_usd": "44542000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001551152-25-000049",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-05T05:00:00+00:00",
+            "revenue_usd": "41232000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "LLY",
@@ -818,7 +1459,39 @@
           "available_at": "2026-10-30T04:00:00+00:00",
           "revenue_usd": "45887000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-31T04:00:00+00:00",
+        "prior_revenue_usd": "59419800000",
+        "percent": 45.51041908589393,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000059478-25-000067",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-20T05:00:00+00:00",
+            "revenue_usd": "45042700000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000059478-25-000254",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-31T04:00:00+00:00",
+            "revenue_usd": "45887000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000059478-25-000254",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-31T04:00:00+00:00",
+            "revenue_usd": "31509900000"
+          }
+        ]
+      }
     },
     {
       "ticker": "AMGN",
@@ -855,7 +1528,39 @@
           "available_at": "2026-11-05T05:00:00+00:00",
           "revenue_usd": "26885000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-06T05:00:00+00:00",
+        "prior_revenue_usd": "35971000000",
+        "percent": 8.151010536265325,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000318154-25-000010",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-15T05:00:00+00:00",
+            "revenue_usd": "33424000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000318154-25-000072",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "26885000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000318154-25-000072",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "24338000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "GILD",
@@ -892,7 +1597,39 @@
           "available_at": "2026-10-31T04:00:00+00:00",
           "revenue_usd": "21518000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-08T05:00:00+00:00",
+        "prior_revenue_usd": "29087000000",
+        "percent": 6.535565716643174,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000882095-25-000006",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-03-01T05:00:00+00:00",
+            "revenue_usd": "28754000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000882095-25-000047",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-08T05:00:00+00:00",
+            "revenue_usd": "21518000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000882095-25-000047",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-08T05:00:00+00:00",
+            "revenue_usd": "21185000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "BMY",
@@ -929,7 +1666,39 @@
           "available_at": "2026-10-30T04:00:00+00:00",
           "revenue_usd": "35692000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-31T04:00:00+00:00",
+        "prior_revenue_usd": "48034000000",
+        "percent": 4.1637173668651375,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000014272-25-000039",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-13T05:00:00+00:00",
+            "revenue_usd": "48300000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000014272-25-000149",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-31T04:00:00+00:00",
+            "revenue_usd": "35692000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000014272-25-000149",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-31T04:00:00+00:00",
+            "revenue_usd": "35958000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "XOM",
@@ -966,7 +1735,39 @@
           "available_at": "2026-05-05T04:00:00+00:00",
           "revenue_usd": "83130000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-03-31",
+        "prior_cutoff": "2025-05-06T04:00:00+00:00",
+        "prior_revenue_usd": "349632000000",
+        "percent": -4.4006269449020685,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000034088-25-000010",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-20T05:00:00+00:00",
+            "revenue_usd": "349585000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000034088-25-000024",
+            "start": "2025-01-01",
+            "end": "2025-03-31",
+            "available_at": "2025-05-06T04:00:00+00:00",
+            "revenue_usd": "83130000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000034088-25-000024",
+            "start": "2024-01-01",
+            "end": "2024-03-31",
+            "available_at": "2025-05-06T04:00:00+00:00",
+            "revenue_usd": "83083000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "CVX",
@@ -1003,7 +1804,39 @@
           "available_at": "2026-11-06T05:00:00+00:00",
           "revenue_usd": "142158000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-07T05:00:00+00:00",
+        "prior_revenue_usd": "194384000000",
+        "percent": 20.03714297473043,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000093410-25-000009",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-22T05:00:00+00:00",
+            "revenue_usd": "202792000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000093410-25-000108",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-07T05:00:00+00:00",
+            "revenue_usd": "142158000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000093410-25-000108",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-07T05:00:00+00:00",
+            "revenue_usd": "150566000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "COP",
@@ -1040,7 +1873,39 @@
           "available_at": "2026-11-06T05:00:00+00:00",
           "revenue_usd": "45552000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-07T05:00:00+00:00",
+        "prior_revenue_usd": "59788000000",
+        "percent": 13.31538101291229,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001163165-25-000012",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-19T05:00:00+00:00",
+            "revenue_usd": "54745000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001163165-25-000058",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-07T05:00:00+00:00",
+            "revenue_usd": "45552000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001163165-25-000058",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-07T05:00:00+00:00",
+            "revenue_usd": "40509000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "CAT",
@@ -1077,7 +1942,39 @@
           "available_at": "2026-11-05T05:00:00+00:00",
           "revenue_usd": "48456000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-04T05:00:00+00:00",
+        "prior_revenue_usd": "64671000000",
+        "percent": 20.259467149108566,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000018230-25-000008",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-15T05:00:00+00:00",
+            "revenue_usd": "64809000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000018230-25-000048",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-04T05:00:00+00:00",
+            "revenue_usd": "48456000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000018230-25-000048",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-04T05:00:00+00:00",
+            "revenue_usd": "48594000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "DE",
@@ -1114,7 +2011,39 @@
           "available_at": "2026-08-28T04:00:00+00:00",
           "revenue_usd": "33290000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-07-27",
+        "prior_cutoff": "2025-08-29T04:00:00+00:00",
+        "prior_revenue_usd": "44434000000",
+        "percent": 7.987126974839088,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001558370-24-016169",
+            "start": "2023-10-30",
+            "end": "2024-10-27",
+            "available_at": "2024-12-13T05:00:00+00:00",
+            "revenue_usd": "51716000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001558370-25-011789",
+            "start": "2024-10-28",
+            "end": "2025-07-27",
+            "available_at": "2025-08-29T04:00:00+00:00",
+            "revenue_usd": "33290000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001558370-25-011789",
+            "start": "2023-10-30",
+            "end": "2024-07-28",
+            "available_at": "2025-08-29T04:00:00+00:00",
+            "revenue_usd": "40572000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "UNP",
@@ -1151,7 +2080,39 @@
           "available_at": "2026-10-23T04:00:00+00:00",
           "revenue_usd": "18425000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-24T04:00:00+00:00",
+        "prior_revenue_usd": "24546000000",
+        "percent": 7.402428094190499,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000100885-25-000042",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-08T05:00:00+00:00",
+            "revenue_usd": "24250000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000100885-25-000321",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-24T04:00:00+00:00",
+            "revenue_usd": "18425000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000100885-25-000321",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-24T04:00:00+00:00",
+            "revenue_usd": "18129000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "UPS",
@@ -1188,7 +2149,39 @@
           "available_at": "2026-11-05T05:00:00+00:00",
           "revenue_usd": "64182000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-11-06T05:00:00+00:00",
+        "prior_revenue_usd": "89483000000",
+        "percent": 2.106545377334242,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001090727-25-000019",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-19T05:00:00+00:00",
+            "revenue_usd": "91070000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001628280-25-049661",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "64182000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001628280-25-049661",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-11-06T05:00:00+00:00",
+            "revenue_usd": "65769000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "BA",
@@ -1225,7 +2218,39 @@
           "available_at": "2026-10-28T04:00:00+00:00",
           "revenue_usd": "65515000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-30T04:00:00+00:00",
+        "prior_revenue_usd": "80757000000",
+        "percent": 17.529130601681587,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000012927-25-000015",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-04T05:00:00+00:00",
+            "revenue_usd": "66517000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001628280-25-047023",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-30T04:00:00+00:00",
+            "revenue_usd": "65515000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001628280-25-047023",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-30T04:00:00+00:00",
+            "revenue_usd": "51275000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "GM",
@@ -1262,7 +2287,39 @@
           "available_at": "2026-10-21T04:00:00+00:00",
           "revenue_usd": "139732000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-22T04:00:00+00:00",
+        "prior_revenue_usd": "187434000000",
+        "percent": -0.2571571859961373,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001467858-25-000032",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-01-29T05:00:00+00:00",
+            "revenue_usd": "187442000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001467858-25-000143",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-22T04:00:00+00:00",
+            "revenue_usd": "139732000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001467858-25-000143",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-22T04:00:00+00:00",
+            "revenue_usd": "139740000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "F",
@@ -1299,7 +2356,39 @@
           "available_at": "2026-10-30T04:00:00+00:00",
           "revenue_usd": "141377000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-25T04:00:00+00:00",
+        "prior_revenue_usd": "189588000000",
+        "percent": -1.3835263835263836,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000037996-25-000013",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-07T05:00:00+00:00",
+            "revenue_usd": "184992000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000037996-25-000186",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-25T04:00:00+00:00",
+            "revenue_usd": "141377000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000037996-25-000186",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-25T04:00:00+00:00",
+            "revenue_usd": "136781000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "GE",
@@ -1336,7 +2425,39 @@
           "available_at": "2026-10-21T04:00:00+00:00",
           "revenue_usd": "33138000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-22T04:00:00+00:00",
+        "prior_revenue_usd": "43950000000",
+        "percent": 19.62684869169511,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000040545-25-000015",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-04T05:00:00+00:00",
+            "revenue_usd": "38702000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000040545-25-000132",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-22T04:00:00+00:00",
+            "revenue_usd": "33138000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000040545-25-000132",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-22T04:00:00+00:00",
+            "revenue_usd": "27890000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "MMM",
@@ -1373,7 +2494,39 @@
           "available_at": "2026-10-21T04:00:00+00:00",
           "revenue_usd": "18815000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-22T04:00:00+00:00",
+        "prior_revenue_usd": "24825000000",
+        "percent": 1.6998992950654581,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000066740-25-000006",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-06T05:00:00+00:00",
+            "revenue_usd": "24575000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000066740-25-000089",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-22T04:00:00+00:00",
+            "revenue_usd": "18815000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000066740-25-000089",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-22T04:00:00+00:00",
+            "revenue_usd": "18565000000"
+          }
+        ]
+      }
     },
     {
       "ticker": "HON",
@@ -1410,7 +2563,8 @@
           "available_at": "2026-10-23T04:00:00+00:00",
           "revenue_usd": "14703000000"
         }
-      ]
+      ],
+      "year_over_year": null
     },
     {
       "ticker": "RTX",
@@ -1447,7 +2601,39 @@
           "available_at": "2026-10-21T04:00:00+00:00",
           "revenue_usd": "64365000000"
         }
-      ]
+      ],
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-22T04:00:00+00:00",
+        "prior_revenue_usd": "85988000000",
+        "percent": 11.628366748848677,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000101829-25-000005",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-04T05:00:00+00:00",
+            "revenue_usd": "80738000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000101829-25-000042",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-22T04:00:00+00:00",
+            "revenue_usd": "64365000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000101829-25-000042",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-22T04:00:00+00:00",
+            "revenue_usd": "59115000000"
+          }
+        ]
+      }
     }
   ]
 }

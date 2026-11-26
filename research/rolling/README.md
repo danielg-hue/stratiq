@@ -39,3 +39,11 @@ The current and prior cumulative periods must now differ by at most one
 week, in addition to the existing same-filing requirement. The corrected
 November 26 snapshot reconciled all 40 archived issuers. PepsiCo was the
 only changed row and returned USD 98.241 billion through September 5, 2026.
+
+The `year_over_year` result compares the current trailing value with the
+same prior fiscal window reconstructed at its first eligible filing cutoff.
+The prior calculation uses the same revenue tag and preserves its original
+inputs. For an interim comparison, the original prior YTD amount must
+match the current filing's comparative amount. Where that requirement
+fails, prior inputs cannot be reconciled, or the denominator is nonpositive,
+growth is unavailable. The trailing level remains independently available.

@@ -32,5 +32,37 @@
       "available_at": "2026-10-23T04:00:00+00:00",
       "revenue_usd": "141073000000"
     }
-  ]
+  ],
+  "year_over_year": {
+    "prior_period_end": "2025-09-30",
+    "prior_cutoff": "2025-10-31T04:00:00+00:00",
+    "prior_revenue_usd": "189458000000",
+    "percent": 27.524306178678124,
+    "inputs": [
+      {
+        "role": "annual",
+        "accession": "0001326801-25-000017",
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "available_at": "2025-01-31T05:00:00+00:00",
+        "revenue_usd": "164501000000"
+      },
+      {
+        "role": "current_ytd",
+        "accession": "0001628280-25-047240",
+        "start": "2025-01-01",
+        "end": "2025-09-30",
+        "available_at": "2025-10-31T04:00:00+00:00",
+        "revenue_usd": "141073000000"
+      },
+      {
+        "role": "prior_ytd",
+        "accession": "0001628280-25-047240",
+        "start": "2024-01-01",
+        "end": "2024-09-30",
+        "available_at": "2025-10-31T04:00:00+00:00",
+        "revenue_usd": "116116000000"
+      }
+    ]
+  }
 }

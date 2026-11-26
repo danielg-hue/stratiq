@@ -7,6 +7,8 @@ const usd = new Intl.NumberFormat('en-US', {
   style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 2,
 });
 
+const percentage = new Intl.NumberFormat('en-US', {maximumFractionDigits: 1, signDisplay: 'exceptZero'});
+
 const labels = {annual: 'Annual filing', current_ytd: 'Current year to date', prior_ytd: 'Prior year to date'};
 
 function node(tag, text) {
@@ -29,8 +31,9 @@ function issuerCard(row) {
   const sources = node('details', '');
   sources.append(node('summary', 'Filing inputs'));
   const list = node('ul', '');
-  for (const input of row.inputs) {
-    const item = node('li', `${labels[input.role]} · ${input.start} to ${input.end} · ${usd.format(Number(input.revenue_usd))} · `);
+  const inputs = [...row.inputs, ...(row.year_over_year?.inputs ?? []).map((input) => ({...input, priorWindow: true}))];
+  for (const input of inputs) {
+    const item = node('li', `${input.priorWindow ? 'Prior window · ' : ''}${labels[input.role]} · ${input.start} to ${input.end} · ${usd.format(Number(input.revenue_usd))} · `);
     if (/^\d{10}-\d{2}-\d{6}$/.test(input.accession) && Number.isInteger(row.cik)) {
       const accession = input.accession.replaceAll('-', '');
       const link = node('a', input.accession);
@@ -40,7 +43,12 @@ function issuerCard(row) {
     list.append(item);
   }
   sources.append(list);
-  card.append(value, period, sources);
+  const growth = row.year_over_year;
+  const change = growth
+    ? node('p', `${percentage.format(growth.percent)}% year over year · Prior period ended ${growth.prior_period_end}`)
+    : node('p', 'Year-over-year growth unavailable.');
+  change.className = 'rolling-growth';
+  card.append(value, period, change, sources);
   return card;
 }
 

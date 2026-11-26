@@ -70,3 +70,20 @@ class RollingTest(TestCase):
         facts[-1]["end"] = "2025-09-20"
         with self.assertRaisesRegex(ValueError, "differ by more than one week"):
             rolling_revenue(archive(facts), cutoff)
+
+    def test_growth_uses_original_matching_prior_window(self):
+        records = data()[:3]
+        records.extend([
+            filing("2024-12-31", "2025-02-20", 90, "2024-01-01"),
+            dict(filing("2025-06-30", "2025-08-01", 45, "2025-01-01"), form="10-Q", accn="prior-q2"),
+            dict(filing("2024-06-30", "2025-08-01", 40, "2024-01-01"), form="10-Q", accn="prior-q2"),
+        ])
+        cutoff = timestamp("2026-08-05T00:00:00Z")
+        result = rolling_revenue(archive(records), cutoff)
+        self.assertEqual(result["year_over_year"]["prior_period_end"], "2025-06-30")
+        self.assertEqual(result["year_over_year"]["prior_revenue_usd"], "95")
+        self.assertAlmostEqual(result["year_over_year"]["percent"], 100 * 25 / 95)
+        records[2]["val"] = 46
+        revised = rolling_revenue(archive(records), cutoff)
+        self.assertEqual(revised["trailing_four_quarter_revenue_usd"], "119")
+        self.assertIsNone(revised["year_over_year"])
