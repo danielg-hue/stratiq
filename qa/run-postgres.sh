@@ -14,7 +14,7 @@ done
 [[ "$attempt" -lt 60 ]]
 psql_qa() { docker exec -i "$container" psql -X -q -v ON_ERROR_STOP=1 -U postgres; }
 echo 'create role anon; create role authenticated; create role service_role bypassrls;' | psql_qa
-for migration in "$repo"/supabase/migrations/*.sql "$repo"/supabase/controlled_assessment_submission.pending.sql; do
+for migration in "$repo"/supabase/migrations/*.sql; do
     { echo 'begin;'; cat "$migration"; echo 'commit;'; } | psql_qa
 done
 psql_qa < "$repo/qa/submission.sql"
