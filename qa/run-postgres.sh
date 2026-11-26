@@ -19,3 +19,12 @@ for migration in "$repo"/supabase/migrations/*.sql; do
 done
 psql_qa < "$repo/qa/submission.sql"
 bash "$repo/qa/concurrent-submission.sh" "$container"
+payload="$(cd "$repo" && PYTHONDONTWRITEBYTECODE=1 python -c '
+import json
+from assessment_submission import prepare_submission
+from test_assessment_submission import request_for
+from test_strategic_report import bundle
+data = bundle()
+print(json.dumps(prepare_submission(data, request_for(data)), default=str, allow_nan=False))
+')"
+docker exec -i "$container" psql -X -q -v ON_ERROR_STOP=1 -v "payload=$payload" -U postgres < "$repo/qa/adapter-submission.sql"
