@@ -87,3 +87,27 @@ strategic score was assigned. The raw archive SHA-256 was
 Tests covered UTF-8 offsets, invalid accession and file identity, unsafe
 filenames, ambiguous excerpts and retrieval chronology. All 82 Python
 tests passed.
+
+## Source registry
+
+An ingestion worker with existing private source-table access can call
+`source_registry.register_source(cursor, document)` in a read-committed
+transaction. The adapter verifies the raw bytes and declared license, derives
+the source UUID from the URL and byte digest, and reads the row back after
+insert. Identical retries reuse the row. The same URL and bytes with
+different timestamps or license metadata raise a conflict. Preserve the
+original capture metadata for retries. The worker returns the exact record
+expected by the assessment adapter's document-ID mapping.
+
+To prepare metadata for review without opening a database connection, run
+`python source_registry.py intake.json`. The registry stores metadata and a
+digest. Keep the archived bytes and the retrieval record separately under
+ingestion custody.
+
+The live StratIQ registry contains one verified research-only entry for
+Apple's FY2024 10-K, source UUID `4cbefb00-8d7e-596a-abeb-9881799500aa`.
+Repeating the same insertion kept one matching row. Live access checks
+confirmed that the assessor and standard authenticated API role still lack
+direct read access to the registry. The live check used the project's
+management SQL connection. A separately provisioned ingestion identity
+remains outstanding. The Python suite passed all 85 tests.
