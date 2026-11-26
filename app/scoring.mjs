@@ -1,5 +1,7 @@
 const file = document.querySelector('#score-file');
 const filter = document.querySelector('#score-filter');
+const pilot = document.querySelector('#score-pilot');
+const pilotLabel = document.querySelector('#score-pilot-label');
 const status = document.querySelector('#score-status');
 const result = document.querySelector('#score-result');
 const frameworkNames = {
@@ -88,14 +90,22 @@ function render(model) {
     block.className = 'score-framework';
     const scored = elements.filter((item) => item.status === 'assessed').length;
     block.append(node('summary', `${frameworkNames[key]} · ${scored}/${elements.length} scored`));
-    block.open = filter.value === 'assessed' || (filter.value === 'all' && scored > 0);
+    block.open = filter.value !== 'all' || scored > 0;
     const items = elements.filter((item) => filter.value === 'all' || item.status === filter.value);
     for (const item of items) {
       const row = node('div', '');
       row.className = 'score-element';
       const points = Number(item.score);
       const rating = item.status === 'assessed' ? `${points > 0 ? '+' : ''}${points.toFixed(2)}` : 'Unknown';
-      row.append(node('strong', `${criteria[item.element]} · ${rating}`));
+      const rubric = criteria[item.element];
+      row.append(node('strong', `${rubric.criterion} · ${rating}`));
+      if (item.status === 'unknown') {
+        row.append(node('p', `Evidence to look for: ${rubric.evidence}`));
+        const anchors = node('details', '');
+        anchors.append(node('summary', 'Scoring anchors'),
+          node('p', `Adverse: ${rubric.adverse}`), node('p', `Favorable: ${rubric.favorable}`));
+        row.append(anchors);
+      }
       if (item.rationale) row.append(node('p', item.rationale));
       if (item.citations.length) {
         const citations = node('ul', '');
@@ -119,6 +129,7 @@ async function initialize() {
   if (!registryResponse.ok) throw new Error('Scoring registry could not load.');
   const registry = await registryResponse.json();
   let model;
+  let drafts = [];
   let request = 0;
   function show(draft) {
     model = validatedDraft(draft, registry);
@@ -136,23 +147,46 @@ async function initialize() {
       const draft = JSON.parse(await selection.text());
       if (current !== request) return;
       show(draft);
+      pilot.value = '';
       status.textContent = 'Local draft opened in this browser.';
     } catch (error) {
       if (current === request) status.textContent = error instanceof SyntaxError ? 'Draft JSON is invalid.' : error.message;
     }
   });
   filter.addEventListener('change', () => { if (model) render(model); });
+  pilot.addEventListener('change', () => {
+    if (pilot.value === '') return;
+    ++request;
+    model = drafts[Number(pilot.value)];
+    filter.disabled = false;
+    render(model);
+    status.textContent = 'Owner-only pilot draft loaded.';
+  });
   try {
-    const response = await fetch(new URL('./internal-scoring-draft.json', import.meta.url));
+    const response = await fetch(new URL('./internal-scoring-drafts.json', import.meta.url));
     if (response.ok) {
-      const draft = await response.json();
+      const received = await response.json();
+      if (!Array.isArray(received) || !received.length) return;
+      drafts = received.map((draft) => validatedDraft(draft, registry));
+      const placeholder = node('option', 'Select a pilot draft');
+      placeholder.value = '';
+      placeholder.disabled = true;
+      pilot.append(placeholder);
+      drafts.forEach(({draft}, index) => {
+        const option = node('option', `${draft.company} · ${draft.as_of.slice(0, 10)}`);
+        option.value = String(index);
+        pilot.append(option);
+      });
+      pilotLabel.hidden = false;
+      pilot.disabled = false;
       if (request === 0) {
-        show(draft);
+        pilot.value = '0';
+        show(drafts[0].draft);
         status.textContent = 'Owner-only pilot draft loaded.';
       }
     }
   } catch {
-    // Local draft import remains available if the optional pilot is absent.
+    // Local draft import remains available if the optional pilot library is absent.
   }
 }
 

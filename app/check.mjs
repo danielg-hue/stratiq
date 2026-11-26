@@ -15,11 +15,12 @@ globalThis.localStorage = window.localStorage;
 const rolling = JSON.parse(await readFile(root + '/rolling.json', 'utf8'));
 rolling.issuers.push({ticker: 'UNAVAILABLE', company: '=1+1', cik: 0, unavailable: true});
 const registry = JSON.parse(await readFile(root + '/scoring-registry.json', 'utf8'));
-const draftFile = process.argv[4];
-const draft = draftFile ? JSON.parse(await readFile(draftFile, 'utf8')) : null;
+const drafts = await readFile(root + '/internal-scoring-drafts.json', 'utf8')
+  .then(JSON.parse).catch((error) => { if (error.code !== 'ENOENT') throw error; return null; });
+const draft = drafts?.[0];
 const assets = new Map([
   ['cohorts.json', data], ['rolling.json', rolling], ['scoring-registry.json', registry],
-  ['internal-scoring-draft.json', draft],
+  ['internal-scoring-drafts.json', drafts],
 ]);
 globalThis.fetch = async (url) => {
   const asset = assets.get(url.pathname.split('/').at(-1));
@@ -43,6 +44,20 @@ if (draft) {
   query('#score-filter').value = 'assessed';
   query('#score-filter').dispatchEvent(new window.Event('change'));
   assert.equal(document.querySelectorAll('#score-result .score-element').length, 5);
+  assert.equal(query('#score-pilot-label').hidden, false);
+  assert.equal(query('#score-pilot').options.length, 3);
+  query('#score-pilot').value = '1';
+  query('#score-pilot').dispatchEvent(new window.Event('change'));
+  assert.match(query('#score-result').textContent, /Alphabet Inc/);
+  assert.match(query('#score-result').textContent, /2 of 50 elements scored/);
+  assert.equal(document.querySelectorAll('#score-result a').length, 7);
+  query('#score-filter').value = 'unknown';
+  query('#score-filter').dispatchEvent(new window.Event('change'));
+  assert.equal(document.querySelectorAll('#score-result .score-element').length, 48);
+  assert.match(query('#score-result').textContent, /Evidence to look for/);
+  assert.match(query('#score-result').textContent, /Scoring anchors/);
+  query('#score-filter').value = 'assessed';
+  query('#score-filter').dispatchEvent(new window.Event('change'));
   const changed = structuredClone(draft);
   changed.sources[0].origin = 'javascript:1';
   changed.company = '<script>Example</script>';
@@ -53,12 +68,15 @@ if (draft) {
   };
   upload(changed);
   await new Promise(setImmediate);
+  assert.equal(query('#score-pilot').value, '');
   assert.match(query('#score-result h3').textContent, /<script>/);
   assert.equal(document.querySelectorAll('#score-result a, #score-result script').length, 0);
   changed.frameworks.financial.elements[0].element = 'unknown_element';
   upload(changed);
   await new Promise(setImmediate);
   assert.match(query('#score-status').textContent, /invalid score or citation/);
+} else {
+  assert.equal(query('#score-pilot-label').hidden, true);
 }
 assert.match(query('#cohort-summary').textContent, /29 of 40/);
 assert.match(query('#correlations').textContent, /\+0\.203/);

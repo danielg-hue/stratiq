@@ -138,11 +138,19 @@ and recomputes coverage and the draft index. This is an internal viewer.
 Generating or sealing a report remains a backend or CLI operation.
 
 The standard build excludes all draft data. For verified owner-only
-deployments, an optional `--internal-draft PATH` packages one report.
-The private build includes the Apple FY2024 pilot draft. No Apple draft
-data is tracked in the public source repository.
+deployments, repeat `--internal-draft PATH` for each report. Each company
+and cutoff pair must be unique. The private build includes Apple and
+Alphabet FY2024 drafts. Neither draft is tracked in the public repository.
 
 DOM tests verified both build flavors, coverage filtering, citation links,
 rejection of invalid registry entries, inert rendering of HTML-like input
 and removal of non-HTTPS source links. All 106 Python tests passed.
 Hosting source: `6920c7e`.
+
+
+The **Pilot draft** selector switches between packaged reports. Under
+**Unknown**, the workspace shows the evidence to seek and each element's
+favorable and adverse scoring anchors. The markup and links remain inert
+for untrusted local uploads. Tests covered both pilot drafts, switching and
+filtering, evidence guidance, local import, and a build without any pilot
+data. All 109 Python tests passed. Hosting source: `fe36e11`.

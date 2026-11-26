@@ -6,7 +6,7 @@ import shutil
 import sys
 
 
-def build(destination, draft=None):
+def build(destination, drafts=()):
     source = Path(__file__).resolve().parent
     sys.path.insert(0, str(source.parent))
     from rubrics import FRAMEWORKS, RUBRICS
@@ -26,22 +26,32 @@ def build(destination, draft=None):
     shutil.copyfile(research / "rolling" / "explorer.json", destination / "rolling.json")
     (destination / "cohorts.json").write_text(json.dumps(reports, ensure_ascii=False), encoding="utf-8")
 
-    registry = {framework: {element: RUBRICS[element].criterion for element in elements}
-                for framework, elements in FRAMEWORKS.items()}
+    registry = {
+        framework: {element: {"criterion": RUBRICS[element].criterion, "evidence": RUBRICS[element].evidence,
+                               "adverse": RUBRICS[element].adverse, "favorable": RUBRICS[element].favorable}
+                    for element in elements}
+        for framework, elements in FRAMEWORKS.items()
+    }
     (destination / "scoring-registry.json").write_text(json.dumps(registry), encoding="utf-8")
-    packaged_draft = destination / "internal-scoring-draft.json"
-    if draft is not None:
-        report = json.loads(draft.read_text())
-        if report.get("status") != "internal_draft" or report.get("publication", {}).get("publishable") is not False:
+    packaged_drafts = destination / "internal-scoring-drafts.json"
+    (destination / "internal-scoring-draft.json").unlink(missing_ok=True)
+    reports = [json.loads(path.read_text()) for path in drafts]
+    if reports:
+        if any(report.get("status") != "internal_draft"
+               or report.get("publication", {}).get("publishable") is not False for report in reports):
             raise ValueError("only internal strategic drafts can be packaged")
-        packaged_draft.write_text(json.dumps(report, ensure_ascii=False), encoding="utf-8")
+        keys = {(report["company"], report["as_of"]) for report in reports}
+        if len(keys) != len(reports):
+            raise ValueError("drafts must have unique company and cutoff pairs")
+        packaged_drafts.write_text(json.dumps(reports, ensure_ascii=False), encoding="utf-8")
     else:
-        packaged_draft.unlink(missing_ok=True)
+        packaged_drafts.unlink(missing_ok=True)
+
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("destination", type=Path)
-    parser.add_argument("--internal-draft", type=Path)
+    parser.add_argument("--internal-draft", type=Path, action="append", default=[])
     args = parser.parse_args()
     build(args.destination, args.internal_draft)
