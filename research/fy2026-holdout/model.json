@@ -1,0 +1,372 @@
+{
+  "coverage": [
+    {
+      "archive_sha256": "e4b7685f57b8d6fc9be74c23dc891dfd81de5716d0551338914385fa11bf43a6",
+      "cik": 1652044,
+      "end": "2025-12-31",
+      "initial_revenue": "402836000000",
+      "initial_revenue_accession": "0001652044-26-000018",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "GOOGL"
+    },
+    {
+      "archive_sha256": "acddb7c0a6973a1fd08372de3b292298a34eae7f42a7eedc4bdebd3ac659c8fd",
+      "cik": 1018724,
+      "end": "2025-12-31",
+      "initial_revenue": "716924000000",
+      "initial_revenue_accession": "0001018724-26-000004",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2025-01-01",
+      "ticker": "AMZN"
+    },
+    {
+      "archive_sha256": "f8e539cea9d363752df2f9bb33078c19ae897ff7f34d49fe4d9a732d032b94f7",
+      "cik": 1326801,
+      "end": "2025-12-31",
+      "initial_revenue": "200966000000",
+      "initial_revenue_accession": "0001628280-26-003942",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2025-01-01",
+      "ticker": "META"
+    },
+    {
+      "archive_sha256": "c951e0ae2402dd8cf8f39319928adccc4196b997941fe40b0d4d6b8060802db1",
+      "cik": 1318605,
+      "end": "2025-12-31",
+      "initial_revenue": "94827000000",
+      "initial_revenue_accession": "0001628280-26-003952",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "TSLA"
+    },
+    {
+      "archive_sha256": "fd31bc147b36495f6912e063188aea71434077236f4e995268620b47fda99e61",
+      "cik": 1065280,
+      "end": "2025-12-31",
+      "initial_revenue": "45183036000",
+      "initial_revenue_accession": "0001065280-26-000034",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "NFLX"
+    },
+    {
+      "archive_sha256": "1bfd701ddbd3a171d7e1279a78f8ba305d85784ff0335a3c736ffec460750ab2",
+      "cik": 51143,
+      "end": "2025-12-31",
+      "initial_revenue": "67535000000",
+      "initial_revenue_accession": "0000051143-26-000010",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "IBM"
+    },
+    {
+      "archive_sha256": "fe93b258bc0ba8f3076ddebb5d8bb91c46deaa1f7b06d2ff2e3eaed85fee8a63",
+      "cik": 1341439,
+      "excluded": "no eligible December FY2025 revenue",
+      "ticker": "ORCL"
+    },
+    {
+      "archive_sha256": "9c568557a91cfbc234c999183d6434f8bbf7b8ebf2f29577f28d761a9becb59d",
+      "cik": 50863,
+      "end": "2025-12-27",
+      "initial_revenue": "52853000000",
+      "initial_revenue_accession": "0000050863-26-000011",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2024-12-29",
+      "ticker": "INTC"
+    },
+    {
+      "archive_sha256": "dcde3491321ccee802ee64ede0c7253ea4f7e4708709122b685ba2a1d7488be8",
+      "cik": 2488,
+      "end": "2025-12-27",
+      "initial_revenue": "34639000000",
+      "initial_revenue_accession": "0000002488-26-000018",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2024-12-29",
+      "ticker": "AMD"
+    },
+    {
+      "archive_sha256": "87a4173fcd3d662d18d19e0e885095aa5e3812b74c54d1ee55808ff1540a8081",
+      "cik": 21344,
+      "end": "2025-12-31",
+      "initial_revenue": "47941000000",
+      "initial_revenue_accession": "0001628280-26-010047",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "KO"
+    },
+    {
+      "archive_sha256": "a764921d09591614e55f734fd3e5f3532319c68fab9d691c61c17fc03b8a396b",
+      "cik": 77476,
+      "end": "2025-12-27",
+      "initial_revenue": "93925000000",
+      "initial_revenue_accession": "0000077476-26-000007",
+      "revenue_tag": "Revenues",
+      "start": "2024-12-29",
+      "ticker": "PEP"
+    },
+    {
+      "archive_sha256": "426688e51562a0bf08a4ede782fbaa7ff97eed5c18477bcffab165b3d5743359",
+      "cik": 63908,
+      "end": "2025-12-31",
+      "initial_revenue": "26885000000",
+      "initial_revenue_accession": "0000063908-26-000035",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "MCD"
+    },
+    {
+      "archive_sha256": "0deec882c9ad1727f308f0279acd19cbfa52669bb724fdcd1ce75d970d67015e",
+      "cik": 829224,
+      "excluded": "no eligible December FY2025 revenue",
+      "ticker": "SBUX"
+    },
+    {
+      "archive_sha256": "b675ced201b27ede2b0d26ca6fd873befe96a1afa9679339a2d0b964187dcdff",
+      "cik": 909832,
+      "excluded": "no eligible December FY2025 revenue",
+      "ticker": "COST"
+    },
+    {
+      "archive_sha256": "0aa535de219a99716dc9bdcf2d26a28598ef883137f770741042ded520bd546c",
+      "cik": 354950,
+      "excluded": "no eligible December FY2025 revenue",
+      "ticker": "HD"
+    },
+    {
+      "archive_sha256": "728985d8461419111c2bb51a7092f1c3e858910a505eee0f37ed4e2b857e5da2",
+      "cik": 60667,
+      "excluded": "no eligible December FY2025 revenue",
+      "ticker": "LOW"
+    },
+    {
+      "archive_sha256": "d95c8313e8b4cd5355b753a1075c2831b3fe213abb307daff05fccabff7d879b",
+      "cik": 27419,
+      "excluded": "no eligible December FY2025 revenue",
+      "ticker": "TGT"
+    },
+    {
+      "archive_sha256": "49330f98609f70fcef4054edc90bc811398a58c4bf26dc0b218d607967a8dbe4",
+      "cik": 104169,
+      "excluded": "no eligible December FY2025 revenue",
+      "ticker": "WMT"
+    },
+    {
+      "archive_sha256": "9ce98e50414e9a6704eaf485e1868c2298c6ae36acc85a82c0a3737485303be7",
+      "cik": 200406,
+      "end": "2025-12-28",
+      "initial_revenue": "94193000000",
+      "initial_revenue_accession": "0000200406-26-000016",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2024-12-30",
+      "ticker": "JNJ"
+    },
+    {
+      "archive_sha256": "8f379293683cf844f7305fbf11e15716090a9cfe2a2af9cc0ef35bb4d77c6bce",
+      "cik": 78003,
+      "end": "2025-12-31",
+      "initial_revenue": "62579000000",
+      "initial_revenue_accession": "0000078003-26-000026",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "PFE"
+    },
+    {
+      "archive_sha256": "b8c8442de6a33be22bd258e1649763fc3cd7f0dd9ed678e77f0f0ce982706358",
+      "cik": 310158,
+      "end": "2025-12-31",
+      "initial_revenue": "65011000000",
+      "initial_revenue_accession": "0000310158-26-000063",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "MRK"
+    },
+    {
+      "archive_sha256": "6ec0b9f0faeeb8ec745ed192956acb87604fe695b36755173727c0c789411ff6",
+      "cik": 1551152,
+      "end": "2025-12-31",
+      "initial_revenue": "61160000000",
+      "initial_revenue_accession": "0001551152-26-000008",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "ABBV"
+    },
+    {
+      "archive_sha256": "72ec001637e16887021c76251eaf05056bdaaf9a4e68ef62316b9be99861dbdc",
+      "cik": 59478,
+      "end": "2025-12-31",
+      "initial_revenue": "65179000000",
+      "initial_revenue_accession": "0000059478-26-000013",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "LLY"
+    },
+    {
+      "archive_sha256": "fc0346d9b99fb7e42d6d7a4c1f2c674c89a41002ee7c7bc3656e980b3d8d0c75",
+      "cik": 318154,
+      "end": "2025-12-31",
+      "initial_revenue": "36751000000",
+      "initial_revenue_accession": "0000318154-26-000010",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2025-01-01",
+      "ticker": "AMGN"
+    },
+    {
+      "archive_sha256": "1c6c241ddb137215b2d1c2496e64895b3287ae59ae2fe963cf4fa725d0856e3d",
+      "cik": 882095,
+      "end": "2025-12-31",
+      "initial_revenue": "29443000000",
+      "initial_revenue_accession": "0000882095-26-000006",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2025-01-01",
+      "ticker": "GILD"
+    },
+    {
+      "archive_sha256": "6f5d8ef98f7142e3ee53f4559aa773a4265f795075575fb6fddc8bfb02168b90",
+      "cik": 14272,
+      "end": "2025-12-31",
+      "initial_revenue": "48194000000",
+      "initial_revenue_accession": "0000014272-26-000004",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "BMY"
+    },
+    {
+      "archive_sha256": "9b95535419e5662e3deed01de803e83deead477a4c81316e1c45186368fdd8b8",
+      "cik": 34088,
+      "end": "2025-12-31",
+      "initial_revenue": "332238000000",
+      "initial_revenue_accession": "0000034088-26-000045",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "XOM"
+    },
+    {
+      "archive_sha256": "43eaec6a9fa044700a81b6c2283acf92d0e29e710c1c33150429ef5e68e70336",
+      "cik": 93410,
+      "end": "2025-12-31",
+      "initial_revenue": "189031000000",
+      "initial_revenue_accession": "0000093410-26-000078",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "CVX"
+    },
+    {
+      "archive_sha256": "ff9fe5718463fb92148c7a1c1d8d55118337258af6533d896723d4935729b4c2",
+      "cik": 1163165,
+      "end": "2025-12-31",
+      "initial_revenue": "58944000000",
+      "initial_revenue_accession": "0001163165-26-000009",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "COP"
+    },
+    {
+      "archive_sha256": "0fe50d57bf90ee91f2997ca309353b4b86c2adc192ba9c469623ea7c2f52cfb7",
+      "cik": 18230,
+      "excluded": "incomplete FY2025 point-in-time accounts",
+      "ticker": "CAT"
+    },
+    {
+      "archive_sha256": "b845478ca3e2c2a83471cfb92524b33d83ec47fd3c1c68614f3f2487f1606b6c",
+      "cik": 315189,
+      "excluded": "no eligible December FY2025 revenue",
+      "ticker": "DE"
+    },
+    {
+      "archive_sha256": "0ad87b2eccbaeb0c2685e9aa7de2d79142b3885986a3a94ee64de2e3eb1b5d6f",
+      "cik": 100885,
+      "end": "2025-12-31",
+      "initial_revenue": "24510000000",
+      "initial_revenue_accession": "0000100885-26-000037",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2025-01-01",
+      "ticker": "UNP"
+    },
+    {
+      "archive_sha256": "fae9ab510b51d90a294d7a1e769c35012ef39127d87ecd36ed99ea60146dce1e",
+      "cik": 1090727,
+      "end": "2025-12-31",
+      "initial_revenue": "88661000000",
+      "initial_revenue_accession": "0001628280-26-008432",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2025-01-01",
+      "ticker": "UPS"
+    },
+    {
+      "archive_sha256": "794d5fb4c83e163b258afbc6828a6d9ce6657f3dae28d5fce0c29623619a957d",
+      "cik": 12927,
+      "end": "2025-12-31",
+      "initial_revenue": "89463000000",
+      "initial_revenue_accession": "0001628280-26-004357",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "BA"
+    },
+    {
+      "archive_sha256": "e62161d8f058c3b37c42fd90f779e6bf9945a54c71e384e3e6a3ddab68fc6c49",
+      "cik": 1467858,
+      "end": "2025-12-31",
+      "initial_revenue": "185019000000",
+      "initial_revenue_accession": "0001467858-26-000013",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "GM"
+    },
+    {
+      "archive_sha256": "a572be781d554ea39f47c7b478d31b137f91b87d769f044ce2cb922ac7d36189",
+      "cik": 37996,
+      "excluded": "incomplete FY2025 point-in-time accounts",
+      "ticker": "F"
+    },
+    {
+      "archive_sha256": "95ed2ee4383e17c8c50ea84b475a90b8172dc9d1728a330787ec0b7fada60216",
+      "cik": 40545,
+      "end": "2025-12-31",
+      "initial_revenue": "45855000000",
+      "initial_revenue_accession": "0000040545-26-000008",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "GE"
+    },
+    {
+      "archive_sha256": "f386e2155c94359b4e3f3a688c4b1d008d8082be0f87279cea40c15d6a04d209",
+      "cik": 66740,
+      "end": "2025-12-31",
+      "initial_revenue": "24948000000",
+      "initial_revenue_accession": "0000066740-26-000014",
+      "revenue_tag": "Revenues",
+      "start": "2025-01-01",
+      "ticker": "MMM"
+    },
+    {
+      "archive_sha256": "ef98dc309c39aebcf0b47b11a618b20d812b226b0c709bc4ef7f838e803aab68",
+      "cik": 773840,
+      "end": "2025-12-31",
+      "initial_revenue": "37442000000",
+      "initial_revenue_accession": "0000773840-26-000013",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2025-01-01",
+      "ticker": "HON"
+    },
+    {
+      "archive_sha256": "24494083f9c3c39826a9fe6ce29da4dcd4777701e72c59b507e8e2dd15d15ed5",
+      "cik": 101829,
+      "end": "2025-12-31",
+      "initial_revenue": "88603000000",
+      "initial_revenue_accession": "0000101829-26-000006",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "start": "2025-01-01",
+      "ticker": "RTX"
+    }
+  ],
+  "model_sources": {
+    "quant.py": "\"\"\"Deterministic benchmarks; inputs must be point-in-time, consistently scaled.\"\"\"\nfrom validation import number\n\ndef finite(x):\n    return x if number(x) else None\n\ndef ratio(a,b):\n    if a is None or b is None or not number(a) or not number(b) or b<=0: return None\n    return finite(a/b)\n\ndef altman_z_manufacturing(working_capital, retained_earnings, ebit, assets, market_equity, liabilities, sales):\n    xs=[ratio(working_capital,assets),ratio(retained_earnings,assets),ratio(ebit,assets),ratio(market_equity,liabilities),ratio(sales,assets)]\n    return None if None in xs else finite(sum(a*b for a,b in zip(xs,[1.2,1.4,3.3,.6,1])))\n\ndef piotroski_from_accounts(current, prior):\n    from core import piotroski\n    def metrics(x):\n        return [ratio(x.get('net_income'),x.get('begin_assets')),ratio(x.get('cfo'),x.get('begin_assets')),ratio(x.get('long_debt'),x.get('average_assets')),ratio(x.get('current_assets'),x.get('current_liabilities')),ratio(x.get('gross_profit'),x.get('sales')),ratio(x.get('sales'),x.get('begin_assets'))]\n    a,b=metrics(current),metrics(prior)\n    issuance=current.get('equity_issued')\n    if None in a or None in b or type(issuance) is not bool: return None\n    return piotroski(dict(zip(('positive_roa','positive_cfo','improving_roa','cfo_exceeds_income','lower_leverage','higher_current_ratio','no_equity_issuance','higher_gross_margin','higher_asset_turnover'),(a[0]>0,a[1]>0,a[0]>b[0],a[1]>a[0],a[2]<b[2],a[3]>b[3],not issuance,a[4]>b[4],a[5]>b[5]))))\n\ndef dupont(net_income,sales,average_assets,average_equity):\n    parts=[ratio(net_income,sales),ratio(sales,average_assets),ratio(average_assets,average_equity)]\n    roe=None if None in parts else finite(parts[0]*parts[1]*parts[2])\n    return None if roe is None else {'margin':parts[0],'turnover':parts[1],'leverage':parts[2],'roe':roe}\n\ndef roic(nopat,average_invested_capital):\n    return ratio(nopat,average_invested_capital)\n\ndef economic_value_added(nopat,invested_capital,wacc):\n    if any(x is None or not number(x) for x in (nopat,invested_capital,wacc)) or invested_capital<=0 or wacc<0: return None\n    return finite(nopat-invested_capital*wacc)\n\ndef sloan_accruals(net_income,cfo,average_assets):\n    if not number(net_income) or not number(cfo): return None\n    return ratio(net_income-cfo,average_assets)\n",
+    "sec_cohort.py": "\"\"\"Run a December-year-end SEC benchmark cohort against local filing archives.\"\"\"\nimport argparse\nfrom datetime import datetime, timedelta, timezone\nfrom hashlib import sha256\nimport json\nfrom pathlib import Path\n\nfrom backtest import compare\nfrom sec_facts import vintages\nfrom sec_pilot import ANNUAL_FORMS, CONTRACT_REVENUE, MODELS, issuer_observation\n\nREVENUE_TAGS = (\"Revenues\", CONTRACT_REVENUE, \"SalesRevenueNet\")\n\n\ndef annual_period(facts, year, cutoff):\n    periods = {\n        (fact.start, fact.end) for fact in facts\n        if fact.start is not None and fact.end.year == year and fact.end.month == 12\n        and 350 <= (fact.end - fact.start).days <= 380\n        and fact.form in ANNUAL_FORMS and fact.available_at <= cutoff\n    }\n    if len(periods) > 1:\n        raise ValueError(\"ambiguous December fiscal period\")\n    return next(iter(periods), None)\n\n\ndef revenue_periods(raw, feature_year, as_of, cutoff):\n    for tag in REVENUE_TAGS:\n        facts = vintages(raw, \"us-gaap\", tag, \"USD\")\n        current = annual_period(facts, feature_year, as_of)\n        if current is None:\n            continue\n        following = annual_period(facts, feature_year + 1, cutoff)\n        if following is None:\n            raise ValueError(\"outcome missing under the feature-period revenue tag\")\n        return tag, current, following\n    raise ValueError(\"missing December fiscal period with eligible revenue\")\n\n\ndef run(issuers_path, archive_dir, feature_year):\n    if not 2000 <= feature_year <= 9997:\n        raise ValueError(\"invalid feature year\")\n    issuers = [tuple(line.split()) for line in issuers_path.read_text().splitlines() if line.strip()]\n    if len({ticker for ticker, _ in issuers}) != len(issuers) or len({int(cik) for _, cik in issuers}) != len(issuers):\n        raise ValueError(\"duplicate issuer in cohort\")\n    as_of = datetime(feature_year + 1, 4, 1, tzinfo=timezone.utc)\n    horizon = datetime(feature_year + 2, 1, 1, tzinfo=timezone.utc)\n    cutoff = datetime(feature_year + 2, 4, 1, tzinfo=timezone.utc)\n    rows, coverage = [], []\n    for ticker, cik in issuers:\n        entry = {\"ticker\": ticker, \"cik\": int(cik)}\n        try:\n            if not ticker.isascii() or not ticker.isalnum():\n                raise ValueError(\"invalid archive ticker\")\n            raw = (archive_dir / f\"{ticker}.json\").read_bytes()\n            entry[\"sha256\"] = sha256(raw).hexdigest()\n            if int(json.loads(raw)[\"cik\"]) != int(cik):\n                raise ValueError(\"archive CIK does not match cohort\")\n            tag, (start, end), (next_start, next_end) = revenue_periods(raw, feature_year, as_of, cutoff)\n            entry[\"revenue_tag\"] = tag\n            if next_start != end + timedelta(days=1):\n                raise ValueError(\"fiscal periods are not adjacent\")\n            row = issuer_observation(\n                raw, start, end, next_start, next_end, as_of, horizon, cutoff, revenue_tag=tag,\n            )\n            if row is None:\n                raise ValueError(\"incomplete point-in-time accounts or outcome\")\n            rows.append(row)\n            entry[\"included\"] = True\n        except FileNotFoundError:\n            entry.update(included=False, reason=\"archive missing\")\n        except (ValueError, KeyError) as error:\n            entry.update(included=False, reason=str(error))\n        coverage.append(entry)\n\n    result = compare(rows, MODELS, cutoff)\n    differences = []\n    for index in range(len(rows)):\n        reduced = compare(rows[:index] + rows[index + 1:], MODELS, cutoff)\n        for cohort in reduced[\"cohorts\"]:\n            first, second = (cohort[\"rank_ic\"][name] for name in MODELS)\n            if first is not None and second is not None:\n                differences.append(first - second)\n    return {\n        \"universe_size\": len(issuers), \"matched_size\": len(rows),\n        \"feature_year\": feature_year, \"coverage\": coverage, \"comparison\": result,\n        \"leave_one_out_rank_difference_range\": [min(differences), max(differences)] if differences else None,\n    }\n\n\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"issuers\", type=Path)\n    parser.add_argument(\"archives\", type=Path)\n    parser.add_argument(\"feature_year\", type=int)\n    args = parser.parse_args()\n    print(json.dumps(run(args.issuers, args.archives, args.feature_year), indent=2, default=str))\n",
+    "sec_facts.py": "\"\"\"Preserve SEC Company Facts filing vintages and select facts as of a cutoff.\"\"\"\nfrom dataclasses import dataclass\nfrom datetime import date, datetime, time, timedelta, timezone\nfrom hashlib import sha256\nfrom decimal import Decimal\nimport json\nfrom urllib.request import Request, urlopen\nfrom zoneinfo import ZoneInfo\n\n\n@dataclass(frozen=True)\nclass Fact:\n    accession: str\n    form: str\n    start: date | None\n    end: date\n    filed: date\n    available_at: datetime\n    value: Decimal\n    source_sha256: str\n\n\ndef fetch_company_facts(cik, user_agent):\n    \"\"\"Retrieve the original response bytes using a caller-supplied SEC contact.\"\"\"\n    if type(cik) is not int or not 1 <= cik <= 9_999_999_999:\n        raise ValueError(\"invalid SEC CIK\")\n    if not isinstance(user_agent, str) or \"@\" not in user_agent or \"\\n\" in user_agent or \"\\r\" in user_agent:\n        raise ValueError(\"SEC User-Agent must include contact email\")\n    url = f\"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json\"\n    request = Request(url, headers={\"User-Agent\": user_agent, \"Accept\": \"application/json\"})\n    with urlopen(request, timeout=30) as response:\n        data = response.read(64 * 1024 * 1024 + 1)\n    if len(data) > 64 * 1024 * 1024:\n        raise ValueError(\"SEC response exceeds size limit\")\n    return data\n\n\ndef vintages(raw, taxonomy, concept, unit):\n    payload = json.loads(raw, parse_float=Decimal)\n    source_digest = sha256(raw).hexdigest()\n    entries = payload[\"facts\"].get(taxonomy, {}).get(concept, {}).get(\"units\", {}).get(unit, [])\n    output = set()\n    for entry in entries:\n        start = date.fromisoformat(entry[\"start\"]) if \"start\" in entry else None\n        end = date.fromisoformat(entry[\"end\"])\n        filed = date.fromisoformat(entry[\"filed\"])\n        if end > filed or (start is not None and start > end):\n            raise ValueError(\"invalid SEC filing chronology\")\n        # Company Facts supplies filing dates. Wait until that Eastern date has elapsed.\n        available = datetime.combine(filed + timedelta(days=1), time(), ZoneInfo(\"America/New_York\"))\n        value = Decimal(entry[\"val\"])\n        if not value.is_finite():\n            raise ValueError(\"nonfinite SEC fact\")\n        output.add(Fact(entry[\"accn\"], entry[\"form\"], start, end, filed,\n                        available.astimezone(timezone.utc), value, source_digest))\n    return tuple(sorted(output, key=lambda f: (f.end, f.start or date.min, f.filed, f.accession, f.form, f.value)))\n\n\ndef select_as_of(facts, cutoff, *, start, end, forms=(\"10-K\", \"10-K/A\", \"10-Q\", \"10-Q/A\")):\n    if not isinstance(cutoff, datetime) or cutoff.utcoffset() is None:\n        raise ValueError(\"timezone-aware cutoff required\")\n    eligible = [fact for fact in facts\n                if fact.start == start and fact.end == end and fact.form in forms\n                and fact.available_at <= cutoff]\n    if not eligible:\n        return None\n    latest = max(fact.available_at for fact in eligible)\n    candidates = [fact for fact in eligible if fact.available_at == latest]\n    if len({fact.value for fact in candidates}) != 1:\n        raise ValueError(\"conflicting SEC values at latest observable filing date\")\n    return min(candidates, key=lambda fact: (fact.accession, fact.form, fact.source_sha256))\n",
+    "sec_holdout_freeze.py": "\"\"\"Freeze the FY2025 SEC accounting features for the FY2026 revenue-growth evaluation.\"\"\"\nimport argparse\nfrom hashlib import sha256\nimport json\nfrom pathlib import Path\n\nfrom holdout_run import register, registration_digest, timestamp\nfrom sec_cohort import REVENUE_TAGS, annual_period\nfrom sec_facts import vintages\nfrom sec_pilot import MODELS, issuer_features\n\n\nSPEC = {\n    \"start\": \"2026-04-01T00:00:00+00:00\",\n    \"end\": \"2026-04-02T00:00:00+00:00\",\n    \"label_cutoff\": \"2027-04-01T00:00:00+00:00\",\n    \"models\": list(MODELS),\n    \"metric\": \"revenue_growth\",\n}\nOUTCOME_END = \"2027-01-01T00:00:00+00:00\"\n\n\ndef freeze(universe, archives):\n    as_of = timestamp(SPEC[\"start\"])\n    predictions, coverage = [], []\n    for line in universe.read_text().splitlines():\n        ticker, cik = line.split()\n        entry = {\"ticker\": ticker, \"cik\": int(cik)}\n        try:\n            raw = (archives / f\"{ticker}.json\").read_bytes()\n            entry[\"archive_sha256\"] = sha256(raw).hexdigest()\n            if int(json.loads(raw)[\"cik\"]) != int(cik):\n                raise ValueError(\"archive CIK mismatch\")\n            for revenue_tag in REVENUE_TAGS:\n                period = annual_period(vintages(raw, \"us-gaap\", revenue_tag, \"USD\"), 2025, as_of)\n                if period is not None:\n                    break\n            else:\n                raise ValueError(\"no eligible December FY2025 revenue\")\n            features = issuer_features(raw, *period, as_of, revenue_tag=revenue_tag)\n            if features is None:\n                raise ValueError(\"incomplete FY2025 point-in-time accounts\")\n            scores, available, initial_sales = features\n            entry.update(\n                revenue_tag=revenue_tag, start=period[0].isoformat(), end=period[1].isoformat(),\n                initial_revenue=str(initial_sales.value), initial_revenue_accession=initial_sales.accession,\n            )\n            predictions.append({\n                \"company\": str(int(cik)), \"as_of\": SPEC[\"start\"], \"outcome_end\": OUTCOME_END,\n                \"scores\": scores, \"feature_available_at\": {name: value.isoformat() for name, value in available.items()},\n            })\n        except (FileNotFoundError, ValueError, KeyError) as error:\n            entry[\"excluded\"] = \"missing archive\" if isinstance(error, FileNotFoundError) else str(error)\n        coverage.append(entry)\n    return predictions, coverage\n\n\ndef serialize(value):\n    return json.dumps(value, indent=2, sort_keys=True, allow_nan=False) + \"\\n\"\n\n\ndef main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"universe\", type=Path)\n    parser.add_argument(\"archives\", type=Path)\n    parser.add_argument(\"output\", type=Path)\n    args = parser.parse_args()\n    predictions, coverage = freeze(args.universe, args.archives)\n    root = Path(__file__).resolve().parent\n    # Include exact model source bytes for reproducibility and bind the denominator manifest.\n    artifact = serialize({\n        \"coverage\": coverage,\n        \"model_sources\": {name: (root / name).read_text() for name in (\n            \"sec_holdout_freeze.py\", \"sec_pilot.py\", \"sec_cohort.py\", \"sec_facts.py\", \"quant.py\", \"validation.py\",\n        )},\n    }).encode()\n    protocol, frozen = register(SPEC, artifact, predictions)\n    args.output.mkdir(parents=True, exist_ok=True)\n    for name, value in ((\"specification.json\", SPEC), (\"predictions.json\", predictions), (\"registration.json\", {\n        \"registration_sha256\": registration_digest(protocol, SPEC[\"metric\"]),\n        \"protocol_sha256\": protocol.digest, \"predictions\": len(frozen), \"universe\": len(coverage),\n    })):\n        (args.output / name).write_text(serialize(value))\n    (args.output / \"model.json\").write_bytes(artifact)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "sec_pilot.py": "\"\"\"Build a matched accounting benchmark cohort from archived SEC responses.\"\"\"\nimport argparse\nfrom datetime import date, datetime, timedelta, timezone\nimport json\nfrom pathlib import Path\n\nfrom backtest import Observation, compare\nfrom quant import ratio, sloan_accruals\nfrom sec_facts import select_as_of, vintages\n\n\nANNUAL_FORMS = (\"10-K\", \"10-K/A\")\nMODELS = (\"return_on_assets\", \"negative_sloan_accruals\")\nCONTRACT_REVENUE = \"RevenueFromContractWithCustomerExcludingAssessedTax\"\n\n\ndef issuer_observation(raw, start, end, next_start, next_end, as_of, outcome_end, evaluation_cutoff,\n                       *, revenue_tag=CONTRACT_REVENUE):\n    \"\"\"Use exact annual fiscal periods and one later revenue-growth label.\"\"\"\n    if not start <= end < next_start <= next_end or not as_of < outcome_end <= evaluation_cutoff:\n        raise ValueError(\"invalid pilot chronology\")\n    if not all(330 <= (last - first).days <= 385\n               for first, last in [(start, end), (next_start, next_end)]):\n        raise ValueError(\"pilot requires annual fiscal periods\")\n    if not end <= as_of.date() < next_end or next_end > outcome_end.date():\n        raise ValueError(\"invalid feature or outcome window\")\n\n    features = issuer_features(raw, start, end, as_of, revenue_tag=revenue_tag)\n    if features is None:\n        return None\n    scores, available, initial_sales = features\n    final_sales = select_as_of(vintages(raw, \"us-gaap\", revenue_tag, \"USD\"),\n                               evaluation_cutoff, start=next_start, end=next_end, forms=ANNUAL_FORMS)\n    if final_sales is None or final_sales.available_at < outcome_end:\n        return None\n    growth = ratio(float(final_sales.value - initial_sales.value), float(initial_sales.value))\n    if growth is None:\n        return None\n    return Observation(\n        company=str(json.loads(raw)[\"cik\"]), as_of=as_of, outcome_end=outcome_end,\n        label_available_at=final_sales.available_at, scores=scores, total_return=growth,\n        feature_available_at=available,\n    )\n\n\ndef issuer_features(raw, start, end, as_of, *, revenue_tag=CONTRACT_REVENUE):\n    \"\"\"Compute annual benchmarks using only filings available at the feature cutoff.\"\"\"\n    def select(concept, first, last):\n        return select_as_of(vintages(raw, \"us-gaap\", concept, \"USD\"),\n                            as_of, start=first, end=last, forms=ANNUAL_FORMS)\n\n    balance = select(\"Assets\", None, end)\n    opening = select(\"Assets\", None, start - timedelta(days=1))\n    net = select(\"NetIncomeLoss\", start, end)\n    operating_cash = select(\"NetCashProvidedByUsedInOperatingActivities\", start, end)\n    initial_sales = select(revenue_tag, start, end)\n    if None in (balance, opening, net, operating_cash, initial_sales) or initial_sales.value <= 0:\n        return None\n    mean_assets = float((opening.value + balance.value) / 2)\n    roa = ratio(float(net.value), mean_assets)\n    accrual = sloan_accruals(float(net.value), float(operating_cash.value), mean_assets)\n    if None in (roa, accrual):\n        return None\n    balance_available = max(opening.available_at, balance.available_at)\n    return (\n        {\"return_on_assets\": roa, \"negative_sloan_accruals\": -accrual},\n        {\n            \"return_on_assets\": max(balance_available, net.available_at),\n            \"negative_sloan_accruals\": max(balance_available, net.available_at, operating_cash.available_at),\n        },\n        initial_sales,\n    )\n\n\ndef run(config_path):\n    path = Path(config_path)\n    config = json.loads(path.read_text())\n    as_of, outcome_end, evaluation_cutoff = (\n        datetime.fromisoformat(config[key])\n        for key in (\"as_of\", \"outcome_end\", \"evaluation_cutoff\")\n    )\n    if any(value.utcoffset() is None for value in (as_of, outcome_end, evaluation_cutoff)):\n        raise ValueError(\"timezone-aware cohort timestamps required\")\n    as_of, outcome_end, evaluation_cutoff = (\n        value.astimezone(timezone.utc) for value in (as_of, outcome_end, evaluation_cutoff)\n    )\n    rows, excluded = [], []\n    for issuer in config[\"issuers\"]:\n        raw = (path.parent / issuer[\"archive\"]).read_bytes()\n        periods = (date.fromisoformat(issuer[key]) for key in (\"start\", \"end\", \"next_start\", \"next_end\"))\n        try:\n            row = issuer_observation(raw, *periods, as_of, outcome_end, evaluation_cutoff)\n        except ValueError as error:\n            excluded.append({\"archive\": issuer[\"archive\"], \"reason\": str(error)})\n            continue\n        if row is None:\n            excluded.append({\"archive\": issuer[\"archive\"], \"reason\": \"incomplete point-in-time accounts\"})\n        else:\n            rows.append(row)\n    result = compare(rows, MODELS, evaluation_cutoff)\n    return {\n        **result, \"metric\": \"revenue_growth\", \"issuer_count\": len(config[\"issuers\"]),\n        \"issuer_exclusions\": excluded,\n    }\n\n\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"config\", help=\"JSON cohort specification with archived issuer responses\")\n    args = parser.parse_args()\n    print(json.dumps(run(args.config), indent=2, default=str))\n",
+    "validation.py": "\"\"\"Shared fail-closed primitive validation. Timestamps are declarations, not verified provenance.\"\"\"\nfrom math import isfinite\nfrom datetime import datetime\n\ndef number(x):\n    return type(x) in (int,float) and abs(x)<=1e100 and isfinite(x)\n\ndef text(x):\n    return isinstance(x,str) and bool(x.strip())\n\ndef timestamp(x):\n    return isinstance(x,datetime) and x.utcoffset() is not None\n\ndef provenance(times,n,as_of):\n    if len(times)!=n or any(not timestamp(t) or t>as_of for t in times):\n        raise ValueError('point-in-time feature availability required')\n"
+  }
+}

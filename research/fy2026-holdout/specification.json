@@ -1,0 +1,10 @@
+{
+  "end": "2026-04-02T00:00:00+00:00",
+  "label_cutoff": "2027-04-01T00:00:00+00:00",
+  "metric": "revenue_growth",
+  "models": [
+    "return_on_assets",
+    "negative_sloan_accruals"
+  ],
+  "start": "2026-04-01T00:00:00+00:00"
+}
