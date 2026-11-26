@@ -17,3 +17,9 @@ coverage filtering, empty results, inert HTML-like input, EDGAR URLs and JSON
 export in a DOM test. The managed preview relay timed out before a browser
 session could load, so browser rendering and keyboard navigation remain
 unverified. The existing 67 Python regression tests passed.
+
+The verified build was deployed to an owner-private Site at
+https://stratiq-sec-research.tangycharm15.chatgpt.site. The deployed source
+archive was generated from application commit `4816702`. The connected Vercel
+team belongs to Hospice Tools. The GitHub Pages artifact is staged on
+`gh-pages`, and the GitHub integration lacks permission to enable Pages.
