@@ -28,3 +28,4 @@ data = bundle()
 print(json.dumps(prepare_submission(data, request_for(data)), default=str, allow_nan=False))
 ')"
 docker exec -i "$container" psql -X -q -v ON_ERROR_STOP=1 -v "payload=$payload" -U postgres < "$repo/qa/adapter-submission.sql"
+psql_qa < "$repo/qa/assessment-worker.sql"
