@@ -44,3 +44,10 @@ small{display:block;color:var(--muted)}
 .rolling-value{display:block;font-size:clamp(1.8rem,5vw,3rem);letter-spacing:-.045em}
 #rolling-result summary{cursor:pointer;color:var(--accent)}
 #rolling-result li{margin:.35rem 0;overflow-wrap:anywhere}
+.rolling-selectors{display:flex;flex-wrap:wrap;gap:.75rem;max-width:100%}
+.rolling-selectors label{min-width:0;max-width:100%}
+.rolling-selectors select{max-width:min(100%,17rem)}
+.rolling-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:.9rem}
+.rolling-card{padding:1rem;border:1px solid var(--line);border-radius:.65rem;min-width:0}
+.rolling-card h3{font-size:1rem;margin:.1rem 0;color:var(--muted)}
+#rolling-comparison:empty{display:none}

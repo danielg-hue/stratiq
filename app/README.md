@@ -75,3 +75,15 @@ download failure, loss of coverage and stale candidates. A replay of all
 40 archived issuers matched the published snapshot byte for byte. Triggering
 a fresh SEC batch requires a configured contact header. No scheduled job
 or automatic publication is configured.
+
+## Side-by-side issuer comparison
+
+Use **Compare with** in the rolling revenue panel to display two issuers
+from the same archived cutoff. Each card retains its own reporting period
+and SEC filing inputs. The panel indicates when reporting dates differ
+and suppresses self-comparison. These figures compare revenue levels,
+without a peer ranking or a normalized growth comparison.
+
+DOM regression tests covered selection, matched and mismatched period dates,
+and duplicate selection. All 98 Python tests passed. Authenticated visual
+browser QA remains open. Hosting source commit: `6449dff`.

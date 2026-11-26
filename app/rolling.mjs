@@ -1,4 +1,6 @@
 const issuerSelect = document.querySelector('#rolling-issuer');
+const peerSelect = document.querySelector('#rolling-peer');
+const comparison = document.querySelector('#rolling-comparison');
 const cutoff = document.querySelector('#rolling-cutoff');
 const result = document.querySelector('#rolling-result');
 const usd = new Intl.NumberFormat('en-US', {
@@ -13,10 +15,13 @@ function node(tag, text) {
   return item;
 }
 
-function render(row) {
+function issuerCard(row) {
+  const card = node('article', '');
+  card.className = 'rolling-card';
+  card.append(node('h3', row.company ? `${row.ticker} · ${row.company}` : row.ticker));
   if (row.unavailable) {
-    result.replaceChildren(node('p', 'Rolling revenue is unavailable. The latest eligible filing data could not be reconciled.'));
-    return;
+    card.append(node('p', 'Rolling revenue is unavailable. The latest eligible filing data could not be reconciled.'));
+    return card;
   }
   const value = node('strong', usd.format(Number(row.trailing_four_quarter_revenue_usd)));
   value.className = 'rolling-value';
@@ -35,7 +40,8 @@ function render(row) {
     list.append(item);
   }
   sources.append(list);
-  result.replaceChildren(value, period, sources);
+  card.append(value, period, sources);
+  return card;
 }
 
 async function initialize() {
@@ -49,11 +55,24 @@ async function initialize() {
     const option = node('option', row.company ? `${row.ticker} · ${row.company}` : row.ticker);
     option.value = row.ticker;
     issuerSelect.append(option);
+    peerSelect.append(option.cloneNode(true));
   }
   if (!issuers.size) throw new Error('Rolling snapshot has no issuers');
+  function render() {
+    const primary = issuers.get(issuerSelect.value);
+    if (peerSelect.value === primary.ticker) peerSelect.value = '';
+    for (const option of peerSelect.options) option.disabled = option.value === primary.ticker;
+    const peer = issuers.get(peerSelect.value);
+    result.replaceChildren(...(peer ? [primary, peer] : [primary]).map(issuerCard));
+    comparison.textContent = peer && !primary.unavailable && !peer.unavailable && primary.period_end !== peer.period_end
+      ? 'These reporting periods end on different dates.'
+      : '';
+  }
   issuerSelect.disabled = false;
-  issuerSelect.addEventListener('change', () => render(issuers.get(issuerSelect.value)));
-  render(issuers.get(issuerSelect.value));
+  peerSelect.disabled = false;
+  issuerSelect.addEventListener('change', render);
+  peerSelect.addEventListener('change', render);
+  render();
 }
 
 initialize().catch(() => {

@@ -25,10 +25,12 @@
 <section class="panel" id="rolling" aria-labelledby="rolling-title">
   <div class="section-head">
     <div><p class="eyebrow">SEC FILINGS</p><h2 id="rolling-title">Rolling four-quarter revenue</h2></div>
-    <label>Issuer<select id="rolling-issuer" disabled></select></label>
+    <div class="rolling-selectors"><label>Issuer<select id="rolling-issuer" disabled></select></label>
+    <label>Compare with<select id="rolling-peer" disabled><option value="">No comparison</option></select></label></div>
   </div>
   <p id="rolling-cutoff" role="status">Loading rolling revenue…</p>
-  <div id="rolling-result" aria-live="polite"></div>
+  <p id="rolling-comparison" role="status"></p>
+  <div id="rolling-result" class="rolling-cards" aria-live="polite"></div>
 </section>
 <section class="panel" id="issuers" aria-labelledby="issuer-title">
   <div class="section-head"><div><p class="eyebrow">COVERAGE</p><h2 id="issuer-title">Issuer directory</h2></div><button id="export" type="button" disabled>Download cohort JSON</button></div>
