@@ -134,3 +134,24 @@ The Apple FY2024 draft produced a private packet for five scored elements
 and 17 exact citations. No human review has been recorded. Tests covered
 digest changes, missing and duplicate decisions, revision requests, and
 the closed publication gate.
+
+## Assemble a new issuer draft
+
+Prepare a judgments JSON file with `company`, `as_of`, `assessments`, and
+`risk_flags`. Pass the SEC intake packages as separate files. The command
+merges identical document references, checks every citation against the
+original bytes, and writes a new private directory.
+
+```sh
+python prepare_assessment.py judgments.json NEW_PRIVATE_DIRECTORY intake.json
+```
+
+The directory contains `bundle.json` for reproducibility, `report.json` for
+the Scoring workspace, and `research-gaps.json` with preferred evidence
+and rubric anchors for every unknown element. Conflicting metadata,
+invalid excerpts, and an existing output directory are rejected.
+
+The workflow was exercised on Alphabet's FY2024 Form 10-K with two scored
+elements, seven exact citations and 48 unknowns. The draft remained internal
+and the overall index was suppressed. Tests covered repeated-document
+assembly, conflicts, citation integrity and overwrite protection.
