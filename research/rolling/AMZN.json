@@ -1,0 +1,36 @@
+{
+  "company": "AMAZON.COM, INC.",
+  "cik": 1018724,
+  "as_of": "2026-11-26T00:00:00+00:00",
+  "period_end": "2026-09-30",
+  "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+  "trailing_four_quarter_revenue_usd": "797455000000",
+  "interim_quarters": 3,
+  "source_sha256": "acddb7c0a6973a1fd08372de3b292298a34eae7f42a7eedc4bdebd3ac659c8fd",
+  "inputs": [
+    {
+      "role": "annual",
+      "accession": "0001018724-26-000004",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "available_at": "2026-02-07T05:00:00+00:00",
+      "revenue_usd": "716924000000"
+    },
+    {
+      "role": "current_ytd",
+      "accession": "0001018724-26-000040",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "available_at": "2026-10-31T04:00:00+00:00",
+      "revenue_usd": "584069000000"
+    },
+    {
+      "role": "prior_ytd",
+      "accession": "0001018724-26-000040",
+      "start": "2025-01-01",
+      "end": "2025-09-30",
+      "available_at": "2026-10-31T04:00:00+00:00",
+      "revenue_usd": "503538000000"
+    }
+  ]
+}

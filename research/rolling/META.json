@@ -1,0 +1,36 @@
+{
+  "company": "Meta Platforms, Inc.",
+  "cik": 1326801,
+  "as_of": "2026-11-26T00:00:00+00:00",
+  "period_end": "2026-09-30",
+  "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+  "trailing_four_quarter_revenue_usd": "241605000000",
+  "interim_quarters": 3,
+  "source_sha256": "f8e539cea9d363752df2f9bb33078c19ae897ff7f34d49fe4d9a732d032b94f7",
+  "inputs": [
+    {
+      "role": "annual",
+      "accession": "0001628280-26-003942",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "available_at": "2026-01-30T05:00:00+00:00",
+      "revenue_usd": "200966000000"
+    },
+    {
+      "role": "current_ytd",
+      "accession": "0001628280-26-066773",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "available_at": "2026-10-23T04:00:00+00:00",
+      "revenue_usd": "181712000000"
+    },
+    {
+      "role": "prior_ytd",
+      "accession": "0001628280-26-066773",
+      "start": "2025-01-01",
+      "end": "2025-09-30",
+      "available_at": "2026-10-23T04:00:00+00:00",
+      "revenue_usd": "141073000000"
+    }
+  ]
+}
