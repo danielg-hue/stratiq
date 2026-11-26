@@ -18,7 +18,7 @@ def build(destination):
     if not reports:
         raise ValueError("no SEC cohort reports found")
     destination.mkdir(parents=True, exist_ok=True)
-    for filename in ("index.html", "style.css", "main.mjs", "rolling.mjs"):
+    for filename in ("index.html", "style.css", "main.mjs", "rolling.mjs", "download.mjs"):
         shutil.copyfile(source / filename, destination / filename)
     shutil.copyfile(research / "rolling" / "explorer.json", destination / "rolling.json")
     (destination / "cohorts.json").write_text(json.dumps(reports, ensure_ascii=False), encoding="utf-8")

@@ -1,3 +1,5 @@
+import {downloadFile} from './download.mjs';
+
 const issuerSelect = document.querySelector('#rolling-issuer');
 const peerSelect = document.querySelector('#rolling-peer');
 const comparison = document.querySelector('#rolling-comparison');
@@ -59,11 +61,36 @@ function issuerCard(row) {
   return card;
 }
 
+function csvCell(value) {
+  if (typeof value === 'number' && Number.isFinite(value)) return String(value);
+  let text = String(value ?? '');
+  if (/^[\t\r\n]|^\s*[=+@-]/u.test(text)) text = "'" + text;
+  return '"' + text.replaceAll('"', '""') + '"';
+}
+
+function screenerCsv(issuers, cutoff) {
+  const headings = [
+    'Ticker', 'Company', 'CIK', 'Reporting period end', 'Filing cutoff UTC',
+    'Trailing four-quarter revenue (USD)', 'YoY growth (%)', 'Prior reporting period end',
+    'Reporting basis', 'Current input accessions', 'Prior input accessions',
+  ];
+  const accessions = (inputs) => [...new Set((inputs ?? []).map((input) => input.accession))].join(' ');
+  const rows = issuers.map((issuer) => [
+    issuer.ticker, issuer.company, issuer.cik, issuer.period_end, cutoff,
+    issuer.trailing_four_quarter_revenue_usd, issuer.year_over_year?.percent,
+    issuer.year_over_year?.prior_period_end, issuer.reporting_basis,
+    accessions(issuer.inputs), accessions(issuer.year_over_year?.inputs),
+  ]);
+  return [headings, ...rows].map((row) => row.map(csvCell).join(',')).join('\r\n') + '\r\n';
+}
+
 function initializeScreener(snapshot, openIssuer) {
   const minimum = document.querySelector('#screen-minimum');
   const sort = document.querySelector('#screen-sort');
   const summary = document.querySelector('#screen-summary');
   const rows = document.querySelector('#screen-rows');
+  const exportButton = document.querySelector('#screen-export');
+  let displayed = [];
   const score = {
     growth: (row) => row.year_over_year?.percent ?? -Infinity,
     revenue: (row) => row.unavailable ? -Infinity : Number(row.trailing_four_quarter_revenue_usd),
@@ -73,6 +100,8 @@ function initializeScreener(snapshot, openIssuer) {
     if (minimum.validity.badInput) {
       summary.textContent = 'Enter a valid percentage to filter the table.';
       rows.replaceChildren();
+      displayed = [];
+      exportButton.disabled = true;
       return;
     }
     const lowerBound = minimum.value === '' ? -Infinity : minimum.valueAsNumber;
@@ -84,6 +113,8 @@ function initializeScreener(snapshot, openIssuer) {
       }
       return left.ticker.localeCompare(right.ticker);
     });
+    displayed = ordered;
+    exportButton.disabled = displayed.length === 0;
     summary.textContent = `${ordered.length} of ${snapshot.issuers.length} issuers · Filing cutoff ${snapshot.cutoff.slice(0, 10)} UTC`;
     rows.replaceChildren(...ordered.map((issuer) => {
       const row = node('tr', '');
@@ -109,6 +140,10 @@ function initializeScreener(snapshot, openIssuer) {
   }
   minimum.disabled = false;
   sort.disabled = false;
+  exportButton.addEventListener('click', () => {
+    downloadFile(`stratiq-screener-${snapshot.cutoff.slice(0, 10)}.csv`,
+      screenerCsv(displayed, snapshot.cutoff), 'text/csv;charset=utf-8');
+  });
   minimum.addEventListener('input', renderScreen);
   sort.addEventListener('change', renderScreen);
   renderScreen();

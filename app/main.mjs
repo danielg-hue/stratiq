@@ -1,4 +1,5 @@
 import './rolling.mjs';
+import {downloadFile} from './download.mjs';
 
 const year = document.querySelector('#year');
 const search = document.querySelector('#search');
@@ -138,12 +139,7 @@ async function initialize() {
   });
   download.addEventListener('click', () => {
     const report = active();
-    const uri = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'}));
-    const link = element('a');
-    link.href = uri;
-    link.download = `stratiq-sec-${report.feature_year}.json`;
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(uri), 1000);
+    downloadFile(`stratiq-sec-${report.feature_year}.json`, JSON.stringify(report, null, 2), 'application/json');
   });
   renderCohort();
   download.disabled = false;

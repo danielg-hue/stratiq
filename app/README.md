@@ -119,3 +119,11 @@ Each row displays the issuer's own reporting period. The issuer link
 opens the detailed calculation and filing inputs in the rolling panel.
 The DOM tests cover numeric ordering, filtering, empty results, and
 keyboard focus transfer on opening a row. Hosting source: `7a44ae3`.
+
+The **Download screener CSV** action exports the currently displayed
+rows in the selected order. It includes unrounded values, current and
+prior period dates, cutoff, reporting basis where applicable, and filing
+accessions. Missing values remain blank. Formula-like text from source
+fields is exported as literal text. DOM tests verified order, filtering,
+empty-result behavior, and formula escaping. All 103 Python tests passed.
+Hosting source: `62c21f2`.
