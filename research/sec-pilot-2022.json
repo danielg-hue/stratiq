@@ -1,0 +1,310 @@
+{
+  "universe_size": 40,
+  "matched_size": 27,
+  "feature_year": 2022,
+  "coverage": [
+    {
+      "ticker": "GOOGL",
+      "cik": 1652044,
+      "sha256": "e4b7685f57b8d6fc9be74c23dc891dfd81de5716d0551338914385fa11bf43a6",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "sha256": "acddb7c0a6973a1fd08372de3b292298a34eae7f42a7eedc4bdebd3ac659c8fd",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "META",
+      "cik": 1326801,
+      "sha256": "f8e539cea9d363752df2f9bb33078c19ae897ff7f34d49fe4d9a732d032b94f7",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "TSLA",
+      "cik": 1318605,
+      "sha256": "c951e0ae2402dd8cf8f39319928adccc4196b997941fe40b0d4d6b8060802db1",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "NFLX",
+      "cik": 1065280,
+      "sha256": "fd31bc147b36495f6912e063188aea71434077236f4e995268620b47fda99e61",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "IBM",
+      "cik": 51143,
+      "sha256": "1bfd701ddbd3a171d7e1279a78f8ba305d85784ff0335a3c736ffec460750ab2",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "ORCL",
+      "cik": 1341439,
+      "sha256": "fe93b258bc0ba8f3076ddebb5d8bb91c46deaa1f7b06d2ff2e3eaed85fee8a63",
+      "included": false,
+      "reason": "missing December fiscal period with eligible revenue"
+    },
+    {
+      "ticker": "INTC",
+      "cik": 50863,
+      "sha256": "9c568557a91cfbc234c999183d6434f8bbf7b8ebf2f29577f28d761a9becb59d",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "AMD",
+      "cik": 2488,
+      "sha256": "dcde3491321ccee802ee64ede0c7253ea4f7e4708709122b685ba2a1d7488be8",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "KO",
+      "cik": 21344,
+      "sha256": "87a4173fcd3d662d18d19e0e885095aa5e3812b74c54d1ee55808ff1540a8081",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "PEP",
+      "cik": 77476,
+      "sha256": "a764921d09591614e55f734fd3e5f3532319c68fab9d691c61c17fc03b8a396b",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "MCD",
+      "cik": 63908,
+      "sha256": "426688e51562a0bf08a4ede782fbaa7ff97eed5c18477bcffab165b3d5743359",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "SBUX",
+      "cik": 829224,
+      "sha256": "0deec882c9ad1727f308f0279acd19cbfa52669bb724fdcd1ce75d970d67015e",
+      "included": false,
+      "reason": "missing December fiscal period with eligible revenue"
+    },
+    {
+      "ticker": "COST",
+      "cik": 909832,
+      "sha256": "b675ced201b27ede2b0d26ca6fd873befe96a1afa9679339a2d0b964187dcdff",
+      "included": false,
+      "reason": "missing December fiscal period with eligible revenue"
+    },
+    {
+      "ticker": "HD",
+      "cik": 354950,
+      "sha256": "0aa535de219a99716dc9bdcf2d26a28598ef883137f770741042ded520bd546c",
+      "included": false,
+      "reason": "missing December fiscal period with eligible revenue"
+    },
+    {
+      "ticker": "LOW",
+      "cik": 60667,
+      "sha256": "728985d8461419111c2bb51a7092f1c3e858910a505eee0f37ed4e2b857e5da2",
+      "included": false,
+      "reason": "missing December fiscal period with eligible revenue"
+    },
+    {
+      "ticker": "TGT",
+      "cik": 27419,
+      "sha256": "d95c8313e8b4cd5355b753a1075c2831b3fe213abb307daff05fccabff7d879b",
+      "included": false,
+      "reason": "missing December fiscal period with eligible revenue"
+    },
+    {
+      "ticker": "WMT",
+      "cik": 104169,
+      "sha256": "49330f98609f70fcef4054edc90bc811398a58c4bf26dc0b218d607967a8dbe4",
+      "included": false,
+      "reason": "missing December fiscal period with eligible revenue"
+    },
+    {
+      "ticker": "JNJ",
+      "cik": 200406,
+      "sha256": "9ce98e50414e9a6704eaf485e1868c2298c6ae36acc85a82c0a3737485303be7",
+      "included": false,
+      "reason": "missing December fiscal period with eligible revenue"
+    },
+    {
+      "ticker": "PFE",
+      "cik": 78003,
+      "sha256": "8f379293683cf844f7305fbf11e15716090a9cfe2a2af9cc0ef35bb4d77c6bce",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "MRK",
+      "cik": 310158,
+      "sha256": "b8c8442de6a33be22bd258e1649763fc3cd7f0dd9ed678e77f0f0ce982706358",
+      "revenue_tag": "Revenues",
+      "included": false,
+      "reason": "incomplete point-in-time accounts or outcome"
+    },
+    {
+      "ticker": "ABBV",
+      "cik": 1551152,
+      "sha256": "6ec0b9f0faeeb8ec745ed192956acb87604fe695b36755173727c0c789411ff6",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "LLY",
+      "cik": 59478,
+      "sha256": "72ec001637e16887021c76251eaf05056bdaaf9a4e68ef62316b9be99861dbdc",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "AMGN",
+      "cik": 318154,
+      "sha256": "fc0346d9b99fb7e42d6d7a4c1f2c674c89a41002ee7c7bc3656e980b3d8d0c75",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "GILD",
+      "cik": 882095,
+      "sha256": "1c6c241ddb137215b2d1c2496e64895b3287ae59ae2fe963cf4fa725d0856e3d",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "BMY",
+      "cik": 14272,
+      "sha256": "6f5d8ef98f7142e3ee53f4559aa773a4265f795075575fb6fddc8bfb02168b90",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "XOM",
+      "cik": 34088,
+      "sha256": "9b95535419e5662e3deed01de803e83deead477a4c81316e1c45186368fdd8b8",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "CVX",
+      "cik": 93410,
+      "sha256": "43eaec6a9fa044700a81b6c2283acf92d0e29e710c1c33150429ef5e68e70336",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "COP",
+      "cik": 1163165,
+      "sha256": "ff9fe5718463fb92148c7a1c1d8d55118337258af6533d896723d4935729b4c2",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "CAT",
+      "cik": 18230,
+      "sha256": "0fe50d57bf90ee91f2997ca309353b4b86c2adc192ba9c469623ea7c2f52cfb7",
+      "revenue_tag": "Revenues",
+      "included": false,
+      "reason": "incomplete point-in-time accounts or outcome"
+    },
+    {
+      "ticker": "DE",
+      "cik": 315189,
+      "sha256": "b845478ca3e2c2a83471cfb92524b33d83ec47fd3c1c68614f3f2487f1606b6c",
+      "included": false,
+      "reason": "missing December fiscal period with eligible revenue"
+    },
+    {
+      "ticker": "UNP",
+      "cik": 100885,
+      "sha256": "0ad87b2eccbaeb0c2685e9aa7de2d79142b3885986a3a94ee64de2e3eb1b5d6f",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "UPS",
+      "cik": 1090727,
+      "sha256": "fae9ab510b51d90a294d7a1e769c35012ef39127d87ecd36ed99ea60146dce1e",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "BA",
+      "cik": 12927,
+      "sha256": "794d5fb4c83e163b258afbc6828a6d9ce6657f3dae28d5fce0c29623619a957d",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "GM",
+      "cik": 1467858,
+      "sha256": "e62161d8f058c3b37c42fd90f779e6bf9945a54c71e384e3e6a3ddab68fc6c49",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "F",
+      "cik": 37996,
+      "sha256": "a572be781d554ea39f47c7b478d31b137f91b87d769f044ce2cb922ac7d36189",
+      "revenue_tag": "Revenues",
+      "included": false,
+      "reason": "incomplete point-in-time accounts or outcome"
+    },
+    {
+      "ticker": "GE",
+      "cik": 40545,
+      "sha256": "95ed2ee4383e17c8c50ea84b475a90b8172dc9d1728a330787ec0b7fada60216",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "MMM",
+      "cik": 66740,
+      "sha256": "f386e2155c94359b4e3f3a688c4b1d008d8082be0f87279cea40c15d6a04d209",
+      "revenue_tag": "Revenues",
+      "included": true
+    },
+    {
+      "ticker": "HON",
+      "cik": 773840,
+      "sha256": "ef98dc309c39aebcf0b47b11a618b20d812b226b0c709bc4ef7f838e803aab68",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "included": true
+    },
+    {
+      "ticker": "RTX",
+      "cik": 101829,
+      "sha256": "24494083f9c3c39826a9fe6ce29da4dcd4777701e72c59b507e8e2dd15d15ed5",
+      "revenue_tag": "Revenues",
+      "included": false,
+      "reason": "incomplete point-in-time accounts or outcome"
+    }
+  ],
+  "comparison": {
+    "excluded": 0,
+    "cohorts": [
+      {
+        "as_of": "2023-04-01 00:00:00+00:00",
+        "outcome_end": "2024-01-01 00:00:00+00:00",
+        "n": 27,
+        "rank_ic": {
+          "return_on_assets": -0.1746031746031746,
+          "negative_sloan_accruals": -0.004273504273504274
+        }
+      }
+    ],
+    "note": "Descriptive only; no independent-sample significance or portfolio returns claimed."
+  },
+  "leave_one_out_rank_difference_range": [
+    -0.3309401709401709,
+    0.01982905982905983
+  ]
+}

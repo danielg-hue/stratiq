@@ -11,9 +11,11 @@ from sec_facts import select_as_of, vintages
 
 ANNUAL_FORMS = ("10-K", "10-K/A")
 MODELS = ("return_on_assets", "negative_sloan_accruals")
+CONTRACT_REVENUE = "RevenueFromContractWithCustomerExcludingAssessedTax"
 
 
-def issuer_observation(raw, start, end, next_start, next_end, as_of, outcome_end, evaluation_cutoff):
+def issuer_observation(raw, start, end, next_start, next_end, as_of, outcome_end, evaluation_cutoff,
+                       *, revenue_tag=CONTRACT_REVENUE):
     """Use exact annual fiscal periods and one later revenue-growth label."""
     if not start <= end < next_start <= next_end or not as_of < outcome_end <= evaluation_cutoff:
         raise ValueError("invalid pilot chronology")
@@ -27,7 +29,7 @@ def issuer_observation(raw, start, end, next_start, next_end, as_of, outcome_end
     assets = vintages(raw, "us-gaap", "Assets", "USD")
     income = vintages(raw, "us-gaap", "NetIncomeLoss", "USD")
     cash = vintages(raw, "us-gaap", "NetCashProvidedByUsedInOperatingActivities", "USD")
-    sales = vintages(raw, "us-gaap", "RevenueFromContractWithCustomerExcludingAssessedTax", "USD")
+    sales = vintages(raw, "us-gaap", revenue_tag, "USD")
 
     def select(facts, cutoff, first, last):
         return select_as_of(facts, cutoff, start=first, end=last, forms=ANNUAL_FORMS)
