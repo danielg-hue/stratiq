@@ -111,3 +111,26 @@ confirmed that the assessor and standard authenticated API role still lack
 direct read access to the registry. The live check used the project's
 management SQL connection. A separately provisioned ingestion identity
 remains outstanding. The Python suite passed all 85 tests.
+
+## Private human review
+
+Run `python strategic_review.py bundle.json` to prepare a packet containing
+the scored elements, rationales, exact excerpts, source references, and
+declared risks. Keep it in analyst-controlled storage. The reviewer should
+compare each citation with the assigned score and rubric. Each scored
+element requires its own `agree`, `revise`, or `unsupported` decision and
+a written rationale.
+
+A reviewer response is JSON with exactly `review_sha256`, `reviewer` and
+`decisions`. Each decision contains `element`, `decision` and `rationale`.
+Run `python strategic_review.py bundle.json --review decisions.json` to
+validate and record the response. A changed score, citation, rationale or
+declared risk requires review against a new digest. Unresolved decisions
+return `revision_required`. A recorded review cannot change publication
+eligibility. A supplied reviewer name is a declaration. Store the record
+in a controlled system if authenticated attribution is required.
+
+The Apple FY2024 draft produced a private packet for five scored elements
+and 17 exact citations. No human review has been recorded. Tests covered
+digest changes, missing and duplicate decisions, revision requests, and
+the closed publication gate.
