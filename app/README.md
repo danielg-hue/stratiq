@@ -53,3 +53,25 @@ a static snapshot and has no scheduled refresh.
 DOM tests verified the cutoff, issuer switching, values, EDGAR links and
 the unavailable state. All 92 Python tests passed. Visual browser QA remains
 unverified. The corrected panel was packaged from hosting source commit `4992215`.
+
+## On-demand rolling snapshot refresh
+
+Set `STRATIQ_SEC_USER_AGENT` to a SEC-compliant contact header and run the
+refresh from the repository root.
+
+```sh
+PYTHONPATH=. python research/rolling_snapshot.py --live --replace research/rolling/explorer.json
+```
+
+The command fetches each issuer in sequence and stages the candidate in
+memory. Replacement is atomic and protected by a local writer lock.
+A failed download, missing result, changed issuer universe, older cutoff
+or older issuer period leaves the previous snapshot in place. An identical
+retry requires no file replacement. Rebuild and publish to expose a
+successfully refreshed artifact in the Explorer.
+
+Tests covered atomic replacement, identical retries, and preservation on
+download failure, loss of coverage and stale candidates. A replay of all
+40 archived issuers matched the published snapshot byte for byte. Triggering
+a fresh SEC batch requires a configured contact header. No scheduled job
+or automatic publication is configured.
