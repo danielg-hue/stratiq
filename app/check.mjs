@@ -41,7 +41,7 @@ assert.match(query('#rolling-result a').href, /^https:\/\/www\.sec\.gov\/Archive
 fire(query('#rolling-peer'), 'change', 'GOOGL');
 assert.equal(document.querySelectorAll('.rolling-card').length, 2);
 assert.match(query('#rolling-result').textContent, /471.1B/);
-assert.match(query('#rolling-result').textContent, /Year-over-year growth unavailable/);
+assert.match(query('#rolling-result').textContent, /[+]22.2% year over year/);
 assert.equal(query('#rolling-comparison').textContent, '');
 fire(query('#rolling-peer'), 'change', 'PEP');
 assert.match(query('#rolling-comparison').textContent, /different dates/);
@@ -51,6 +51,8 @@ assert.equal(document.querySelectorAll('.rolling-card').length, 1);
 fire(query('#rolling-issuer'), 'change', 'PEP');
 assert.match(query('#rolling-result').textContent, /98.24B/);
 assert.match(query('#rolling-result').textContent, /2026-09-05/);
+fire(query('#rolling-issuer'), 'change', 'HON');
+assert.match(query('#rolling-result').textContent, /different reporting bases/);
 fire(query('#rolling-issuer'), 'change', 'UNAVAILABLE');
 assert.match(query('#rolling-result').textContent, /could not be reconciled/);
 fire(query('#year'), 'change', '2022');

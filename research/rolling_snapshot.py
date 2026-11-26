@@ -10,7 +10,7 @@ from time import sleep
 
 from holdout_run import timestamp
 from sec_facts import fetch_company_facts
-from sec_rolling import rolling_revenue
+from sec_rolling import ReportingBasisError, rolling_revenue
 
 
 UNIVERSE = Path(__file__).with_name("sec-pilot-issuers.tsv")
@@ -22,9 +22,12 @@ def build_snapshot(universe, read_archive, cutoff, *, strict=False):
         ticker, cik_text = line.split()
         cik = int(cik_text)
         try:
-            row = rolling_revenue(read_archive(ticker, cik), cutoff)
-            if row["cik"] != cik:
+            raw = read_archive(ticker, cik)
+            if int(json.loads(raw)["cik"]) != cik:
                 raise ValueError("SEC archive CIK mismatch")
+            row = rolling_revenue(raw, cutoff)
+        except ReportingBasisError:
+            row = {"cik": cik, "unavailable": True, "unavailable_reason": "reporting_basis"}
         except (OSError, ValueError, KeyError) as error:
             if strict:
                 raise ValueError(f"{ticker}: {error}") from error
@@ -54,6 +57,8 @@ def replace_snapshot(destination, candidate):
         for cik, row in old.items():
             updated = new[cik]
             if updated.get("unavailable"):
+                if row.get("unavailable_reason") == updated.get("unavailable_reason") == "reporting_basis":
+                    continue
                 raise ValueError(f'{row["ticker"]}: refresh has no usable result')
             if row.get("period_end") and updated["period_end"] < row["period_end"]:
                 raise ValueError(f'{row["ticker"]}: reported period would move backward')

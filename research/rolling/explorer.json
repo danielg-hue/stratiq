@@ -37,7 +37,42 @@
           "revenue_usd": "289007000000"
         }
       ],
-      "year_over_year": null
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2025-10-31T04:00:00+00:00",
+        "prior_revenue_usd": "385476000000",
+        "percent": 22.21201838765578,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0001652044-25-000014",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2025-02-06T05:00:00+00:00",
+            "revenue_usd": "350018000000"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0001652044-25-000091",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2025-10-31T04:00:00+00:00",
+            "revenue_usd": "289007000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0001652044-25-000091",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2025-10-31T04:00:00+00:00",
+            "revenue_usd": "253549000000"
+          }
+        ],
+        "annual_tag_bridge": {
+          "original_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "confirmation_accession": "0001652044-26-000018"
+        }
+      }
     },
     {
       "ticker": "AMZN",
@@ -2530,41 +2565,9 @@
     },
     {
       "ticker": "HON",
-      "company": "Honeywell International Inc",
       "cik": 773840,
-      "as_of": "2026-11-26T00:00:00+00:00",
-      "period_end": "2026-09-30",
-      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-      "trailing_four_quarter_revenue_usd": "37743000000",
-      "interim_quarters": 3,
-      "source_sha256": "ef98dc309c39aebcf0b47b11a618b20d812b226b0c709bc4ef7f838e803aab68",
-      "inputs": [
-        {
-          "role": "annual",
-          "accession": "0000773840-26-000013",
-          "start": "2025-01-01",
-          "end": "2025-12-31",
-          "available_at": "2026-02-18T05:00:00+00:00",
-          "revenue_usd": "37442000000"
-        },
-        {
-          "role": "current_ytd",
-          "accession": "0000773840-26-000143",
-          "start": "2026-01-01",
-          "end": "2026-09-30",
-          "available_at": "2026-10-23T04:00:00+00:00",
-          "revenue_usd": "15004000000"
-        },
-        {
-          "role": "prior_ytd",
-          "accession": "0000773840-26-000143",
-          "start": "2025-01-01",
-          "end": "2025-09-30",
-          "available_at": "2026-10-23T04:00:00+00:00",
-          "revenue_usd": "14703000000"
-        }
-      ],
-      "year_over_year": null
+      "unavailable": true,
+      "unavailable_reason": "reporting_basis"
     },
     {
       "ticker": "RTX",

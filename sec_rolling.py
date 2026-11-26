@@ -15,6 +15,10 @@ INTERIM = ("10-Q", "10-Q/A")
 QUARTERS = ((75, 105), (165, 200), (250, 295))
 
 
+class ReportingBasisError(ValueError):
+    """The annual and interim inputs lack a verified common reporting basis."""
+
+
 def quarter_count(start, end):
     if start is None:
         return None
@@ -66,7 +70,7 @@ def filing_inputs(sources):
     ]
 
 
-def prior_growth(facts, cutoff, revenue, interim_quarters, sources):
+def prior_growth(facts, other_tags, cutoff, revenue, interim_quarters, sources):
     annual = sources[0]
     interim = interim_quarters > 0
     target = sources[2].end if interim else annual.start - timedelta(days=1)
@@ -80,6 +84,34 @@ def prior_growth(facts, cutoff, revenue, interim_quarters, sources):
     if not filings:
         return None
     original_cutoff = min(fact.available_at for fact in filings)
+    if interim and original_cutoff < sources[1].available_at:
+        original = select_as_of(filings, original_cutoff, start=annual.start, end=target, forms=INTERIM)
+        if original.value != sources[2].value:
+            raise ReportingBasisError("interim comparative has been restated; annual reporting basis is unverified")
+
+    bridge = None
+    if interim:
+        baseline_end = annual.start - timedelta(days=1)
+        has_baseline = any(f.end == baseline_end and f.form in ANNUAL and f.available_at <= original_cutoff
+                           for f in facts)
+        if not has_baseline:
+            for tag, alternative in other_tags.items():
+                original_annuals = [f for f in alternative if f.end == baseline_end and f.form in ANNUAL
+                                    and f.start is not None and 350 <= (f.end - f.start).days <= 380
+                                    and f.available_at <= original_cutoff]
+                starts = {f.start for f in original_annuals}
+                if len(starts) != 1:
+                    continue
+                baseline_start = starts.pop()
+                original_annual = select_as_of(original_annuals, original_cutoff, start=baseline_start,
+                                               end=baseline_end, forms=ANNUAL)
+                confirmed = select_as_of([f for f in facts if f.accession == annual.accession], cutoff,
+                                         start=baseline_start, end=baseline_end, forms=ANNUAL)
+                if confirmed is None or confirmed.value != original_annual.value:
+                    continue
+                bridge = {"original_tag": tag, "confirmation_accession": confirmed.accession}
+                facts = (*facts, original_annual)
+                break
     try:
         prior = trailing_revenue(facts, original_cutoff)
     except ValueError:
@@ -88,9 +120,6 @@ def prior_growth(facts, cutoff, revenue, interim_quarters, sources):
         return None
     period_end, value, quarters, inputs = prior
     if period_end != target or quarters != interim_quarters or value <= 0:
-        return None
-    if interim and inputs[1].value != sources[2].value:
-        # Mixing an originally published base with a restated comparison distorts growth.
         return None
     if not interim and abs((annual.end - annual.start).days - (inputs[0].end - inputs[0].start).days) > 7:
         return None
@@ -101,6 +130,7 @@ def prior_growth(facts, cutoff, revenue, interim_quarters, sources):
         "prior_period_end": period_end.isoformat(), "prior_cutoff": original_cutoff.isoformat(),
         "prior_revenue_usd": str(value), "percent": growth,
         "inputs": filing_inputs(inputs),
+        **({"annual_tag_bridge": bridge} if bridge else {}),
     }
 
 
@@ -110,8 +140,10 @@ def rolling_revenue(raw, cutoff):
         raise ValueError("timezone-aware cutoff required")
     candidates = []
     problems = []
+    by_tag = {}
     for tag in REVENUE_TAGS:
         facts = vintages(raw, "us-gaap", tag, "USD")
+        by_tag[tag] = facts
         if not facts:
             continue
         try:
@@ -137,7 +169,8 @@ def rolling_revenue(raw, cutoff):
         "trailing_four_quarter_revenue_usd": str(revenue), "interim_quarters": interim_quarters,
         "source_sha256": sources[0].source_sha256,
         "inputs": filing_inputs(sources),
-        "year_over_year": prior_growth(facts, cutoff, revenue, interim_quarters, sources),
+        "year_over_year": prior_growth(facts, {key: value for key, value in by_tag.items() if key != tag},
+                                       cutoff, revenue, interim_quarters, sources),
     }
 
 

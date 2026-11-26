@@ -84,6 +84,25 @@ class RollingTest(TestCase):
         self.assertEqual(result["year_over_year"]["prior_revenue_usd"], "95")
         self.assertAlmostEqual(result["year_over_year"]["percent"], 100 * 25 / 95)
         records[2]["val"] = 46
-        revised = rolling_revenue(archive(records), cutoff)
-        self.assertEqual(revised["trailing_four_quarter_revenue_usd"], "119")
-        self.assertIsNone(revised["year_over_year"])
+        with self.assertRaisesRegex(ValueError, "interim comparative has been restated"):
+            rolling_revenue(archive(records), cutoff)
+
+    def test_annual_tag_bridge_requires_same_period_and_equal_confirmation(self):
+        records = data()[:3]
+        records.extend([
+            dict(filing("2025-12-31", "2026-02-20", 90, "2024-01-01"),
+                 end="2024-12-31", accn=records[0]["accn"]),
+            dict(filing("2025-06-30", "2025-08-01", 45, "2025-01-01"), form="10-Q", accn="prior-q2"),
+            dict(filing("2024-06-30", "2025-08-01", 40, "2024-01-01"), form="10-Q", accn="prior-q2"),
+        ])
+        payload = json.loads(archive(records))
+        tag = "RevenueFromContractWithCustomerExcludingAssessedTax"
+        values = [filing("2024-12-31", "2025-02-20", 90, "2024-01-01")]
+        payload["facts"]["us-gaap"][tag] = {"units": {"USD": values}}
+        cutoff = timestamp("2026-08-05T00:00:00Z")
+        result = rolling_revenue(json.dumps(payload).encode(), cutoff)
+        self.assertEqual(result["year_over_year"]["annual_tag_bridge"]["original_tag"], tag)
+        self.assertEqual(result["year_over_year"]["prior_revenue_usd"], "95")
+        values[0]["val"] = 89
+        result = rolling_revenue(json.dumps(payload).encode(), cutoff)
+        self.assertIsNone(result["year_over_year"])

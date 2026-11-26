@@ -22,7 +22,10 @@ function issuerCard(row) {
   card.className = 'rolling-card';
   card.append(node('h3', row.company ? `${row.ticker} · ${row.company}` : row.ticker));
   if (row.unavailable) {
-    card.append(node('p', 'Rolling revenue is unavailable. The latest eligible filing data could not be reconciled.'));
+    const reason = row.unavailable_reason === 'reporting_basis'
+      ? 'Rolling revenue is unavailable. The annual and interim filings are on different reporting bases.'
+      : 'Rolling revenue is unavailable. The latest eligible filing data could not be reconciled.';
+    card.append(node('p', reason));
     return card;
   }
   const value = node('strong', usd.format(Number(row.trailing_four_quarter_revenue_usd)));

@@ -49,3 +49,10 @@ class RefreshTest(TestCase):
         with self.assertRaisesRegex(ValueError, "ONE: SEC download failed"):
             build_snapshot(universe, failed, timestamp(self.current["cutoff"]), strict=True)
         self.assertEqual(self.destination.read_text(), self.before)
+
+    def test_known_reporting_basis_gap_can_remain_unavailable_on_refresh(self):
+        self.current["issuers"][0] = {"cik": 1, "ticker": "ONE", "unavailable": True,
+                                      "unavailable_reason": "reporting_basis"}
+        self.destination.write_text(json.dumps(self.current))
+        candidate = dict(self.current, cutoff="2026-11-26T01:00:00+00:00")
+        self.assertTrue(replace_snapshot(self.destination, candidate))

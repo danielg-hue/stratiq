@@ -33,5 +33,40 @@
       "revenue_usd": "289007000000"
     }
   ],
-  "year_over_year": null
+  "year_over_year": {
+    "prior_period_end": "2025-09-30",
+    "prior_cutoff": "2025-10-31T04:00:00+00:00",
+    "prior_revenue_usd": "385476000000",
+    "percent": 22.21201838765578,
+    "inputs": [
+      {
+        "role": "annual",
+        "accession": "0001652044-25-000014",
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "available_at": "2025-02-06T05:00:00+00:00",
+        "revenue_usd": "350018000000"
+      },
+      {
+        "role": "current_ytd",
+        "accession": "0001652044-25-000091",
+        "start": "2025-01-01",
+        "end": "2025-09-30",
+        "available_at": "2025-10-31T04:00:00+00:00",
+        "revenue_usd": "289007000000"
+      },
+      {
+        "role": "prior_ytd",
+        "accession": "0001652044-25-000091",
+        "start": "2024-01-01",
+        "end": "2024-09-30",
+        "available_at": "2025-10-31T04:00:00+00:00",
+        "revenue_usd": "253549000000"
+      }
+    ],
+    "annual_tag_bridge": {
+      "original_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "confirmation_accession": "0001652044-26-000018"
+    }
+  }
 }

@@ -99,3 +99,9 @@ under the matching rules. Existing trailing revenue values did not change.
 
 The database and Explorer regression suites passed alongside all 99 Python
 tests. The private build was packaged from hosting source commit `d9e2632`.
+
+The reporting-basis follow-up reconciled Alphabet's prior tag and withholds
+Honeywell's level and growth until the annual basis is verified. The
+November 26 snapshot now has 39 comparable growth rates and 39 trailing
+levels. The hosted source is commit `8495379`. Tests cover confirmed and
+unconfirmed tag changes, restated comparatives, and the unavailable display.

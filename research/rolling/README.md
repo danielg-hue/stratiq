@@ -47,3 +47,20 @@ inputs. For an interim comparison, the original prior YTD amount must
 match the current filing's comparative amount. Where that requirement
 fails, prior inputs cannot be reconciled, or the denominator is nonpositive,
 growth is unavailable. The trailing level remains independently available.
+
+## Filing tag and reporting-basis changes
+
+If the historical annual filing used a different revenue tag, the engine
+can bridge it only when the current annual filing confirms the exact same
+period and amount under the new tag. The result records the original tag
+and confirmation accession. Alphabet's FY2024 amount was USD 350.018
+billion under both filings. Its September 2026 trailing growth is 22.2%.
+
+When an originally filed prior YTD figure differs from the latest
+comparative, the engine withholds the trailing level and growth until the
+annual baseline can be verified on the same reporting basis. Honeywell's
+Q3 2026 filing recasts Aerospace Technologies and Advanced Materials
+as discontinued operations. Its prior YTD comparison differs from
+the original filing, and no compatible annual baseline was verified.
+The updated November 26 snapshot provides both figures for 39 issuers.
+Only Alphabet and Honeywell changed.
