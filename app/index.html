@@ -10,7 +10,7 @@
 <script type="module" src="./main.mjs"></script>
 </head>
 <body>
-<header class="masthead"><span class="wordmark">Strat<span>IQ</span></span><nav aria-label="Sections"><a href="#benchmarks">Benchmarks</a><a href="#issuers">Issuers</a><a href="#methodology">Methodology</a></nav></header>
+<header class="masthead"><span class="wordmark">Strat<span>IQ</span></span><nav aria-label="Sections"><a href="#benchmarks">Benchmarks</a><a href="#issuers">Issuers</a><a href="#rolling">Rolling revenue</a><a href="#methodology">Methodology</a></nav></header>
 <main>
 <section class="intro" aria-labelledby="title">
   <p class="eyebrow">STRATIQ RESEARCH</p>
@@ -21,6 +21,14 @@
   <div class="section-head"><div><p class="eyebrow">COHORT COMPARISON</p><h2 id="benchmark-title">Rank correlation</h2></div><label>Fiscal cohort<select id="year"></select></label></div>
   <p id="cohort-summary" role="status">Loading cohort results…</p>
   <div id="correlations" class="metrics"></div>
+</section>
+<section class="panel" id="rolling" aria-labelledby="rolling-title">
+  <div class="section-head">
+    <div><p class="eyebrow">SEC FILINGS</p><h2 id="rolling-title">Rolling four-quarter revenue</h2></div>
+    <label>Issuer<select id="rolling-issuer" disabled></select></label>
+  </div>
+  <p id="rolling-cutoff" role="status">Loading rolling revenue…</p>
+  <div id="rolling-result" aria-live="polite"></div>
 </section>
 <section class="panel" id="issuers" aria-labelledby="issuer-title">
   <div class="section-head"><div><p class="eyebrow">COVERAGE</p><h2 id="issuer-title">Issuer directory</h2></div><button id="export" type="button" disabled>Download cohort JSON</button></div>

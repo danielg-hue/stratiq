@@ -41,3 +41,6 @@ small{display:block;color:var(--muted)}
 #watchlist-status:empty{display:none}
 .save{background:#fff;color:var(--accent);min-width:4.5rem}
 .save[aria-pressed="true"]{background:#e1f4e9;border-color:#4f8c73}
+.rolling-value{display:block;font-size:clamp(1.8rem,5vw,3rem);letter-spacing:-.045em}
+#rolling-result summary{cursor:pointer;color:var(--accent)}
+#rolling-result li{margin:.35rem 0;overflow-wrap:anywhere}

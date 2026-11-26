@@ -1,0 +1,1421 @@
+{
+  "cutoff": "2026-11-26T00:00:00+00:00",
+  "issuers": [
+    {
+      "ticker": "GOOGL",
+      "company": "Alphabet Inc.",
+      "cik": 1652044,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "471098000000",
+      "interim_quarters": 3,
+      "source_sha256": "e4b7685f57b8d6fc9be74c23dc891dfd81de5716d0551338914385fa11bf43a6",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001652044-26-000018",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-06T05:00:00+00:00",
+          "revenue_usd": "402836000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001652044-26-000084",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-30T04:00:00+00:00",
+          "revenue_usd": "357269000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001652044-26-000084",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-30T04:00:00+00:00",
+          "revenue_usd": "289007000000"
+        }
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "company": "AMAZON.COM, INC.",
+      "cik": 1018724,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "797455000000",
+      "interim_quarters": 3,
+      "source_sha256": "acddb7c0a6973a1fd08372de3b292298a34eae7f42a7eedc4bdebd3ac659c8fd",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001018724-26-000004",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-07T05:00:00+00:00",
+          "revenue_usd": "716924000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001018724-26-000040",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-31T04:00:00+00:00",
+          "revenue_usd": "584069000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001018724-26-000040",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-31T04:00:00+00:00",
+          "revenue_usd": "503538000000"
+        }
+      ]
+    },
+    {
+      "ticker": "META",
+      "company": "Meta Platforms, Inc.",
+      "cik": 1326801,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "241605000000",
+      "interim_quarters": 3,
+      "source_sha256": "f8e539cea9d363752df2f9bb33078c19ae897ff7f34d49fe4d9a732d032b94f7",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001628280-26-003942",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-01-30T05:00:00+00:00",
+          "revenue_usd": "200966000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001628280-26-066773",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "181712000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001628280-26-066773",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "141073000000"
+        }
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "company": "Tesla, Inc.",
+      "cik": 1318605,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "103570000000",
+      "interim_quarters": 3,
+      "source_sha256": "c951e0ae2402dd8cf8f39319928adccc4196b997941fe40b0d4d6b8060802db1",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001628280-26-003952",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-01-30T05:00:00+00:00",
+          "revenue_usd": "94827000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001628280-26-066775",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "78669000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001628280-26-066775",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "69926000000"
+        }
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "company": "Netflix, Inc.",
+      "cik": 1065280,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "49734633000",
+      "interim_quarters": 3,
+      "source_sha256": "fd31bc147b36495f6912e063188aea71434077236f4e995268620b47fda99e61",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001065280-26-000034",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-01-24T05:00:00+00:00",
+          "revenue_usd": "45183036000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001065280-26-000291",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-22T04:00:00+00:00",
+          "revenue_usd": "37683871000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001065280-26-000291",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-22T04:00:00+00:00",
+          "revenue_usd": "33132274000"
+        }
+      ]
+    },
+    {
+      "ticker": "IBM",
+      "company": "INTERNATIONAL BUSINESS MACHINES CORP",
+      "cik": 51143,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "69868000000",
+      "interim_quarters": 3,
+      "source_sha256": "1bfd701ddbd3a171d7e1279a78f8ba305d85784ff0335a3c736ffec460750ab2",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000051143-26-000010",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-25T05:00:00+00:00",
+          "revenue_usd": "67535000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000051143-26-000095",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "50182000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000051143-26-000095",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "47849000000"
+        }
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "company": "ORACLE CORP",
+      "cik": 1341439,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-08-31",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "71776000000",
+      "interim_quarters": 1,
+      "source_sha256": "fe93b258bc0ba8f3076ddebb5d8bb91c46deaa1f7b06d2ff2e3eaed85fee8a63",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001193125-26-277521",
+          "start": "2025-06-01",
+          "end": "2026-05-31",
+          "available_at": "2026-06-23T04:00:00+00:00",
+          "revenue_usd": "67357000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001193125-26-389274",
+          "start": "2026-06-01",
+          "end": "2026-08-31",
+          "available_at": "2026-09-12T04:00:00+00:00",
+          "revenue_usd": "19345000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001193125-26-389274",
+          "start": "2025-06-01",
+          "end": "2025-08-31",
+          "available_at": "2026-09-12T04:00:00+00:00",
+          "revenue_usd": "14926000000"
+        }
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "company": "Intel Corporation",
+      "cik": 50863,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-26",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "59892000000",
+      "interim_quarters": 3,
+      "source_sha256": "9c568557a91cfbc234c999183d6434f8bbf7b8ebf2f29577f28d761a9becb59d",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000050863-26-000011",
+          "start": "2024-12-29",
+          "end": "2025-12-27",
+          "available_at": "2026-01-24T05:00:00+00:00",
+          "revenue_usd": "52853000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000050863-26-000191",
+          "start": "2025-12-28",
+          "end": "2026-09-26",
+          "available_at": "2026-10-31T04:00:00+00:00",
+          "revenue_usd": "46218000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000050863-26-000191",
+          "start": "2024-12-29",
+          "end": "2025-09-27",
+          "available_at": "2026-10-31T04:00:00+00:00",
+          "revenue_usd": "39179000000"
+        }
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "company": "ADVANCED MICRO DEVICES INC",
+      "cik": 2488,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-26",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "45436000000",
+      "interim_quarters": 3,
+      "source_sha256": "dcde3491321ccee802ee64ede0c7253ea4f7e4708709122b685ba2a1d7488be8",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000002488-26-000018",
+          "start": "2024-12-29",
+          "end": "2025-12-27",
+          "available_at": "2026-02-05T05:00:00+00:00",
+          "revenue_usd": "34639000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000002488-26-000191",
+          "start": "2025-12-28",
+          "end": "2026-09-26",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "35166000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000002488-26-000191",
+          "start": "2024-12-29",
+          "end": "2025-09-27",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "24369000000"
+        }
+      ]
+    },
+    {
+      "ticker": "KO",
+      "company": "COCA COLA CO",
+      "cik": 21344,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-10-02",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "51054000000",
+      "interim_quarters": 3,
+      "source_sha256": "87a4173fcd3d662d18d19e0e885095aa5e3812b74c54d1ee55808ff1540a8081",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001628280-26-010047",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-21T05:00:00+00:00",
+          "revenue_usd": "47941000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001628280-26-067844",
+          "start": "2026-01-01",
+          "end": "2026-10-02",
+          "available_at": "2026-10-29T04:00:00+00:00",
+          "revenue_usd": "39232000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001628280-26-067844",
+          "start": "2025-01-01",
+          "end": "2025-09-26",
+          "available_at": "2026-10-29T04:00:00+00:00",
+          "revenue_usd": "36119000000"
+        }
+      ]
+    },
+    {
+      "ticker": "PEP",
+      "cik": 77476,
+      "unavailable": true
+    },
+    {
+      "ticker": "MCD",
+      "company": "MCDONALDS CORP",
+      "cik": 63908,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "27782000000",
+      "interim_quarters": 3,
+      "source_sha256": "426688e51562a0bf08a4ede782fbaa7ff97eed5c18477bcffab165b3d5743359",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000063908-26-000035",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-25T05:00:00+00:00",
+          "revenue_usd": "26885000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000063908-26-000083",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-11-07T05:00:00+00:00",
+          "revenue_usd": "20773000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000063908-26-000083",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-11-07T05:00:00+00:00",
+          "revenue_usd": "19876000000"
+        }
+      ]
+    },
+    {
+      "ticker": "SBUX",
+      "company": "Starbucks Corporation",
+      "cik": 829224,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-27",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "37910600000",
+      "interim_quarters": 0,
+      "source_sha256": "0deec882c9ad1727f308f0279acd19cbfa52669bb724fdcd1ce75d970d67015e",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000829224-26-000162",
+          "start": "2025-09-29",
+          "end": "2026-09-27",
+          "available_at": "2026-11-13T05:00:00+00:00",
+          "revenue_usd": "37910600000"
+        }
+      ]
+    },
+    {
+      "ticker": "COST",
+      "company": "COSTCO WHOLESALE CORP /NEW",
+      "cik": 909832,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-08-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "303154000000",
+      "interim_quarters": 0,
+      "source_sha256": "b675ced201b27ede2b0d26ca6fd873befe96a1afa9679339a2d0b964187dcdff",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000909832-26-000093",
+          "start": "2025-09-01",
+          "end": "2026-08-30",
+          "available_at": "2026-10-08T04:00:00+00:00",
+          "revenue_usd": "303154000000"
+        }
+      ]
+    },
+    {
+      "ticker": "HD",
+      "company": "HOME DEPOT,\u00a0INC.",
+      "cik": 354950,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-11-01",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "171222000000",
+      "interim_quarters": 3,
+      "source_sha256": "0aa535de219a99716dc9bdcf2d26a28598ef883137f770741042ded520bd546c",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001628280-26-019436",
+          "start": "2025-02-03",
+          "end": "2026-02-01",
+          "available_at": "2026-03-19T04:00:00+00:00",
+          "revenue_usd": "164683000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001628280-26-075287",
+          "start": "2026-02-02",
+          "end": "2026-11-01",
+          "available_at": "2026-11-21T05:00:00+00:00",
+          "revenue_usd": "133024000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001628280-26-075287",
+          "start": "2025-02-03",
+          "end": "2025-11-02",
+          "available_at": "2026-11-21T05:00:00+00:00",
+          "revenue_usd": "126485000000"
+        }
+      ]
+    },
+    {
+      "ticker": "LOW",
+      "company": "LOWE\u2019S COMPANIES,\u00a0INC.",
+      "cik": 60667,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-07-31",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "90432000000",
+      "interim_quarters": 2,
+      "source_sha256": "728985d8461419111c2bb51a7092f1c3e858910a505eee0f37ed4e2b857e5da2",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000060667-26-000029",
+          "start": "2025-02-01",
+          "end": "2026-01-30",
+          "available_at": "2026-03-24T04:00:00+00:00",
+          "revenue_usd": "86286000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000060667-26-000117",
+          "start": "2026-01-31",
+          "end": "2026-07-31",
+          "available_at": "2026-08-28T04:00:00+00:00",
+          "revenue_usd": "49034000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000060667-26-000117",
+          "start": "2025-02-01",
+          "end": "2025-08-01",
+          "available_at": "2026-08-28T04:00:00+00:00",
+          "revenue_usd": "44888000000"
+        }
+      ]
+    },
+    {
+      "ticker": "TGT",
+      "company": "TARGET CORPORATION",
+      "cik": 27419,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-08-01",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "107705000000",
+      "interim_quarters": 2,
+      "source_sha256": "d95c8313e8b4cd5355b753a1075c2831b3fe213abb307daff05fccabff7d879b",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000027419-26-000016",
+          "start": "2025-02-02",
+          "end": "2026-01-31",
+          "available_at": "2026-03-12T04:00:00+00:00",
+          "revenue_usd": "104780000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000027419-26-000042",
+          "start": "2026-02-01",
+          "end": "2026-08-01",
+          "available_at": "2026-08-29T04:00:00+00:00",
+          "revenue_usd": "51982000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000027419-26-000042",
+          "start": "2025-02-02",
+          "end": "2025-08-02",
+          "available_at": "2026-08-29T04:00:00+00:00",
+          "revenue_usd": "49057000000"
+        }
+      ]
+    },
+    {
+      "ticker": "WMT",
+      "company": "Walmart Inc.",
+      "cik": 104169,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-07-31",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "735840000000",
+      "interim_quarters": 2,
+      "source_sha256": "49330f98609f70fcef4054edc90bc811398a58c4bf26dc0b218d607967a8dbe4",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000104169-26-000055",
+          "start": "2025-02-01",
+          "end": "2026-01-31",
+          "available_at": "2026-03-14T04:00:00+00:00",
+          "revenue_usd": "713163000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000104169-26-000154",
+          "start": "2026-02-01",
+          "end": "2026-07-31",
+          "available_at": "2026-08-29T04:00:00+00:00",
+          "revenue_usd": "365688000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000104169-26-000154",
+          "start": "2025-02-01",
+          "end": "2025-07-31",
+          "available_at": "2026-08-29T04:00:00+00:00",
+          "revenue_usd": "343011000000"
+        }
+      ]
+    },
+    {
+      "ticker": "JNJ",
+      "company": "Johnson & Johnson",
+      "cik": 200406,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-27",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "99335000000",
+      "interim_quarters": 3,
+      "source_sha256": "9ce98e50414e9a6704eaf485e1868c2298c6ae36acc85a82c0a3737485303be7",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000200406-26-000016",
+          "start": "2024-12-30",
+          "end": "2025-12-28",
+          "available_at": "2026-02-12T05:00:00+00:00",
+          "revenue_usd": "94193000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000200406-26-000197",
+          "start": "2025-12-29",
+          "end": "2026-09-27",
+          "available_at": "2026-10-22T04:00:00+00:00",
+          "revenue_usd": "74771000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000200406-26-000197",
+          "start": "2024-12-30",
+          "end": "2025-09-28",
+          "available_at": "2026-10-22T04:00:00+00:00",
+          "revenue_usd": "69629000000"
+        }
+      ]
+    },
+    {
+      "ticker": "PFE",
+      "company": "PFIZER INC",
+      "cik": 78003,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-27",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "63624000000",
+      "interim_quarters": 3,
+      "source_sha256": "8f379293683cf844f7305fbf11e15716090a9cfe2a2af9cc0ef35bb4d77c6bce",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000078003-26-000026",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-27T05:00:00+00:00",
+          "revenue_usd": "62579000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000078003-26-000127",
+          "start": "2026-01-01",
+          "end": "2026-09-27",
+          "available_at": "2026-11-04T05:00:00+00:00",
+          "revenue_usd": "46067000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000078003-26-000127",
+          "start": "2025-01-01",
+          "end": "2025-09-28",
+          "available_at": "2026-11-04T05:00:00+00:00",
+          "revenue_usd": "45022000000"
+        }
+      ]
+    },
+    {
+      "ticker": "MRK",
+      "company": "Merck\u00a0& Co., Inc.",
+      "cik": 310158,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "67378000000",
+      "interim_quarters": 3,
+      "source_sha256": "b8c8442de6a33be22bd258e1649763fc3cd7f0dd9ed678e77f0f0ce982706358",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000310158-26-000063",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-25T05:00:00+00:00",
+          "revenue_usd": "65011000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000310158-26-000248",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "50978000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000310158-26-000248",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "48611000000"
+        }
+      ]
+    },
+    {
+      "ticker": "ABBV",
+      "company": "AbbVie Inc.",
+      "cik": 1551152,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "66014000000",
+      "interim_quarters": 3,
+      "source_sha256": "6ec0b9f0faeeb8ec745ed192956acb87604fe695b36755173727c0c789411ff6",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001551152-26-000008",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-21T05:00:00+00:00",
+          "revenue_usd": "61160000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001551152-26-000037",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-11-04T05:00:00+00:00",
+          "revenue_usd": "49396000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001551152-26-000037",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-11-04T05:00:00+00:00",
+          "revenue_usd": "44542000000"
+        }
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "company": "ELI LILLY AND COMPANY",
+      "cik": 59478,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "86462000000",
+      "interim_quarters": 3,
+      "source_sha256": "72ec001637e16887021c76251eaf05056bdaaf9a4e68ef62316b9be99861dbdc",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000059478-26-000013",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-13T05:00:00+00:00",
+          "revenue_usd": "65179000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000059478-26-000108",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-30T04:00:00+00:00",
+          "revenue_usd": "67170000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000059478-26-000108",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-30T04:00:00+00:00",
+          "revenue_usd": "45887000000"
+        }
+      ]
+    },
+    {
+      "ticker": "AMGN",
+      "company": "Amgen Inc.",
+      "cik": 318154,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "38903000000",
+      "interim_quarters": 3,
+      "source_sha256": "fc0346d9b99fb7e42d6d7a4c1f2c674c89a41002ee7c7bc3656e980b3d8d0c75",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000318154-26-000010",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-14T05:00:00+00:00",
+          "revenue_usd": "36751000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000318154-26-000155",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "29037000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000318154-26-000155",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "26885000000"
+        }
+      ]
+    },
+    {
+      "ticker": "GILD",
+      "company": "GILEAD SCIENCES, INC.",
+      "cik": 882095,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "30988000000",
+      "interim_quarters": 3,
+      "source_sha256": "1c6c241ddb137215b2d1c2496e64895b3287ae59ae2fe963cf4fa725d0856e3d",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000882095-26-000006",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-25T05:00:00+00:00",
+          "revenue_usd": "29443000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000882095-26-000039",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-31T04:00:00+00:00",
+          "revenue_usd": "23063000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000882095-26-000039",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-31T04:00:00+00:00",
+          "revenue_usd": "21518000000"
+        }
+      ]
+    },
+    {
+      "ticker": "BMY",
+      "company": "BRISTOL-MYERS SQUIBB COMPANY",
+      "cik": 14272,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "50034000000",
+      "interim_quarters": 3,
+      "source_sha256": "6f5d8ef98f7142e3ee53f4559aa773a4265f795075575fb6fddc8bfb02168b90",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000014272-26-000004",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-12T05:00:00+00:00",
+          "revenue_usd": "48194000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000014272-26-000024",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-30T04:00:00+00:00",
+          "revenue_usd": "37532000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000014272-26-000024",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-30T04:00:00+00:00",
+          "revenue_usd": "35692000000"
+        }
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "company": "Exxon Mobil Corporation",
+      "cik": 34088,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-03-31",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "334246000000",
+      "interim_quarters": 1,
+      "source_sha256": "9b95535419e5662e3deed01de803e83deead477a4c81316e1c45186368fdd8b8",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000034088-26-000045",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-19T05:00:00+00:00",
+          "revenue_usd": "332238000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000034088-26-000067",
+          "start": "2026-01-01",
+          "end": "2026-03-31",
+          "available_at": "2026-05-05T04:00:00+00:00",
+          "revenue_usd": "85138000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000034088-26-000067",
+          "start": "2025-01-01",
+          "end": "2025-03-31",
+          "available_at": "2026-05-05T04:00:00+00:00",
+          "revenue_usd": "83130000000"
+        }
+      ]
+    },
+    {
+      "ticker": "CVX",
+      "company": "Chevron Corp",
+      "cik": 93410,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "233333000000",
+      "interim_quarters": 3,
+      "source_sha256": "43eaec6a9fa044700a81b6c2283acf92d0e29e710c1c33150429ef5e68e70336",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000093410-26-000078",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-25T05:00:00+00:00",
+          "revenue_usd": "189031000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000093410-26-000200",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-11-06T05:00:00+00:00",
+          "revenue_usd": "186460000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000093410-26-000200",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-11-06T05:00:00+00:00",
+          "revenue_usd": "142158000000"
+        }
+      ]
+    },
+    {
+      "ticker": "COP",
+      "company": "ConocoPhillips",
+      "cik": 1163165,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "67749000000",
+      "interim_quarters": 3,
+      "source_sha256": "ff9fe5718463fb92148c7a1c1d8d55118337258af6533d896723d4935729b4c2",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001163165-26-000009",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-18T05:00:00+00:00",
+          "revenue_usd": "58944000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001163165-26-000045",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-11-06T05:00:00+00:00",
+          "revenue_usd": "54357000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001163165-26-000045",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-11-06T05:00:00+00:00",
+          "revenue_usd": "45552000000"
+        }
+      ]
+    },
+    {
+      "ticker": "CAT",
+      "company": "CATERPILLAR INC",
+      "cik": 18230,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "77773000000",
+      "interim_quarters": 3,
+      "source_sha256": "0fe50d57bf90ee91f2997ca309353b4b86c2adc192ba9c469623ea7c2f52cfb7",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000018230-26-000008",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-14T05:00:00+00:00",
+          "revenue_usd": "67589000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000018230-26-000057",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "58640000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000018230-26-000057",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "48456000000"
+        }
+      ]
+    },
+    {
+      "ticker": "DE",
+      "company": "DEERE & CO",
+      "cik": 315189,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-08-02",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "47983000000",
+      "interim_quarters": 3,
+      "source_sha256": "b845478ca3e2c2a83471cfb92524b33d83ec47fd3c1c68614f3f2487f1606b6c",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001104659-25-122321",
+          "start": "2024-10-28",
+          "end": "2025-11-02",
+          "available_at": "2025-12-19T05:00:00+00:00",
+          "revenue_usd": "45684000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001104659-26-102213",
+          "start": "2025-11-03",
+          "end": "2026-08-02",
+          "available_at": "2026-08-28T04:00:00+00:00",
+          "revenue_usd": "35589000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001104659-26-102213",
+          "start": "2024-10-28",
+          "end": "2025-07-27",
+          "available_at": "2026-08-28T04:00:00+00:00",
+          "revenue_usd": "33290000000"
+        }
+      ]
+    },
+    {
+      "ticker": "UNP",
+      "company": "UNION PACIFIC CORP",
+      "cik": 100885,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "26363000000",
+      "interim_quarters": 3,
+      "source_sha256": "0ad87b2eccbaeb0c2685e9aa7de2d79142b3885986a3a94ee64de2e3eb1b5d6f",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000100885-26-000037",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-07T05:00:00+00:00",
+          "revenue_usd": "24510000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000100885-26-000321",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "20278000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000100885-26-000321",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "18425000000"
+        }
+      ]
+    },
+    {
+      "ticker": "UPS",
+      "company": "United Parcel Service, Inc.",
+      "cik": 1090727,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "91368000000",
+      "interim_quarters": 3,
+      "source_sha256": "fae9ab510b51d90a294d7a1e769c35012ef39127d87ecd36ed99ea60146dce1e",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001628280-26-008432",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-18T05:00:00+00:00",
+          "revenue_usd": "88661000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001628280-26-070246",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "66889000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001628280-26-070246",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-11-05T05:00:00+00:00",
+          "revenue_usd": "64182000000"
+        }
+      ]
+    },
+    {
+      "ticker": "BA",
+      "company": "THE BOEING COMPANY",
+      "cik": 12927,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "94913000000",
+      "interim_quarters": 3,
+      "source_sha256": "794d5fb4c83e163b258afbc6828a6d9ce6657f3dae28d5fce0c29623619a957d",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001628280-26-004357",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-01-31T05:00:00+00:00",
+          "revenue_usd": "89463000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001628280-26-067508",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-28T04:00:00+00:00",
+          "revenue_usd": "70965000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001628280-26-067508",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-28T04:00:00+00:00",
+          "revenue_usd": "65515000000"
+        }
+      ]
+    },
+    {
+      "ticker": "GM",
+      "company": "GENERAL MOTORS COMPANY",
+      "cik": 1467858,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "186952000000",
+      "interim_quarters": 3,
+      "source_sha256": "e62161d8f058c3b37c42fd90f779e6bf9945a54c71e384e3e6a3ddab68fc6c49",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0001467858-26-000013",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-01-28T05:00:00+00:00",
+          "revenue_usd": "185019000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0001467858-26-000059",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-21T04:00:00+00:00",
+          "revenue_usd": "141665000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0001467858-26-000059",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-21T04:00:00+00:00",
+          "revenue_usd": "139732000000"
+        }
+      ]
+    },
+    {
+      "ticker": "F",
+      "company": "Ford Motor Co",
+      "cik": 37996,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "186965000000",
+      "interim_quarters": 3,
+      "source_sha256": "a572be781d554ea39f47c7b478d31b137f91b87d769f044ce2cb922ac7d36189",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000037996-26-000015",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-12T05:00:00+00:00",
+          "revenue_usd": "187267000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000037996-26-000191",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-30T04:00:00+00:00",
+          "revenue_usd": "141075000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000037996-26-000191",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-30T04:00:00+00:00",
+          "revenue_usd": "141377000000"
+        }
+      ]
+    },
+    {
+      "ticker": "GE",
+      "company": "GENERAL ELECTRIC COMPANY",
+      "cik": 40545,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "52576000000",
+      "interim_quarters": 3,
+      "source_sha256": "95ed2ee4383e17c8c50ea84b475a90b8172dc9d1728a330787ec0b7fada60216",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000040545-26-000008",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-01-30T05:00:00+00:00",
+          "revenue_usd": "45855000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000040545-26-000064",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-21T04:00:00+00:00",
+          "revenue_usd": "39859000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000040545-26-000064",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-21T04:00:00+00:00",
+          "revenue_usd": "33138000000"
+        }
+      ]
+    },
+    {
+      "ticker": "MMM",
+      "company": "3M COMPANY",
+      "cik": 66740,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "Revenues",
+      "trailing_four_quarter_revenue_usd": "25247000000",
+      "interim_quarters": 3,
+      "source_sha256": "f386e2155c94359b4e3f3a688c4b1d008d8082be0f87279cea40c15d6a04d209",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000066740-26-000014",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-04T05:00:00+00:00",
+          "revenue_usd": "24948000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000066740-26-000311",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-21T04:00:00+00:00",
+          "revenue_usd": "19114000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000066740-26-000311",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-21T04:00:00+00:00",
+          "revenue_usd": "18815000000"
+        }
+      ]
+    },
+    {
+      "ticker": "HON",
+      "company": "Honeywell International Inc",
+      "cik": 773840,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "37743000000",
+      "interim_quarters": 3,
+      "source_sha256": "ef98dc309c39aebcf0b47b11a618b20d812b226b0c709bc4ef7f838e803aab68",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000773840-26-000013",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-18T05:00:00+00:00",
+          "revenue_usd": "37442000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000773840-26-000143",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "15004000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000773840-26-000143",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "14703000000"
+        }
+      ]
+    },
+    {
+      "ticker": "RTX",
+      "company": "RTX CORPORATION",
+      "cik": 101829,
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "95987000000",
+      "interim_quarters": 3,
+      "source_sha256": "24494083f9c3c39826a9fe6ce29da4dcd4777701e72c59b507e8e2dd15d15ed5",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000101829-26-000006",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-02-07T05:00:00+00:00",
+          "revenue_usd": "88603000000"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000101829-26-000031",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-21T04:00:00+00:00",
+          "revenue_usd": "71749000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000101829-26-000031",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-21T04:00:00+00:00",
+          "revenue_usd": "64365000000"
+        }
+      ]
+    }
+  ]
+}

@@ -35,3 +35,21 @@ filtered, focus restoration, malformed and stale stored data, and session-only
 operation when storage is blocked. These are DOM tests. Visual browser QA
 remains outstanding. The watchlist build was deployed on the same private Site
 from hosting source commit `eca1d6d`.
+
+## Rolling four-quarter revenue
+
+The private Explorer includes a rolling revenue panel for the existing
+40-issuer universe. It displays the archived filing cutoff, each issuer's
+actual trailing-period end, USD revenue and links to its input accessions.
+The November 26, 2026 UTC snapshot has 39 usable results. PepsiCo's latest
+period could not be reconciled and is shown as unavailable.
+
+To refresh the packaged snapshot from updated SEC archives, run
+`PYTHONPATH=. python research/rolling_snapshot.py /path/to/archives CUTOFF`
+from the repository root and save the generated JSON to
+`research/rolling/explorer.json` before building. The published panel uses
+a static snapshot and has no scheduled refresh.
+
+DOM tests verified the cutoff, issuer switching, values, EDGAR links and
+the unavailable state. All 91 Python tests passed. Visual browser QA remains
+unverified. The panel was packaged from hosting source commit `55999fc`.

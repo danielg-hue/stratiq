@@ -12,7 +12,8 @@ const {window} = new JSDOM(await readFile(root + '/index.html', 'utf8'), {url: '
 globalThis.document = window.document;
 globalThis.window = window;
 globalThis.localStorage = window.localStorage;
-globalThis.fetch = async () => ({ok: true, json: async () => data});
+const rolling = JSON.parse(await readFile(root + '/rolling.json', 'utf8'));
+globalThis.fetch = async (url) => ({ok: true, json: async () => url.pathname.endsWith('/rolling.json') ? rolling : data});
 let downloaded;
 globalThis.URL.createObjectURL = (blob) => { downloaded = blob; return 'blob:test'; };
 globalThis.URL.revokeObjectURL = () => {};
@@ -29,6 +30,13 @@ const fire = (node, event, value) => {
   node.value = value;
   node.dispatchEvent(new window.Event(event));
 };
+assert.match(query('#rolling-cutoff').textContent, /2026-11-26/);
+fire(query('#rolling-issuer'), 'change', 'AMZN');
+assert.match(query('#rolling-result').textContent, /797.46B/);
+assert.match(query('#rolling-result').textContent, /2026-09-30/);
+assert.match(query('#rolling-result a').href, /^https:\/\/www\.sec\.gov\/Archives\//);
+fire(query('#rolling-issuer'), 'change', 'PEP');
+assert.match(query('#rolling-result').textContent, /could not be reconciled/);
 fire(query('#year'), 'change', '2022');
 assert.match(query('#cohort-summary').textContent, /27 of 40/);
 fire(query('#search'), 'input', 'alphabet');

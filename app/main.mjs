@@ -1,3 +1,5 @@
+import './rolling.mjs';
+
 const year = document.querySelector('#year');
 const search = document.querySelector('#search');
 const coverage = document.querySelector('#coverage');
