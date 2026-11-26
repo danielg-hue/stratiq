@@ -155,3 +155,11 @@ The workflow was exercised on Alphabet's FY2024 Form 10-K with two scored
 elements, seven exact citations and 48 unknowns. The draft remained internal
 and the overall index was suppressed. Tests covered repeated-document
 assembly, conflicts, citation integrity and overwrite protection.
+
+Definitive proxy statements (`DEF 14A`) are also accepted by the intake
+command. The Apple FY2024 draft uses the January 2024 proxy and FY2024
+10-K available by its existing November 2 cutoff. The additional points
+cover board independence, incentives, shareholder rights, liquidity,
+and funding access. All five prior judgments were preserved. The expanded
+draft has 10 scored elements, 40 unknowns, and 27 exact citations.
+The standard build excludes both the document bytes and the draft.

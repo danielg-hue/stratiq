@@ -12,7 +12,7 @@ from validation import text
 
 
 MAX_BYTES = 10_000_000
-FORMS = {"10-K", "10-K/A", "10-Q", "10-Q/A"}
+FORMS = {"10-K", "10-K/A", "10-Q", "10-Q/A", "DEF 14A"}
 
 
 def primary_filing(submissions, accession):

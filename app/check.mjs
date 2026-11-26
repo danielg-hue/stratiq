@@ -38,12 +38,12 @@ await new Promise(setImmediate);
 const query = (selector) => document.querySelector(selector);
 assert.equal(query('#score-file').disabled, false);
 if (draft) {
-  assert.match(query('#score-result').textContent, /5 of 50 elements scored/);
+  assert.match(query('#score-result').textContent, /10 of 50 elements scored/);
   assert.match(query('#score-result').textContent, /Apple Inc/);
-  assert.equal(document.querySelectorAll('#score-result a').length, 17);
+  assert.equal(document.querySelectorAll('#score-result a').length, 27);
   query('#score-filter').value = 'assessed';
   query('#score-filter').dispatchEvent(new window.Event('change'));
-  assert.equal(document.querySelectorAll('#score-result .score-element').length, 5);
+  assert.equal(document.querySelectorAll('#score-result .score-element').length, 10);
   assert.equal(query('#score-pilot-label').hidden, false);
   assert.equal(query('#score-pilot').options.length, 3);
   query('#score-pilot').value = '1';
@@ -59,7 +59,7 @@ if (draft) {
   query('#score-filter').value = 'assessed';
   query('#score-filter').dispatchEvent(new window.Event('change'));
   const changed = structuredClone(draft);
-  changed.sources[0].origin = 'javascript:1';
+  for (const source of changed.sources) source.origin = 'javascript:1';
   changed.company = '<script>Example</script>';
   const upload = (value) => {
     Object.defineProperty(query('#score-file'), 'files', {configurable: true,

@@ -154,3 +154,9 @@ favorable and adverse scoring anchors. The markup and links remain inert
 for untrusted local uploads. Tests covered both pilot drafts, switching and
 filtering, evidence guidance, local import, and a build without any pilot
 data. All 109 Python tests passed. Hosting source: `fe36e11`.
+
+The owner-only Apple pilot now includes 10 scored elements and 27
+citations drawn from its FY2024 annual report and 2024 proxy. The
+private deployment uses hosting source `268bf17`. The public build
+excludes the expanded draft. Both build variants passed DOM tests,
+including the source-link check across both cited documents.

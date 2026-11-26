@@ -52,3 +52,12 @@ class SecFilingTest(TestCase):
                     ])
             with self.assertRaisesRegex(ValueError, "precedes"):
                 package_filing(submissions(), ACCESSION, archive, "2024-11-01T09:00:00Z", [])
+
+    def test_definitive_proxy_is_eligible_for_governance_intake(self):
+        fixture = submissions()
+        fixture["filings"]["recent"]["form"] = ["DEF 14A"]
+        filename, url, _ = primary_filing(fixture, ACCESSION)
+        self.assertIn(filename, url)
+        fixture["filings"]["recent"]["form"] = ["8-K"]
+        with self.assertRaisesRegex(ValueError, "unsupported SEC filing form"):
+            primary_filing(fixture, ACCESSION)
