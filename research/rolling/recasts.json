@@ -1,0 +1,16 @@
+{
+  "773840": {
+    "basis": "Continuing operations, recast after the Aerospace spin-off",
+    "interim_accession": "0000773840-26-000143",
+    "annual_accession": "0000773840-26-000084",
+    "available_at": "2026-06-29T10:41:22+00:00",
+    "exhibit": "exhibit992-junexwintersupp.htm",
+    "exhibit_sha256": "8746b543b7411a9a4a78addc2374f99d5e52decdea9cfe2e327e5676abe0e012",
+    "confirmation_exhibit": "exhibit993unauditedproform.htm",
+    "confirmation_sha256": "daf3d7c96ce44e441bed21e280c43c67b3a4cb18751afc6eb4be630bc2792d76",
+    "prior_years": [
+      {"annual_start": "2025-01-01", "annual_end": "2025-12-31", "annual_revenue": "19945000000", "ytd_end": "2025-09-30", "ytd_revenue": "14703000000"},
+      {"annual_start": "2024-01-01", "annual_end": "2024-12-31", "annual_revenue": "19281000000", "ytd_end": "2024-09-30", "ytd_revenue": "14093000000"}
+    ]
+  }
+}

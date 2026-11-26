@@ -40,7 +40,9 @@ function issuerCard(row) {
     if (/^\d{10}-\d{2}-\d{6}$/.test(input.accession) && Number.isInteger(row.cik)) {
       const accession = input.accession.replaceAll('-', '');
       const link = node('a', input.accession);
-      link.href = `https://www.sec.gov/Archives/edgar/data/${row.cik}/${accession}/${input.accession}-index.htm`;
+      const file = input.document && /^[a-zA-Z0-9_-]+[.]html?$/.test(input.document)
+        ? input.document : `${input.accession}-index.htm`;
+      link.href = `https://www.sec.gov/Archives/edgar/data/${row.cik}/${accession}/${file}`;
       item.append(link);
     }
     list.append(item);
@@ -51,7 +53,9 @@ function issuerCard(row) {
     ? node('p', `${percentage.format(growth.percent)}% year over year · Prior period ended ${growth.prior_period_end}`)
     : node('p', 'Year-over-year growth unavailable.');
   change.className = 'rolling-growth';
-  card.append(value, period, change, sources);
+  card.append(value, period, change);
+  if (row.reporting_basis) card.append(node('p', row.reporting_basis));
+  card.append(sources);
   return card;
 }
 

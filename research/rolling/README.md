@@ -64,3 +64,23 @@ as discontinued operations. Its prior YTD comparison differs from
 the original filing, and no compatible annual baseline was verified.
 The updated November 26 snapshot provides both figures for 39 issuers.
 Only Alphabet and Honeywell changed.
+
+## Honeywell continuing-operations recast
+
+The June 29, 2026 8-K, accession `0000773840-26-000084`, supplies comparable
+historical net sales after the Aerospace separation. Exhibit 99.2 reports
+FY2025 USD 19.945 billion and FY2024 USD 19.281 billion. Exhibit 99.3
+independently reconciles those annual totals. The USD 14.703 billion
+FY2025 nine-month total from Exhibit 99.2 matches the comparative in the
+October 2026 10-Q. The FY2024 nine-month total is USD 14.093 billion.
+
+On this continuing-operations basis, the two trailing periods ended
+September 30 are USD 20.246 billion for 2026 and USD 19.891 billion for 2025,
+or 1.8% year-over-year growth. The curated accession and exhibit digests
+are checked in with the rule. It is scoped to the exact interim filing and
+verified comparative. A different interim accession or changed comparative
+requires a new basis review. Reprocessing the 40-issuer snapshot changed
+only Honeywell and restored comparable coverage for all 40 issuers.
+
+[SEC Exhibit 99.2](https://www.sec.gov/Archives/edgar/data/773840/000077384026000084/exhibit992-junexwintersupp.htm)
+[SEC Exhibit 99.3](https://www.sec.gov/Archives/edgar/data/773840/000077384026000084/exhibit993unauditedproform.htm)

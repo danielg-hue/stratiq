@@ -9,6 +9,7 @@ from holdout_run import timestamp
 from sec_cohort import REVENUE_TAGS
 from sec_facts import fetch_company_facts, select_as_of, vintages
 from validation import number
+from sec_recasts import reconcile_recast
 
 ANNUAL = ("10-K", "10-K/A")
 INTERIM = ("10-Q", "10-Q/A")
@@ -163,15 +164,24 @@ def rolling_revenue(raw, cutoff):
     if revenue < 0:
         raise ValueError("negative trailing revenue")
     payload = json.loads(raw)
-    return {
+    result = {
         "company": payload["entityName"], "cik": int(payload["cik"]),
         "as_of": cutoff.isoformat(), "period_end": end.isoformat(), "revenue_tag": tag,
         "trailing_four_quarter_revenue_usd": str(revenue), "interim_quarters": interim_quarters,
         "source_sha256": sources[0].source_sha256,
         "inputs": filing_inputs(sources),
-        "year_over_year": prior_growth(facts, {key: value for key, value in by_tag.items() if key != tag},
-                                       cutoff, revenue, interim_quarters, sources),
     }
+    try:
+        result["year_over_year"] = prior_growth(
+            facts, {key: value for key, value in by_tag.items() if key != tag},
+            cutoff, revenue, interim_quarters, sources,
+        )
+    except ReportingBasisError:
+        reconciled = reconcile_recast(result["cik"], cutoff, sources, result["inputs"])
+        if reconciled is None:
+            raise
+        result.update(reconciled)
+    return result
 
 
 def main():

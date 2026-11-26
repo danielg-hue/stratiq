@@ -2565,9 +2565,84 @@
     },
     {
       "ticker": "HON",
+      "company": "Honeywell International Inc",
       "cik": 773840,
-      "unavailable": true,
-      "unavailable_reason": "reporting_basis"
+      "as_of": "2026-11-26T00:00:00+00:00",
+      "period_end": "2026-09-30",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "trailing_four_quarter_revenue_usd": "20246000000",
+      "interim_quarters": 3,
+      "source_sha256": "ef98dc309c39aebcf0b47b11a618b20d812b226b0c709bc4ef7f838e803aab68",
+      "inputs": [
+        {
+          "role": "annual",
+          "accession": "0000773840-26-000084",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "available_at": "2026-06-29T10:41:22+00:00",
+          "revenue_usd": "19945000000",
+          "document": "exhibit992-junexwintersupp.htm",
+          "document_sha256": "8746b543b7411a9a4a78addc2374f99d5e52decdea9cfe2e327e5676abe0e012"
+        },
+        {
+          "role": "current_ytd",
+          "accession": "0000773840-26-000143",
+          "start": "2026-01-01",
+          "end": "2026-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "15004000000"
+        },
+        {
+          "role": "prior_ytd",
+          "accession": "0000773840-26-000143",
+          "start": "2025-01-01",
+          "end": "2025-09-30",
+          "available_at": "2026-10-23T04:00:00+00:00",
+          "revenue_usd": "14703000000"
+        }
+      ],
+      "reporting_basis": "Continuing operations, recast after the Aerospace spin-off",
+      "year_over_year": {
+        "prior_period_end": "2025-09-30",
+        "prior_cutoff": "2026-10-23T04:00:00+00:00",
+        "prior_revenue_usd": "19891000000",
+        "percent": 1.784726760846614,
+        "inputs": [
+          {
+            "role": "annual",
+            "accession": "0000773840-26-000084",
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "available_at": "2026-06-29T10:41:22+00:00",
+            "revenue_usd": "19281000000",
+            "document": "exhibit992-junexwintersupp.htm",
+            "document_sha256": "8746b543b7411a9a4a78addc2374f99d5e52decdea9cfe2e327e5676abe0e012"
+          },
+          {
+            "role": "current_ytd",
+            "accession": "0000773840-26-000143",
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "available_at": "2026-10-23T04:00:00+00:00",
+            "revenue_usd": "14703000000"
+          },
+          {
+            "role": "prior_ytd",
+            "accession": "0000773840-26-000084",
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "available_at": "2026-06-29T10:41:22+00:00",
+            "revenue_usd": "14093000000",
+            "document": "exhibit992-junexwintersupp.htm",
+            "document_sha256": "8746b543b7411a9a4a78addc2374f99d5e52decdea9cfe2e327e5676abe0e012"
+          }
+        ],
+        "confirmation": {
+          "accession": "0000773840-26-000084",
+          "document": "exhibit993unauditedproform.htm",
+          "document_sha256": "daf3d7c96ce44e441bed21e280c43c67b3a4cb18751afc6eb4be630bc2792d76"
+        }
+      }
     },
     {
       "ticker": "RTX",
